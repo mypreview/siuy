@@ -1,0 +1,80 @@
+While making Siuy theme, we used third-party plugins and resources, and want to thank their creators:
+
+jQuery - most popular feature-rich JavaScript library
+Copyright JS Foundation and other contributors, https://js.foundation/
+https://github.com/jquery/jquery/blob/master/LICENSE.txt
+
+Modernizr - JavaScript library that detects HTML5 and CSS3 features in the users browser
+The MIT License - Made by Faruk, Paul, Alex, Ryan, Patrick, Stu, and Richard.
+https://github.com/Modernizr/Modernizr/blob/master/LICENSE
+
+File skip link focus fix - Helps with accessibility for keyboard only users.
+The GPL version 2 or (at your option) any later version
+https://git.io/vWdr2
+
+normalize.css - A modern alternative to CSS resets
+The MIT License - Copyright (c) 2012 @necolas.
+https://github.com/necolas/normalize.css/blob/master/LICENSE.md
+
+Twenty Thirteen — Free WordPress Theme
+The GPL version 2 or (at your option) any later version
+https://github.com/WordPress/WordPress/tree/master/wp-content/themes/twentythirteen
+
+Twenty Sixteen — Free WordPress Theme
+The GPL version 2 or (at your option) any later version
+https://github.com/WordPress/twentysixteen
+
+_s or underscores — Free Starter WordPress Theme
+The GPL version 2 or (at your option) any later version
+https://github.com/Automattic/_s/blob/master/LICENSE
+
+Customizer Range Value Control - A generic range with value control you can use to replace the range control.
+GNU GENERAL PUBLIC LICENSE
+https://github.com/soderlind/class-customizer-range-value-control#copyright-and-license
+
+Customizer Toggle Control - A generic toggle control you can use to replace the checkbox control.
+GNU GENERAL PUBLIC LICENSE
+https://github.com/soderlind/class-customizer-toggle-control#copyright-and-license
+
+AppendAround - A pattern for responsive markup
+The MIT License - @scottjehl, Filament Group, Inc.
+https://github.com/filamentgroup/AppendAround/blob/master/LICENSE
+
+Select2 - Select2 is a jQuery based replacement for select boxes.
+The MIT License - Copyright (c) 2014 select2.
+https://github.com/select2/select2#copyright-and-license
+
+Just Another Parallax - Smooth parallax scrolling effect for background images.
+Do What The F*ck You Want To Public License - Copyright (c) 2015 @nk-o.
+https://github.com/nk-o/jarallax/blob/master/LICENSE
+
+JS-OffCanvas - jQuery accessible Offcanvas plugin, using ARIA.
+The MIT License - Copyright (c) 2016 @vmitsaras.
+https://github.com/vmitsaras/js-offcanvas/blob/master/LICENSE
+
+Slinky - A light-weight, responsive, mobile-like navigation menu plugin.
+The MIT License - Copyright (c) 2016 @alizahid.
+https://github.com/alizahid/slinky/blob/master/src/slinky.js#L5
+
+Lato Google Font-Family
+Open Font License - Wei Huang
+https://fonts.google.com/specimen/Lato?selection.family=Lato
+http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
+
+Cardo Google Font-Family
+Open Font License - Wei Huang
+https://fonts.google.com/specimen/Cardo?selection.family=Cardo
+http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
+
+Playfair Display Google Font-Family
+Open Font License - Wei Huang
+https://fonts.google.com/specimen/Playfair+Display?selection.family=Playfair+Display
+http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
+
+A photo by Pablo Hermoso - Free for commercial use No attribution required
+https://magdeleine.co/photo-pablo-hermoso-n-1031/
+Licensed under Creative Commons Zero - http://creativecommons.org/publicdomain/zero/1.0
+
+A photo by Joanna M. Foto - Free for commercial use No attribution required
+https://magdeleine.co/photo-joanna-m-foto-n-747/
+Licensed under Creative Commons Zero - http://creativecommons.org/publicdomain/zero/1.0
