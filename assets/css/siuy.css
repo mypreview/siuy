@@ -210,14 +210,172 @@ th {
 # Typography
 --------------------------------------------------------------*/
 
+.post-navigation .nav-links a,
+.comment-list .comment-author span.says,
+.widget_rss ul li .rssSummary,
+.widget_text .textwidget,
+.siuy-posts-widget .entry-content,
+.content-area .site-main article .entry-title ,
 body,
 optgroup {
-    color: #595959;
     font-family: 'Cardo', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-size: 1rem;
+}
+.content-area .site-main article .entry-meta .byline,
+.content-area .site-main article .entry-meta .entry-date,
+.content-area .site-main article .entry-content,
+.content-area .site-main article .entry-footer,
+.content-area .site-main article .entry-footer > span.readmore > a,
+.wp-caption-text,
+.comments-area > .comments-title,
+.comments-area .comment-reply-title,
+.comments-area .no-comments,
+.comment-notes,
+.logged-in-as a,
+.comment-list .comment-author a,
+.comment-list .comment-meta .comment-metadata time,
+.comment-list .comment-meta .comment-metadata .edit-link .comment-edit-link,
+.comments-area .comment-list .reply > a,
+.comment-list .comment-content,
+.widget-title,
+.siuy-posts-widget .entry-title > a,
+.siuy-posts-widget .entry-date,
+.siuy-posts-widget .entry-content > a.readmore,
+.mc4wp-form-fields input[name="EMAIL"],
+.site-footer .widget-areas,
+.site-footer .site-info,
+.site-footer .site-info a,
+.widget_nav_menu ul li,
+.widget_rss ul li,
+.widget_recent_entries ul li,
+.widget_recent_comments ul li,
+.widget_meta ul li,
+.widget_pages ul li,
+.widget_categories ul li,
+.widget_archive ul li,
+.widget_calendar table,
+.menu a,
+.c-offcanvas > .siuy-slinky-menu ul > li > a,
+.site-header .site-description,
+select,
+textarea,
+button,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+input {
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+.site-footer h4,
+.site-title > a {
+    font-family: 'Playfair Display', Helvetica, Arial, sans-serif;
+}
+input,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+select,
+textarea,
+.content-area .site-main article .entry-content,
+.comment-list .comment-author a,
+.comment-list .comment-content,
+.widget_rss ul li .rssSummary,
+.widget_text .textwidget,
+.siuy-posts-widget .entry-content,
+body,
+optgroup {
+	color: #595959;
+}
+.content-area .site-main article .entry-content,
+.comments-area > .comments-title,
+.comments-area .comment-reply-title,
+.comment-list .comment-author a,
+body,
+optgroup {
+	font-size: 16px;
+	font-size: 1rem;
+}
+input
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+select,
+textarea,
+.content-area .site-main article .entry-title,
+.content-area .site-main article .entry-footer,
+.wp-caption-text,
+.post-navigation .nav-links a,
+.comment-list .comment-meta .comment-metadata .edit-link .comment-edit-link,
+.comments-area .comment-list .reply > a,
+.comment-list .comment-content,
+.siuy-posts-widget .entry-title > a,
+.widget_rss ul li .rssSummary,
+.widget_text .textwidget,
+.siuy-posts-widget .entry-content,
+body,
+optgroup {
     line-height: 24px;
 }
+.content-area .site-main article .entry-footer > span.readmore > a,
+.comments-area .comment-list .reply > a,
+.main-navigation .nav-menu li > a {
+	font-size: 13px;
+	font-size: 0.812rem;
+}
+.c-offcanvas > .siuy-slinky-menu ul > li > a,
+.comment-list .comment-meta .comment-metadata time,
+.comment-list .comment-content,
+.siuy-posts-widget .entry-title > a,
+.widget_rss ul li .rssSummary,
+.widget_text .textwidget,
+.siuy-posts-widget .entry-content,
+.mc4wp-form-fields input[name="EMAIL"],
+.site-footer .widget-areas,
+.widget_nav_menu ul li,
+.widget_rss ul li,
+.widget_recent_entries ul li,
+.widget_recent_comments ul li,
+.widget_meta ul li,
+.widget_pages ul li,
+.widget_categories ul li,
+.widget_archive ul li,
+.comments-area label:focus,
+.screen-reader-text:focus,
 input,
 select,
 input[type="text"],
@@ -236,18 +394,44 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-    color: #595959;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 14px;
+	font-size: 14px;
+}
+input,
+.c-offcanvas > .siuy-slinky-menu ul > li > a,
+.content-area .site-main article .entry-meta .byline,
+.content-area .site-main article .entry-meta .entry-date,
+.widget-title,
+.siuy-posts-widget .entry-title > a,
+.siuy-posts-widget .entry-date,
+select,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
     font-weight: 500;
-    line-height: 24px;
+}
+.content-area .site-main article .entry-footer > span.readmore > a,
+.comment-list .comment-author a,
+.siuy-posts-widget .entry-content > a.readmore {
+    font-weight: 600;
 }
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     color: #63574C;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-size: 12px;
     font-size: 0.75rem;
     line-height: normal;
@@ -309,40 +493,36 @@ big {
     font-size: 125%;
 }
 .site-title > a {
-    font-family: 'Playfair Display', Helvetica, Arial, sans-serif;
     font-size: 30px;
     font-weight: bold;
 }
 .site-header .site-description {
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-size: 12px;
     font-weight: 400;
     margin-left: 10px;
 }
 .c-offcanvas > .siuy-slinky-menu ul > li > a {
     color: #a5a7ac;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
     line-height: 1.4;
     text-transform: uppercase;
 }
 .main-navigation .nav-menu li > a {
     background-color: transparent;
-    color: #2F2F2F;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 1.86px;
-    text-decoration: none;
+    color: #d4d4d4;
+	letter-spacing: 1.7px;
     text-transform: uppercase;
     transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
 }
-.main-navigation .nav-menu:hover li > a {
-    color: #D4D4D4;
+.main-navigation .nav-menu > li:hover > a, 
+.main-navigation .nav-menu > li > a:hover,
+.main-navigation .nav-menu > li.current-menu-parent > a,
+.main-navigation .nav-menu > li.current-menu-item > a {
+	color: #454545;
 }
-.main-navigation .nav-menu:hover li > a:hover {
-    color: #2F2F2F;
+.main-navigation .nav-menu > li.current-menu-parent > a,
+.main-navigation .nav-menu > li.current-menu-item > a{
+    font-weight: 900;
+	letter-spacing: 1.9px;
 }
 .main-navigation .nav-menu .sub-menu li > a {
     color: #2F2F2F;
@@ -352,84 +532,33 @@ big {
     line-height: 30px;
     text-transform: capitalize;
 }
-.site-jumbotron .jumbotron-heading > .heading {
-    color: #FFFFFF;
-    font-family: 'Playfair Display', Helvetica, Arial, sans-serif;
-    letter-spacing: 0;
-    line-height: 0.7;
-    text-align: center;
-}
-.site-jumbotron .jumbotron-featured-posts .entry-title > a {
-    color: #FFFFFF;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 2.33px;
-    line-height: 20px;
-    text-transform: uppercase;
-}
-.site-jumbotron .jumbotron-featured-posts .entry-date {
-    color: #FFFFFF;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-.site-jumbotron .jumbotron-featured-posts .entry-content {
-    color: #FFFFFF;
-    font-family: 'Cardo', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-}
-.site-jumbotron .jumbotron-featured-posts .entry-content > a:last-of-type {
-    color: #FFFFFF;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 1.67px;
-    text-decoration: underline;
-    text-transform: uppercase;
-}
 .content-area .site-main article .entry-title {
     color: #000000;
-    font-family: 'Cardo', Helvetica, Arial, sans-serif;
     font-size: 36px;
     font-weight: 400;
-    line-height: 24px;
 }
 .content-area .site-main article .entry-meta .byline {
     color: #878787;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-size: 12px;
-    font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 .content-area .site-main article .entry-meta .entry-date {
     color: #87878752;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-size: 12px;
-    font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 .content-area .site-main article .entry-content {
-    color: #595959;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 16px;
     font-weight: 400;
     letter-spacing: 1.11px;
     line-height: 36px;
 }
 .content-area .site-main article .entry-footer {
     color: #666666;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: 24px;
 }
 .content-area .site-main article .entry-title > a,
 .content-area .site-main article .entry-meta .byline a,
@@ -439,32 +568,23 @@ big {
 }
 .content-area .site-main article .entry-footer > span.readmore > a {
     color: #FF5252;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 600;
     letter-spacing: 2.33px;
     text-transform: uppercase;
 }
 .wp-caption-text {
     color: #666666;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: 24px;
 }
 .post-navigation .nav-links a {
     color: #000000;
-    font-family: 'Cardo', Helvetica, Arial, sans-serif;
     font-size: 20px;
     font-weight: 400;
-    line-height: 24px;
 }
 .comments-area > .comments-title,
 .comments-area .comment-reply-title {
     color: #000000;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 16px;
     font-weight: 400;
     letter-spacing: 1.78px;
     text-transform: uppercase;
@@ -473,119 +593,82 @@ big {
 .comment-notes,
 .logged-in-as a {
     color: #000000;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-size: 70%;
     font-weight: 400;
     letter-spacing: 1.78px;
     text-transform: uppercase;
 }
 .comment-list .comment-author a {
-    color: #595959;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 600;
     letter-spacing: 0;
 }
 .comment-list .comment-author span.says {
     color: #59595970;
-    font-family: 'Cardo', Helvetica, Arial, sans-serif;
     font-style: italic;
     font-weight: 400;
     letter-spacing: 0;
 }
 .comment-list .comment-meta .comment-metadata time {
     color: #D4D4D4;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 14px;
     font-weight: 400;
     letter-spacing: 0;
 }
 .comment-list .comment-meta .comment-metadata .edit-link .comment-edit-link {
     color: #666666;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: 24px;
 }
 .comments-area .comment-list .reply > a {
     color: #666666;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 13px;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: 24px;
     text-transform: uppercase;
 }
 .comment-list .comment-content {
-    color: #595959;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 14px;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: 24px;
 }
 .widget-title {
     color: #2F2F2F;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-size: 18px;
-    font-weight: 500;
 }
 .siuy-posts-widget .entry-title > a {
     color: #000000;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
     letter-spacing: 2.33px;
-    line-height: 24px;
     text-transform: uppercase;
 }
 .siuy-posts-widget .entry-date {
     color: #87878752;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-size: 10px;
-    font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 .widget_rss ul li .rssSummary,
 .widget_text .textwidget,
 .siuy-posts-widget .entry-content {
-    color: #595959;
-    font-family: 'Cardo', Helvetica, Arial, sans-serif;
-    font-size: 14px;
     font-weight: 400;
-    line-height: 24px;
 }
 .siuy-posts-widget .entry-content > a.readmore {
     color: #FF5252;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-size: 10px;
-    font-weight: 600;
     letter-spacing: 2.33px;
     text-transform: uppercase;
 }
 .mc4wp-form-fields input[name="EMAIL"] {
     color: #D4D4D4;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 .site-footer h4 {
-    font-family: 'Playfair Display', Helvetica, Arial, sans-serif;
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 0;
 }
 .site-footer .widget-areas {
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 14px;
     font-weight: 400;
 }
 .site-footer .site-info,
 .site-footer .site-info a {
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -609,8 +692,6 @@ big {
 .widget_pages ul li,
 .widget_categories ul li,
 .widget_archive ul li {
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-size: 14px;
     letter-spacing: 0.0714286em;
     line-height: 36px;
 }
@@ -618,9 +699,6 @@ select {
     font-weight: bold;
     letter-spacing: 0.0714286em;
     line-height: 2.3;
-}
-.widget_calendar table {
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
 .widget_calendar tbody td>a:not(#today) {
     color: #ff5252;
@@ -803,9 +881,8 @@ a:active {
 --------------------------------------------------------------*/
 
 .site-header {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
+	display: grid;
+    grid-template-columns: 0 auto 1fr 0;
     margin: 0 auto;
     max-width: 1230px;
     min-height: 76px;
@@ -814,7 +891,6 @@ a:active {
 .site-header .site-branding {
     align-items: baseline;
     display: flex;
-    flex: 1 50%;
 }
 #site-navigation .customize-partial-edit-shortcut {
     right: 0;
@@ -823,11 +899,15 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 
+.menu-main-menu-container {
+	display: flex;
+    justify-content: flex-end;
+}
 .main-navigation {
     clear: both;
-    display: block;
-    flex: 1 60%;
+    display: grid;
     width: 100%;
+	height: 100%;
 }
 .main-navigation ul {
     display: none;
@@ -837,29 +917,59 @@ a:active {
     padding-left: 0;
 }
 .main-navigation ul ul {
-    background-color: #FFF;
-    border: 1px solid #EBEBEB;
-    float: left;
-    left: -999em;
-    padding: 20px;
+    background-color: #edeae7;
+    border: 1px solid #edeae7;
+	padding: 15px 0 15px 0;
+	width: 180px;
     position: absolute;
-    top: 100%;
-    z-index: 99999;
+    visibility: hidden;
+    opacity: 0;
+	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
-.main-navigation ul ul ul {
-    left: -999em;
-    top: 0;
+.main-navigation ul.menu>li > ul,
+.main-navigation ul.menu>li > ul {
+	right: 0;
+	transform: translateY(-2em);
+	top: 100%;
 }
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-    left: 100%;
+.main-navigation ul.sub-menu>li > ul,
+.main-navigation ul.sub-menu>li > ul  {
+	left: 100%;
+	transform: translateX(-2em);
+	left: 100%;
+    top: -16px;
 }
-.main-navigation ul ul a {
-    width: 160px;
+.main-navigation ul ul>li {
+	padding: 0 29px 0 18px;
 }
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-    left: auto;
+.main-navigation .nav-menu>li > a {
+    transform: translateY(-50%);
+    top: 50%;
+}
+.main-navigation ul ul li {
+	display: block;
+    width: 100%;
+}
+.main-navigation ul>li:hover > ul,
+.main-navigation ul>li:focus > ul {
+	visibility: visible; /* shows sub-menu */
+	opacity: 1;
+	z-index: 1;
+	transition-delay: 0s, 0s, 0.3s;
+}
+.main-navigation ul.menu>li:hover > ul,
+.main-navigation ul.menu>li:focus > ul {
+	margin-top: 10px;
+	margin-right: -10px;
+	right: 0;
+	transform: translateY(0%);
+}
+.main-navigation ul.sub-menu>li:hover > ul,
+.main-navigation ul.sub-menu>li:focus > ul {
+	left: 100%;
+    top: -16px;
+    margin-left: 13px;
+	transform: translateX(0%);
 }
 .main-navigation li {
     float: left;
@@ -892,7 +1002,7 @@ a:active {
     top: 40%;
     transform: rotate(-90deg) translateY(-40%);
 }
-/* Small menu. */
+/* Small menu */
 
 .siuy-menu-toggle,
 .main-navigation.toggled ul {
@@ -934,19 +1044,42 @@ a:active {
         display: none;
     }
     .main-navigation ul {
-        display: block;
+		display: block;
     }
     .main-navigation .nav-menu > li {
-        margin-right: 20.15px;
-        padding-right: 20.15px;
+		margin-left: 30px;
+		height: 100%;
     }
     .main-navigation .nav-menu > li.menu-item-has-children {
         padding-right: 25.15px;
     }
     .main-navigation .nav-menu > li:last-child {
         margin-right: 0;
-        padding-right: 0;
     }
+	#site-navigation ul.menu>li>ul.sub-menu:before {
+		transform: rotate(-315deg);
+		top: -9px;
+		right: 47px;
+		border-width: 1px 0 0 1px;
+	}
+	#site-navigation ul.menu>li>ul.sub-menu:before,
+	.main-navigation ul.sub-menu>li:hover > ul:before,
+	.main-navigation ul.sub-menu>li.focus > ul:before {
+		content: "";
+		width: 16px;
+		height: 16px;
+		border-style: solid;
+		border-color:#edeae7;
+		position: absolute;
+		background-color: #edeae7;
+	}
+	.main-navigation ul.sub-menu>li:hover > ul:before,
+	.main-navigation ul.sub-menu>li.focus > ul:before {
+		left: -9px;
+		top: 21px;
+		border-width: 1px 0 0 1px;
+		transform: rotate(-45deg);
+	}
 }
 .site-main .comment-navigation,
 .site-main .posts-navigation,
@@ -1295,7 +1428,6 @@ a:active {
     color: #21759b;
     display: block;
     font-size: 0.875rem;
-    font-size: 14px;
     font-weight: bold;
     height: auto;
     left: 5px;
@@ -1695,7 +1827,7 @@ a:active {
     margin-left: 25px;
 }
 .sticky h2.entry-title:before {
-    content: "📌";
+    content: "ðŸ“Œ";
     font-size: 18px;
     left: 0;
     position: absolute;
@@ -1832,7 +1964,7 @@ a:active {
     position: relative;
 }
 .comments-area .comment-list .reply > a:before {
-    content: '↵';
+    content: 'â†µ';
     display: inline-block;
     height: 1px;
     left: -20px;
