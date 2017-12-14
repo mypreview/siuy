@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Siuy
- * @since 	    1.0.0
+ * @since 	    1.1.0
  */
 /**
  * Adds custom classes to the array of body classes.
@@ -135,7 +135,7 @@ function siuy_footer_widget_areas()
 	else:
 		$widget_columns = apply_filters('siuy_footer_widget_areas', 0);
 	endif;
-	if($widget_columns > 0):
+	if ($widget_columns > 0):
 	?>
 	<div class="container widget-areas widget-col-<?php echo absint($widget_columns); ?>">
 	<?php
