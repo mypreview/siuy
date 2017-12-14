@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Siuy
- * @since 	    1.0.0
+ * @since 	    1.1.0
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -133,8 +133,8 @@ if (!class_exists('Siuy')):
 			 */
 			add_theme_support('custom-logo', array(
 				'width' => 150,
-				'height' => 75,
-				'flex-width'  => true,
+				'height' => 76,
+				'flex-width' => true,
 				'flex-height' => false
 			));
 			/**
@@ -166,22 +166,31 @@ if (!class_exists('Siuy')):
 			)));
 			// Declare support for selective refreshing of widgets.
 			add_theme_support('customize-selective-refresh-widgets');
+			/**
+			 *  This theme styles the visual editor to resemble the theme style,
+			 *  specifically font, colors, icons, and column width.
+			 */
+			add_editor_style(array(
+				get_theme_file_uri('/assets/css/editor-style.css') ,
+				$this->fonts_url()
+			));
 		}
 		/**
 		 * Enqueue scripts and styles.
 		 *
-		 * @since 1.0.0
+		 * @since 1.1.0
 		 */
 		public function enqueue()
 
 		{
+			$suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
 			// Add custom fonts, used in the main stylesheet.
 			wp_enqueue_style('siuy-fonts', $this->fonts_url() , array() , null);
 			// Theme stylesheet.
-			wp_enqueue_style('siuy-styles', get_theme_file_uri('/assets/css/siuy.css') , array(), SIUY_THEME_VERSION);
+			wp_enqueue_style('siuy-styles', get_theme_file_uri('/assets/css/siuy' . $suffix . '.css') , array() , SIUY_THEME_VERSION);
 			wp_add_inline_style('siuy-styles', Siuy_Customizer::inline_style());
 			wp_enqueue_script('jquery');
-			wp_enqueue_script('siuy-scripts', get_theme_file_uri('/assets/js/siuy.js') , array(
+			wp_enqueue_script('siuy-scripts', get_theme_file_uri('/assets/js/siuy' . $suffix . '.js') , array(
 				'jquery'
 			) , SIUY_THEME_VERSION, true);
 			if (is_singular() && comments_open() && get_option('thread_comments')):
@@ -252,10 +261,10 @@ if (!class_exists('Siuy')):
 			echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 		}
 		/**
-		* Add a pingback url auto-discovery header for singularly identifiable articles.
-		*
-		* @since 1.0.0
-		*/
+		 * Add a pingback url auto-discovery header for singularly identifiable articles.
+		 *
+		 * @since 1.0.0
+		 */
 		public function pingback_header()
 
 		{
