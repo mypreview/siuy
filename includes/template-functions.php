@@ -126,9 +126,6 @@ add_filter('comment_form_fields', 'siuy_move_comment_field_to_bottom', 10, 1);
 function siuy_footer_widget_areas()
 
 {
-	?>
-	<div class="container widget-areas">
-	<?php
 	if (is_active_sidebar('footer-3')):
 		$widget_columns = apply_filters('siuy_footer_widget_areas', 3);
 	elseif (is_active_sidebar('footer-2')):
@@ -138,6 +135,10 @@ function siuy_footer_widget_areas()
 	else:
 		$widget_columns = apply_filters('siuy_footer_widget_areas', 0);
 	endif;
+	if($widget_columns > 0):
+	?>
+	<div class="container widget-areas widget-col-<?php echo absint($widget_columns); ?>">
+	<?php
 	for ($counter = 0; $counter <= $widget_columns; $counter++):
 		if (is_active_sidebar('footer-' . $counter)):
 			echo '<div class="column">';
@@ -148,5 +149,6 @@ function siuy_footer_widget_areas()
 	?>
 	</div>
 	<?php
+	endif;
 }	
 add_action('siuy_footer', 'siuy_footer_widget_areas', 10);
