@@ -123,9 +123,12 @@ if (!class_exists('Siuy')):
 			* See: https://codex.wordpress.org/Post_Formats
 			*/
 			add_theme_support('post-formats', array(
+				'aside',
 				'image',
 				'video',
 				'quote',
+				'link',
+				'gallery',
 				'audio'
 			));
 			/**
