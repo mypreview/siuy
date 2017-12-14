@@ -133,9 +133,9 @@ if (!class_exists('Siuy')):
 			 */
 			add_theme_support('custom-logo', array(
 				'width' => 150,
-				'height' => 70,
+				'height' => 75,
 				'flex-width'  => true,
-				'flex-height' => true
+				'flex-height' => false
 			));
 			/**
 			 *  Add support for the Site Logo plugin and the site logo functionality in JetPack
