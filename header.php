@@ -11,7 +11,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js no-svg" <?php Siuy::html_tag_schema(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
@@ -27,7 +27,6 @@
 		<div class="site-branding">
 
 			<?php
-
 			do_action('siuy_before_site_branding');
 
 			the_custom_logo();
@@ -38,7 +37,7 @@
 			<?php
 			endif;
 			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
+			if ($description || is_customize_preview()) : ?>
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php 
 
