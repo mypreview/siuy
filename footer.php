@@ -14,7 +14,7 @@
 
 	<?php do_action('siuy_after_site_content'); ?>
 
-	<footer id="colophon" class="site-footer dark" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+	<footer id="colophon" class="site-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 
 		<?php do_action('siuy_footer'); ?>
 
