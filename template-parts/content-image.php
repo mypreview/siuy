@@ -67,6 +67,6 @@
 	<?php endif; ?>
 
 	<footer class="entry-footer">
-		<?php siuy_entry_footer($posted_readme = true); ?>
+		<?php siuy_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
