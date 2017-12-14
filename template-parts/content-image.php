@@ -18,7 +18,7 @@
 			<a href="<?php the_permalink(); ?>" target="_self">
 				<?php 
 				if (has_post_thumbnail()):
-					the_post_thumbnail('full', array('itemprop' => 'image')); 
+					the_post_thumbnail('siuy-featured-image', array('itemprop' => 'image')); 
 				elseif (!has_post_thumbnail() && !empty($get_images)):
 					echo $get_images[0];
 				endif;
@@ -67,6 +67,12 @@
 	<?php endif; ?>
 
 	<footer class="entry-footer">
-		<?php siuy_entry_footer(); ?>
+		<?php
+		$posted_readmore = true; 
+		if (! has_excerpt() && ! is_singular()):
+			$posted_readmore = false;
+		endif;
+		siuy_entry_footer($posted_categories = true, $posted_tags = true, $posted_comments = true, $posted_readmore); 
+		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
