@@ -4,7 +4,7 @@
  *
  * @author  	Mahdi Yazdani
  * @package 	Siuy
- * @since 	    1.0.0
+ * @since 	    1.1.0
  */
 if (!defined('ABSPATH')):
 	exit;
@@ -63,16 +63,41 @@ if (!class_exists('Siuy_Customizer')):
 		 * Theme Customizer along with several other settings.
 		 *
 		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
-		 * @since 1.0.0
+		 * @since 1.1.0
 		 */
 		public function customize_register($wp_customize)
 
 		{
 			// Load Customizer custom controls.
 			require_once dirname(__FILE__) . '/class-siuy-customizer-custom-controls.php';
-			
+			/**
+			 * "Site Identity" section
+			 * Hide site title
+			 *
+			 * @since 1.1.0
+			 */
+			$wp_customize->add_setting('siuy_toggle_site_tagline', array(
+				'default' => apply_filters('siuy_toggle_site_tagline_default_value', false) ,
+				'capability' => 'edit_theme_options',
+				'sanitize_callback' => array($this, 'sanitize_checkbox')
+			));
+			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'siuy_toggle_site_tagline', array(
+				'label' => __('Hide Site Tagline', 'siuy') ,
+				'description' => __('This checkbox will hide the site tagline from view.', 'siuy') ,
+				'section' => 'title_tagline',
+				'settings' => 'siuy_toggle_site_tagline',
+				'type' => 'checkbox',
+				'priority' => 50
+			)));
+			/**
+			 * "Site Identity" section
+			 * Hide site tagline
+			 *
+			 * @since 1.1.0
+			 */
 			/**
 			 * "Layout" section
+			 * General layout
 			 *
 			 * @since 1.0.0
 			 */
@@ -103,11 +128,13 @@ if (!class_exists('Siuy_Customizer')):
 			/**
 			 * Render updates by JavaScript without reloading the entire preview window
 			 *
-			 * @since 1.0.0
+			 * @since 1.1.0
 			 */
 			$wp_customize->get_setting('blogname')->transport = 'postMessage';
 			$wp_customize->get_setting('blogdescription')->transport = 'postMessage';
+			$wp_customize->get_setting('siuy_toggle_site_tagline')->transport = 'postMessage';
 			$wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
+			$wp_customize->get_setting('siuy_layout_sidebar')->transport = 'postMessage';
 			if (isset($wp_customize->selective_refresh)):
 				// Site title
 				$wp_customize->selective_refresh->add_partial('blogname', array(
@@ -126,6 +153,19 @@ if (!class_exists('Siuy_Customizer')):
 					}
 				));
 			endif;
+		}
+		/**
+		 * Checkbox sanitization callback.
+		 *
+		 * Sanitization callback for 'checkbox' type controls. This callback sanitizes `$checked`
+		 * as a boolean value, either TRUE or FALSE.
+		 *
+		 * @since 1.0.0
+		 */
+		public function sanitize_checkbox($checked)
+
+		{
+			return ((isset($checked) && true == $checked) ? true : false);
 		}
 		/**
 		 * Sanitizes choices (selects/radios)
@@ -152,12 +192,22 @@ if (!class_exists('Siuy_Customizer')):
 
 		{
 			$customizer_css = '';
-			$display_header_text = (bool)display_header_text();
+			$display_header_text = (bool) display_header_text();
+			$toggle_site_tagline = (bool) get_theme_mod('siuy_toggle_site_tagline', false);
 			$header_text_color = get_header_textcolor();
-			// Has the text been hidden?
+			// Has the site title and tagline text been hidden?
 			if (!$display_header_text):
 				$customizer_css.= "
 		            .site-title, .site-description {
+		        		position: absolute;
+		        		clip: rect(1px, 1px, 1px, 1px);
+		        	}
+	        	";
+			endif;
+			// Has the site tagline text been hidden?
+			if ($toggle_site_tagline):
+				$customizer_css.= "
+		            .site-description {
 		        		position: absolute;
 		        		clip: rect(1px, 1px, 1px, 1px);
 		        	}
