@@ -38,25 +38,25 @@ if (!function_exists('siuy_entry_footer')):
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function siuy_entry_footer()
+	function siuy_entry_footer($posted_categories = true, $posted_tags = true, $posted_comments = true, $posted_readmore = true)
 
 	{
 		// Hide category and tag text for pages.
 		if ('post' === get_post_type()):
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list(esc_html__(', ', 'siuy'));
-			if ($categories_list):
+			if ($categories_list && $posted_categories):
 				/* translators: 1: list of categories. */
 				printf('<span class="cat-links" itemprop="about">' . esc_html__('Posted in %1$s', 'siuy') . '</span>', $categories_list); // WPCS: XSS OK.
 			endif;
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list('', esc_html_x(', ', 'list item separator', 'siuy'));
-			if ($tags_list):
+			if ($tags_list && $posted_tags):
 				/* translators: 1: list of tags. */
 				printf('<span class="tags-links" itemprop="keywords">' . esc_html__('Tagged %1$s', 'siuy') . '</span>', $tags_list); // WPCS: XSS OK.
 			endif;
 		endif;
-		if (!is_single() && !post_password_required() && (comments_open() || get_comments_number())):
+		if ($posted_comments && !is_single() && !post_password_required() && (comments_open() || get_comments_number())):
 			echo '<span class="comments-link">';
 			comments_popup_link(sprintf(wp_kses(
 			/* translators: %s: post title */
@@ -74,7 +74,7 @@ if (!function_exists('siuy_entry_footer')):
 				'class' => array() ,
 			) ,
 		)) , get_the_title()) , '<span class="edit-link">', '</span>');
-		if (!is_single()):
+		if (!is_single() && $posted_readmore):
 			echo '<span class="readmore"><a href="' . esc_url(get_the_permalink()) . '" target="_self">' . esc_html__('Read more', 'siuy') . '</a></span>';
 		endif;
 	}
