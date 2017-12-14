@@ -53,6 +53,12 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php siuy_entry_footer(); ?>
+		<?php
+		$posted_readmore = true; 
+		if (! has_excerpt() && ! is_singular()):
+			$posted_readmore = false;
+		endif;
+		siuy_entry_footer($posted_categories = true, $posted_tags = true, $posted_comments = true, $posted_readmore); 
+		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
