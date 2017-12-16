@@ -75,7 +75,7 @@ if (!function_exists('siuy_entry_footer')):
 			) ,
 		)) , get_the_title()) , '<span class="edit-link">', '</span>');
 		if (!is_single() && $posted_readmore):
-			echo '<span class="readmore"><a href="' . esc_url(get_the_permalink()) . '" target="_self">' . esc_html__('Read more', 'siuy') . '</a></span>';
+			echo '<span class="readmore"><a href="' . esc_url(get_the_permalink()) . '" target="_self">' . esc_html__('Read more', 'siuy') . '<span class="readmore-icon"></span><span class="readmore-icon-after"></span></a></span>';
 		endif;
 	}
 endif;
