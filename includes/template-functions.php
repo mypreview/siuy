@@ -11,7 +11,7 @@
  *
  * @param array $classes Classes for the body element.
  * @return array
- * @since 1.0.0
+ * @since 1.1.0
  */
 function siuy_body_classes($classes)
 
@@ -23,7 +23,7 @@ function siuy_body_classes($classes)
 	// Adds a class of sidebar layout to all pages.
 	if (is_active_sidebar('sidebar')):
 		$layout_sidebar = get_theme_mod('siuy_layout_sidebar', 'right-sidebar');
-		if (!empty($layout_sidebar)):
+		if (!empty($layout_sidebar) && ! Siuy::is_fluid_template()):
 			$classes[] = esc_attr($layout_sidebar);
 		endif;
 	else:
