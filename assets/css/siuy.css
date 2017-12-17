@@ -336,7 +336,11 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.main-navigation .nav-menu .sub-menu li > a {
+.main-navigation .nav-menu .sub-menu li > a,
+.c-offcanvas > .siuy-slinky-menu ul > li.current-menu-parent > a,
+.c-offcanvas > .siuy-slinky-menu ul > li.current-menu-item > a,
+.c-offcanvas > .siuy-slinky-menu ul > li > a:focus,
+.c-offcanvas > .siuy-slinky-menu ul > li > a:hover {
     color: #63574C;
 }
 .post-navigation .nav-links a,
@@ -357,6 +361,18 @@ input[type="submit"],
 .main-navigation .nav-menu li > a,
 .siuy-posts-widget .entry-date {
 	color: #d4d4d4;
+}
+.main-navigation .nav-menu > li:hover > a,
+.main-navigation .nav-menu > li > a:hover,
+.main-navigation .nav-menu > li.current-menu-parent > a,
+.main-navigation .nav-menu > li.current-menu-item > a {
+    color: #454545;
+}
+.wp-caption-text,
+.comments-area .comment-list .reply > a,
+.comment-list .comment-meta .comment-metadata .edit-link .comment-edit-link,
+.content-area .site-main article .entry-footer {
+    color: #666666;
 }
 blockquote> p,
 .content-area .site-main article .entry-content {
@@ -407,6 +423,17 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     line-height: normal;
+}
+.wp-caption-text,
+.comment-list .comment-content,
+.comments-area .comment-list .reply > a,
+.comment-list .comment-meta .comment-metadata .edit-link .comment-edit-link,
+.comment-list .comment-meta .comment-metadata time,
+.comment-list .comment-author span.says,
+.comment-list .comment-author b.fn,
+.comment-list .comment-author a,
+.content-area .site-main article .entry-footer {
+    letter-spacing: 0;
 }
 body:not(.single) .content-area .site-main article .entry-content,
 .mc4wp-form-fields input[name="EMAIL"],
@@ -490,6 +517,13 @@ textarea,
 h6 {
     font-size: 14px;
     font-size: 0.875rem;
+}
+kbd,
+tt,
+var,
+pre {
+	font-size: 15px;
+    font-size: 0.9375rem;
 }
 table td,
 .comments-area > .comments-title,
@@ -596,6 +630,10 @@ h5,
 h6 {
     font-weight: 600;
 }
+.mc4wp-form-fields input[name="EMAIL"],
+select {
+    font-weight: bold;
+}
 .post-navigation .nav-links a,
 .main-navigation .nav-menu li > a,
 .content-area .site-main article .entry-meta .byline,
@@ -641,8 +679,6 @@ address {
 pre {
     background: #eee;
     font-family: "Courier 10 Pitch", Courier, monospace;
-    font-size: 15px;
-    font-size: 0.9375rem;
     line-height: 1.6;
     margin-bottom: 1.6em;
     max-width: 100%;
@@ -655,8 +691,6 @@ kbd,
 tt,
 var {
     font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-    font-size: 15px;
-    font-size: 0.9375rem;
 }
 abbr,
 acronym {
@@ -678,22 +712,10 @@ big {
     color: #a89b8e;
     transition: color 170ms ease-in-out;
 }
-.c-offcanvas > .siuy-slinky-menu ul > li.current-menu-parent > a,
-.c-offcanvas > .siuy-slinky-menu ul > li.current-menu-item > a,
-.c-offcanvas > .siuy-slinky-menu ul > li > a:focus,
-.c-offcanvas > .siuy-slinky-menu ul > li > a:hover {
-    color: #63574C;
-}
 .main-navigation .nav-menu li > a {
     background-color: transparent;
     letter-spacing: 1.7px;
     transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
-}
-.main-navigation .nav-menu > li:hover > a,
-.main-navigation .nav-menu > li > a:hover,
-.main-navigation .nav-menu > li.current-menu-parent > a,
-.main-navigation .nav-menu > li.current-menu-item > a {
-    color: #454545;
 }
 .main-navigation .nav-menu > li.current-menu-parent > a,
 .main-navigation .nav-menu > li.current-menu-item > a {
@@ -708,18 +730,10 @@ big {
 .content-area .site-main article .entry-meta .entry-date {
     color: #87878752;
 }
-.content-area .site-main article .entry-footer {
-    color: #666666;
-    letter-spacing: 0;
-}
 .content-area .site-main article .entry-title > a,
 .content-area .site-main article .entry-meta .byline a,
 .content-area .site-main article .entry-footer a {
     color: inherit;
-}
-.wp-caption-text {
-    color: #666666;
-    letter-spacing: 0;
 }
 .comments-area > .comments-title,
 .comments-area .comment-reply-title {
@@ -731,41 +745,13 @@ big {
     font-size: 70%;
     letter-spacing: 1.78px;
 }
-.comment-list .comment-author b.fn,
-.comment-list .comment-author a {
-    letter-spacing: 0;
-}
 .comment-list .comment-author span.says {
     color: #59595970;
-    letter-spacing: 0;
-}
-.comment-list .comment-meta .comment-metadata time {
-    letter-spacing: 0;
-}
-.comment-list .comment-meta .comment-metadata .edit-link .comment-edit-link {
-    color: #666666;
-    letter-spacing: 0;
-}
-.comments-area .comment-list .reply > a {
-    color: #666666;
-    letter-spacing: 0;
-}
-.comment-list .comment-content {
-    letter-spacing: 0;
 }
 .widget-title {
     color: #2F2F2F;
 }
-.mc4wp-form-fields input[name="EMAIL"] {
-    font-weight: bold;
-}
-.site-footer h4 {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 0;
-}
-.widget_calendar tbody #today,
-.site-footer h4 {
+.widget_calendar tbody #today {
     color: #FFFFFF;
 }
 .site-footer .site-info,
@@ -784,7 +770,6 @@ big {
     line-height: 34px;
 }
 select {
-    font-weight: bold;
     letter-spacing: 0.0714286em;
     line-height: 2.3;
 }
@@ -792,9 +777,218 @@ select {
     text-align: right;
 }
 @media (max-width: 63em) and (min-width: 50.5em) {
-	.single .post .entry-header .entry-title, h2 {
+	h1 {
+		font-size: 56px;
+		font-size: 3.5rem;
+	}
+	.single .post .entry-header .entry-title, 
+	h2 {
 		font-size: 40px;
 		font-size: 2.5rem;
+	}
+	blockquote, 
+	body:not(.single) .post .entry-header .entry-title, 
+	h3 {
+		font-size: 29px;
+		font-size: 1.812rem;
+	}
+	.site-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+	h4 {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+	blockquote cite, 
+	.content-area .site-main article .entry-content {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+	table th, 
+	.widget-title, 
+	.c-offcanvas > .siuy-slinky-menu ul > li > a, 
+	h5 {
+		font-size: 17px;
+		font-size: 1.065rem;
+	}
+	table td, 
+	.comments-area > .comments-title, 
+	.comments-area .comment-reply-title, 
+	body, 
+	optgroup {
+		font-size: 14.5px;
+		font-size: 0.910rem;
+	}
+	kbd,
+	tt,
+	var,
+	pre {
+		font-size: 14px;
+		font-size: 0.875rem;
+	}
+	.comment-list .comment-meta .comment-metadata time, 
+	.comment-list .comment-content, 
+	.siuy-posts-widget .entry-title > a, 
+	.widget_rss ul li .rssSummary, 
+	.widget_text .textwidget, 
+	.siuy-posts-widget .entry-content, 
+	.mc4wp-form-fields input[name="EMAIL"], 
+	.site-footer .widget-areas, 
+	.widget_nav_menu ul li, 
+	.widget_rss ul li, 
+	.widget_recent_entries ul li, 
+	.widget_recent_comments ul li, 
+	.widget_meta ul li, 
+	.widget_pages ul li, 
+	.widget_categories ul li, 
+	.widget_archive ul li, 
+	.comments-area label:focus, 
+	.screen-reader-text:focus, 
+	input, select, input[type="text"], 
+	input[type="email"], 
+	input[type="url"], 
+	input[type="password"], 
+	input[type="search"], 
+	input[type="number"], 
+	input[type="tel"], 
+	input[type="range"], 
+	input[type="date"], 
+	input[type="month"], 
+	input[type="week"], 
+	input[type="time"], 
+	input[type="datetime"], 
+	input[type="datetime-local"], 
+	input[type="color"], 
+	textarea, 
+	h6 {
+		font-size: 13px;
+		font-size: 0.812rem;
+	}
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.site-header .site-description,
+	.content-area .site-main article .entry-meta .byline,
+	.content-area .site-main article .entry-meta .entry-date,
+	.content-area .site-main article .entry-footer,
+	.wp-caption-text,
+	.comment-list .comment-meta .comment-metadata .edit-link .comment-edit-link,
+	.site-footer .site-info,
+	.site-footer .site-info a,
+	.main-navigation .nav-menu .sub-menu li > a {
+		font-size: 11px;
+		font-size: 0.688rem;
+	}
+}
+@media (max-width: 38.5em) {
+	h1 {
+		font-size: 56px;
+		font-size: 3.5rem;
+	}
+	h2 {
+		font-size: 40px;
+		font-size: 2.5rem;
+	}
+	.single .post .entry-header .entry-title {
+		font-size: 32px;
+		font-size: 2rem;
+	} 
+	body:not(.single) .post .entry-header .entry-title, 
+	h3 {
+		font-size: 29px;
+		font-size: 1.812rem;
+	}
+	.site-title {
+		font-size: 28px;
+		font-size: 1.75rem;
+	}
+	blockquote,
+	h4 {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+	blockquote cite, 
+	.content-area .site-main article .entry-content {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+	table th, 
+	.widget-title, 
+	.c-offcanvas > .siuy-slinky-menu ul > li > a, 
+	h5 {
+		font-size: 17px;
+		font-size: 1.065rem;
+	}
+	table td, 
+	.comments-area > .comments-title, 
+	.comments-area .comment-reply-title, 
+	body, 
+	optgroup {
+		font-size: 14.5px;
+		font-size: 0.910rem;
+	}
+	kbd,
+	tt,
+	var,
+	pre {
+		font-size: 14px;
+		font-size: 0.875rem;
+	}
+	.comment-list .comment-meta .comment-metadata time, 
+	.comment-list .comment-content, 
+	.siuy-posts-widget .entry-title > a, 
+	.widget_rss ul li .rssSummary, 
+	.widget_text .textwidget, 
+	.siuy-posts-widget .entry-content, 
+	.mc4wp-form-fields input[name="EMAIL"], 
+	.site-footer .widget-areas, 
+	.widget_nav_menu ul li, 
+	.widget_rss ul li, 
+	.widget_recent_entries ul li, 
+	.widget_recent_comments ul li, 
+	.widget_meta ul li, 
+	.widget_pages ul li, 
+	.widget_categories ul li, 
+	.widget_archive ul li, 
+	.comments-area label:focus, 
+	.screen-reader-text:focus, 
+	input, select, input[type="text"], 
+	input[type="email"], 
+	input[type="url"], 
+	input[type="password"], 
+	input[type="search"], 
+	input[type="number"], 
+	input[type="tel"], 
+	input[type="range"], 
+	input[type="date"], 
+	input[type="month"], 
+	input[type="week"], 
+	input[type="time"], 
+	input[type="datetime"], 
+	input[type="datetime-local"], 
+	input[type="color"], 
+	textarea, 
+	h6 {
+		font-size: 13px;
+		font-size: 0.812rem;
+	}
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.site-header .site-description,
+	.content-area .site-main article .entry-meta .byline,
+	.content-area .site-main article .entry-meta .entry-date,
+	.content-area .site-main article .entry-footer,
+	.wp-caption-text,
+	.comment-list .comment-meta .comment-metadata .edit-link .comment-edit-link,
+	.site-footer .site-info,
+	.site-footer .site-info a,
+	.main-navigation .nav-menu .sub-menu li > a {
+		font-size: 11px;
+		font-size: 0.688rem;
 	}
 }
 /*--------------------------------------------------------------
@@ -889,7 +1083,7 @@ blockquote> p {
 	margin-bottom: 0.95em;
     margin-top: 0.35em;
 }
-blockquote cite:before {
+cite:before {
     content: "- ";
 }
 blockquote:after {
@@ -2308,6 +2502,14 @@ span.readmore>a:hover .readmore-icon:after {
     .left-sidebar .content-area .site-main {
         padding-left: 2.65em;
     }
+}
+@media (max-width: 38.5em) {
+	.post .entry-footer {
+		display: grid;
+	}
+	.post-navigation .nav-links {
+		grid-template-columns: 1fr;
+	}
 }
 /*--------------------------------------------------------------
 ## Comments
