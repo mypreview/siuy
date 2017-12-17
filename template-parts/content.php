@@ -32,18 +32,22 @@
 
 	<div class="entry-content" itemprop="mainContentOfPage">
 		<?php
-		the_content(sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'siuy'),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		));
+		if (has_excerpt() && ! is_singular()):
+			the_excerpt();
+		else:
+			the_content(sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'siuy'),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			));
+		endif;
 
 		wp_link_pages(array(
 			'before' => '<div class="page-links">' . esc_html__('Pages:', 'siuy'),
