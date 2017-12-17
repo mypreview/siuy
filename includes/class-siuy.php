@@ -349,6 +349,16 @@ if (!class_exists('Siuy')):
 			endif;
 			echo 'itemscope="itemscope" itemtype="' . esc_attr($schema) . esc_attr($type) . '"';
 		}
+		/**
+		 * Query fluid template usage.
+		 *
+		 * @since 1.1.0
+		 */
+		public static function is_fluid_template()
+
+		{
+			return is_page_template('page-templates/template-fluid.php') ? true : false;
+		}
 	}
 endif;
 return new Siuy();
