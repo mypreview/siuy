@@ -14,6 +14,7 @@ if (!class_exists('Siuy_Posts_Widget')):
      * The posts widget class
      */
     class Siuy_Posts_Widget extends WP_Widget
+    
     {
         /**
          * Setup class.
@@ -152,16 +153,19 @@ if (!class_exists('Siuy_Posts_Widget')):
                 <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e('Title:', 'siuy'); ?>:</label>
                 <input type="text" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" value="<?php echo $title; ?>" class="widefat" />
             </p>
-            <select class="widefat" id="<?php echo esc_attr($this->get_field_id('post_orderby')); ?>" name="<?php echo esc_attr($this->get_field_name('post_orderby')); ?>">
-                <option value="none" <?php echo esc_attr(selected('post_orderby', 'none')); ?>><?php esc_html_e('None', 'siuy'); ?></option>
-                <option value="id" <?php echo esc_attr(selected('post_orderby', 'id')); ?>><?php esc_html_e('ID', 'siuy'); ?></option>
-                <option value="author" <?php echo esc_attr(selected('post_orderby', 'author')); ?>><?php esc_html_e('Author', 'siuy'); ?></option>
-                <option value="title" <?php echo esc_attr(selected('post_orderby', 'title')); ?>><?php esc_html_e('Title', 'siuy'); ?></option>
-                <option value="date" <?php echo esc_attr(selected('post_orderby', 'date')); ?>><?php esc_html_e('Date', 'siuy'); ?></option>
-                <option value="modified" <?php echo esc_attr(selected('post_orderby', 'modified')); ?>><?php esc_html_e('Modified', 'siuy'); ?></option>
-                <option value="rand" <?php echo esc_attr(selected('post_orderby', 'rand')); ?>><?php esc_html_e('Rand', 'siuy'); ?></option>
-                <option value="comment_count" <?php echo esc_attr(selected('post_orderby', 'comment_count')); ?>><?php esc_html_e('Comment Count', 'siuy'); ?></option>
-            </select>
+            <p>
+                <label for="<?php echo esc_attr($this->get_field_id('post_orderby')); ?>"><?php esc_html_e('Order by', 'siuy'); ?>:</label>
+                <select class="widefat" id="<?php echo esc_attr($this->get_field_id('post_orderby')); ?>" name="<?php echo esc_attr($this->get_field_name('post_orderby')); ?>">
+                    <option value="none" <?php echo esc_attr(selected($post_orderby, 'none')); ?>><?php esc_html_e('None', 'siuy'); ?></option>
+                    <option value="id" <?php echo esc_attr(selected($post_orderby, 'id')); ?>><?php esc_html_e('ID', 'siuy'); ?></option>
+                    <option value="author" <?php echo esc_attr(selected($post_orderby, 'author')); ?>><?php esc_html_e('Author', 'siuy'); ?></option>
+                    <option value="title" <?php echo esc_attr(selected($post_orderby, 'title')); ?>><?php esc_html_e('Title', 'siuy'); ?></option>
+                    <option value="date" <?php echo esc_attr(selected($post_orderby, 'date')); ?>><?php esc_html_e('Date', 'siuy'); ?></option>
+                    <option value="modified" <?php echo esc_attr(selected($post_orderby, 'modified')); ?>><?php esc_html_e('Modified', 'siuy'); ?></option>
+                    <option value="rand" <?php echo esc_attr(selected($post_orderby, 'rand')); ?>><?php esc_html_e('Rand', 'siuy'); ?></option>
+                    <option value="comment_count" <?php echo esc_attr(selected($post_orderby, 'comment_count')); ?>><?php esc_html_e('Comment Count', 'siuy'); ?></option>
+                </select>
+            </p>
             <p>
                 <input type="checkbox" id="<?php echo esc_attr($this->get_field_id('post_thumbnail')); ?>" name="<?php echo esc_attr($this->get_field_name('post_thumbnail')); ?>" <?php checked($post_thumbnail); ?> class="checkbox" />
                 <label for="<?php echo esc_attr($this->get_field_id('post_thumbnail')); ?>"><?php esc_html_e('Display post featured image?', 'siuy'); ?></label>
