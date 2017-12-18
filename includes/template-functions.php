@@ -23,7 +23,7 @@ function siuy_body_classes($classes)
 	// Adds a class of sidebar layout to all pages.
 	if (is_active_sidebar('sidebar')):
 		$layout_sidebar = get_theme_mod('siuy_layout_sidebar', 'right-sidebar');
-		if (!empty($layout_sidebar) && ! Siuy::is_fluid_template()):
+		if (!empty($layout_sidebar) && ! Siuy::is_fluid_template() && ! is_404()):
 			$classes[] = esc_attr($layout_sidebar);
 		endif;
 	else:
