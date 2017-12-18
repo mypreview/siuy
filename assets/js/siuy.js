@@ -27,6 +27,13 @@
  * navigation support for dropdown menus.
  */
 !function(){function e(){for(var e=this;-1===e.className.indexOf("nav-menu");)"li"===e.tagName.toLowerCase()&&(-1!==e.className.indexOf("focus")?e.className=e.className.replace(" focus",""):e.className+=" focus"),e=e.parentElement}var a,t,n,s,i,l;if((a=document.getElementById("site-navigation"))&&void 0!==(t=a.getElementsByTagName("button")[0]))if(void 0!==(n=a.getElementsByTagName("ul")[0])){for(n.setAttribute("aria-expanded","false"),-1===n.className.indexOf("nav-menu")&&(n.className+=" nav-menu"),i=0,l=(s=n.getElementsByTagName("a")).length;i<l;i++)s[i].addEventListener("focus",e,!0),s[i].addEventListener("blur",e,!0);!function(e){var a,t,n=e.querySelectorAll(".menu-item-has-children > a, .page_item_has_children > a");if("ontouchstart"in window)for(a=function(e){var a,t=this.parentNode;if(t.classList.contains("focus"))t.classList.remove("focus");else{for(e.preventDefault(),a=0;a<t.parentNode.children.length;++a)t!==t.parentNode.children[a]&&t.parentNode.children[a].classList.remove("focus");t.classList.add("focus")}},t=0;t<n.length;++t)n[t].addEventListener("touchstart",a,!1)}(a)}else t.style.display="none"}();
+/*!
+* FitVids 1.1
+* Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+* Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+* Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+*/
+!function(t){"use strict";t.fn.fitVids=function(e){var i={customSelector:null,ignore:null};if(!document.getElementById("fit-vids-style")){var r=document.head||document.getElementsByTagName("head")[0],a=".fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}",d=document.createElement("div");d.innerHTML='<p>x</p><style id="fit-vids-style">'+a+"</style>",r.appendChild(d.childNodes[1])}return e&&t.extend(i,e),this.each(function(){var e=['iframe[src*="player.vimeo.com"]','iframe[src*="youtube.com"]','iframe[src*="youtube-nocookie.com"]','iframe[src*="kickstarter.com"][src*="video.html"]',"object","embed"];i.customSelector&&e.push(i.customSelector);var r=".fitvidsignore";i.ignore&&(r=r+", "+i.ignore);var a=t(this).find(e.join(","));a=a.not("object object"),a=a.not(r),a.each(function(){var e=t(this);if(!(e.parents(r).length>0||"embed"===this.tagName.toLowerCase()&&e.parent("object").length||e.parent(".fluid-width-video-wrapper").length)){e.css("height")||e.css("width")||!isNaN(e.attr("height"))&&!isNaN(e.attr("width"))||(e.attr("height",9),e.attr("width",16));var i="object"===this.tagName.toLowerCase()||e.attr("height")&&!isNaN(parseInt(e.attr("height"),10))?parseInt(e.attr("height"),10):e.height(),a=isNaN(parseInt(e.attr("width"),10))?e.width():parseInt(e.attr("width"),10),d=i/a;if(!e.attr("name")){var o="fitvid"+t.fn.fitVids._count;e.attr("name",o),t.fn.fitVids._count++}e.wrap('<div class="fluid-width-video-wrapper"></div>').parent(".fluid-width-video-wrapper").css("padding-top",100*d+"%"),e.removeAttr("height").removeAttr("width")}})})},t.fn.fitVids._count=0}(window.jQuery||window.Zepto);
 /**
  * Siuy scripts & custom methods
  *
@@ -37,7 +44,9 @@
 (function(window, $, undefined) {
     'use strict';
 
-    // Initializing accesible offcanvas panel and slinky nav
+    /* -------------------------------------------------------- /*
+     * Initializing accesible offcanvas panel and slinky nav
+    /* -------------------------------------------------------- */
     if (('#right.siuy-offcanvas').length > 0) {
 		$(document).trigger('enhance');
 	    $('#right.siuy-offcanvas').offcanvas({
@@ -56,7 +65,9 @@
 	    }
     }
 
-    // if adminbar exist (should check for visible?) then add margin to offcanvas panel
+    /* --------------------------------------------------------------------------------- /*
+     * If adminbar exist (should check for visible?) then add margin to offcanvas panel
+    /* --------------------------------------------------------------------------------- */
     $(window).on('load resize scroll', function() {
         var navbar = $('.siuy-offcanvas'),
             width = Math.max($(window).width(), window.innerWidth),
@@ -72,5 +83,12 @@
             }
         }
     });
+
+    /* ---------------------------------------------- /*
+     * Fluid width video embeds.
+    /* ---------------------------------------------- */
+	if($('iframe[src*="youtube"]').length > 0 || $('iframe[src*="vimeo"]').length > 0) {
+		$('iframe[src*="youtube"], iframe[src*="vimeo"]').parent().fitVids();
+	}
 
 })(this, jQuery);
