@@ -11,9 +11,15 @@
 	<header class="entry-header">
 		<?php if (has_post_thumbnail() && ! post_password_required() && ! is_attachment()): ?>
 		<div class="entry-thumb">
+			<?php if (! is_singular()): ?>
 			<a href="<?php the_permalink(); ?>" target="_self">
-				<?php the_post_thumbnail('siuy-featured-image', array('itemprop' => 'image')); ?>
+			<?php 
+			endif;
+			the_post_thumbnail('siuy-featured-image', array('itemprop' => 'image'));
+			if (! is_singular()):
+			?>
 			</a>
+			<?php endif; ?>
 		</div><!-- .entry-thumb -->
 		<?php 
 		endif;
