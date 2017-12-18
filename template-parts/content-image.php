@@ -15,15 +15,18 @@
 		$get_images = get_media_embedded_in_content(apply_filters('the_content', get_the_content()), array('img'));
 		if ((has_post_thumbnail() || !empty($get_images)) && ! post_password_required() && ! is_attachment()): ?>
 		<div class="entry-thumb">
+			<?php if (! is_singular()): ?>
 			<a href="<?php the_permalink(); ?>" target="_self">
-				<?php 
-				if (has_post_thumbnail()):
-					the_post_thumbnail('siuy-featured-image', array('itemprop' => 'image')); 
-				elseif (!has_post_thumbnail() && !empty($get_images)):
-					echo $get_images[0];
-				endif;
-				?>
+			<?php
+			if (has_post_thumbnail()):
+				the_post_thumbnail('siuy-featured-image', array('itemprop' => 'image')); 
+			elseif (!has_post_thumbnail() && !empty($get_images)):
+				echo $get_images[0];
+			endif;
+			if (! is_singular()):
+			?>
 			</a>
+			<?php endif; ?>
 		</div><!-- .entry-thumb -->
 		<?php 
 		endif;
