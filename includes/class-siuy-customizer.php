@@ -69,7 +69,7 @@ if (!class_exists('Siuy_Customizer')):
 
 		{
 			// Load Customizer custom controls.
-			require_once dirname(__FILE__) . '/class-siuy-customizer-custom-controls.php';
+			require get_parent_theme_file_path('/class-siuy-customizer-custom-controls.php');
 			/**
 			 * "Site Identity" section
 			 * Hide site title
