@@ -260,6 +260,7 @@ budy:not(.single) .content-area .site-main article .entry-content,
 .comments-area .comment-list .reply > a,
 .comment-list .comment-content,
 .widget-title,
+.widgettitle,
 .siuy-posts-widget .entry-title > a,
 .siuy-posts-widget .entry-date,
 .siuy-posts-widget .entry-content > a.readmore,
@@ -283,21 +284,7 @@ budy:not(.single) .content-area .site-main article .entry-content,
 select,
 textarea,
 button,
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
+label,
 input,
 h5 {
     font-family: 'Lato', Helvetica, Arial, sans-serif;
@@ -322,23 +309,9 @@ h6 {
     color: #000000;
 }
 input,
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
 select,
 textarea,
+.site-footer .widgettitle,
 .site-footer .widget-title,
 .content-area .site-main article .entry-content,
 .comment-list .comment-author a,
@@ -519,21 +492,7 @@ input[type="submit"],
 .screen-reader-text:focus,
 input,
 select,
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
+label,
 textarea,
 h6 {
     font-size: 14px;
@@ -555,6 +514,7 @@ optgroup {
     font-size: 1rem;
 }
 table th,
+.widgettitle,
 .widget-title,
 .c-offcanvas > .siuy-slinky-menu ul > li > a,
 h5 {
@@ -616,25 +576,9 @@ body:(.single) .post .entry-header .entry-title,
 }
 input,
 .slinky-menu a span,
+.widgettitle,
 .widget-title,
-.siuy-posts-widget .entry-date,
-select,
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
-textarea {
+.siuy-posts-widget .entry-date {
     font-weight: 500;
 }
 .post-navigation .nav-links a,
@@ -643,6 +587,7 @@ textarea {
 .content-area .site-main article .entry-meta .entry-date,
 .siuy-posts-widget .entry-date,
 .siuy-posts-widget .entry-title > a,
+.site-footer .widgettitle,
 .site-footer .widget-title,
 .content-area .site-main article .entry-footer > span.readmore > a,
 .siuy-posts-widget .entry-content > a.readmore,
@@ -769,6 +714,7 @@ big {
 .comment-list .comment-author span.says {
     color: #59595970;
 }
+.widgettitle,
 .widget-title {
     color: #2F2F2F;
 }
@@ -827,6 +773,7 @@ select {
 		font-size: 1.125rem;
 	}
 	table th, 
+	.widgettitle, 
 	.widget-title, 
 	.c-offcanvas > .siuy-slinky-menu ul > li > a, 
 	h5 {
@@ -936,6 +883,7 @@ select {
 		font-size: 1.125rem;
 	}
 	table th, 
+	.widgettitle, 
 	.widget-title, 
 	.c-offcanvas > .siuy-slinky-menu ul > li > a, 
 	h5 {
@@ -1135,11 +1083,11 @@ input[type="submit"] {
     border: none;
     min-width: 8.4em;
     outline: none;
-    padding: 5px 15px;
+    padding: 5px 30px;
     height: 4.2em;
 	-webkit-transition: all .23s ease;
 	transition: all .23s ease;
-    background: linear-gradient(to left, #EDEAE7 50%, #D4D4D4 50%);
+    background: linear-gradient(to left, #EDEAE7 50%, #d6cfc7 50%);
     background-size: 200% 100%;
     background-position: right bottom;
 }
@@ -1181,7 +1129,7 @@ input[type="color"] {
 }
 textarea {
     border: 1px solid #EBEBEB;
-    padding: 25px 30px;
+    padding: 25px 18px;
     resize: vertical;
     transition: all 0.3s ease;
     width: 100%;
@@ -1211,7 +1159,7 @@ select {
     appearance: none;
     background-color: transparent;
     background-image: linear-gradient(45deg, transparent 50%, #979797 50%), linear-gradient(135deg, #979797 50%, transparent 50%), linear-gradient(to right, #ffffff00, #ffffff00);
-    background-position: calc(99.8% - 4.5px) calc(1em + 2px), calc(99.9% - 0px) calc(1em + 2px), 100% 0;
+    background-position: calc(99.8% - 3.5px) calc(1em + 2px), calc(99.9% - 0px) calc(1em + 2px), 100% 0;
     background-repeat: no-repeat;
     background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
     border-bottom-color: #979797;
@@ -1221,6 +1169,32 @@ select {
     outline: none;
     padding: 0 0 15px;
     width: 100%;
+}
+input[type="checkbox"] {
+	position: relative;
+    appearance: none !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    border: solid 1px #a89b8e;
+    width: 20px !important;
+    height: 20px;
+    margin-right: 3px;
+    vertical-align: middle;
+    margin-top: -4px;
+	outline: none;
+	transition: all 0.3s ease;
+}
+input[type="checkbox"]:checked {
+	background-color: #a89b8e;
+}
+input[type="checkbox"]:checked::before {
+	position: absolute;
+    content: '\2714';
+    font-size: 15px;
+    line-height: 1.33;
+    color: #fff;
+    width: 100%;
+    transform: translateX(20%);
 }
 /*--------------------------------------------------------------
 ## Links
@@ -2060,6 +2034,7 @@ a:focus {
     max-width: 100%;
 	margin-bottom: 0.55em;
 }
+#secondary .widgettitle,
 #secondary .widget-title {
     margin-bottom: 1.7em;
     margin-top: 0;
@@ -2264,6 +2239,7 @@ body.blog.no-sidebar #content.site-content {
 @media screen and (min-width: 50.5em) {
 	#content.site-content {
 		margin-top: 4.65em;
+		margin-bottom: 7.7em;
 	}
 	#masthead+#content:before {
 		margin-top: -4.65em;
@@ -2271,7 +2247,7 @@ body.blog.no-sidebar #content.site-content {
 	.left-sidebar #content.site-content,
     .right-sidebar #content.site-content {
 		display: grid;
-		grid-gap: 60px;
+		grid-gap: 0 60px;
 	}
     .right-sidebar #content.site-content {
         grid-template-columns: 1fr minmax(284px, 284px);
@@ -2309,7 +2285,7 @@ body.blog.no-sidebar #content.site-content {
 @media screen and (max-width: 65.5em) and (min-width: 50.5em) {
     .right-sidebar #content.site-content,
     .left-sidebar #content.site-content {
-        grid-gap: 40px;
+        grid-gap: 0 40px;
     }
     .right-sidebar #content.site-content {
         grid-template-columns: 1fr minmax(220px, 220px);
@@ -2321,6 +2297,7 @@ body.blog.no-sidebar #content.site-content {
 @media screen and (max-width: 50.5em) {
 	#content.site-content {
 		margin-top: 2.85em;
+		margin-bottom: 4.65em;
 	}
 	#masthead+#content:before {
 		margin-top: -2.85em;
@@ -2330,6 +2307,9 @@ body.blog.no-sidebar #content.site-content {
 ## Posts and pages
 --------------------------------------------------------------*/
 
+.page-header .page-title {
+	margin-top: 0;
+}
 .sticky {
     display: block;
 }
@@ -2534,6 +2514,7 @@ span.readmore>a:hover .readmore-icon:after {
 .comments-area #commentform p:not(.form-submit) {
     margin-bottom: 0;
 }
+.comment-subscription-form,
 .comments-area #commentform .form-submit,
 .comments-area #commentform .comment-form-comment,
 .comments-area #commentform .comment-notes {
@@ -2639,6 +2620,10 @@ span.readmore>a:hover .readmore-icon:after {
     top: 0;
     width: 1px;
 }
+.comments-area input[type="checkbox"]+label {
+	clip-path: inherit;
+	position: relative !important;
+}
 @media screen and (min-width: 37.5em) {
     .comments-area .comment-list .comment-author .fn {
         margin-left: 38px;
@@ -2701,6 +2686,7 @@ span.readmore>a:hover .readmore-icon:after {
 .site-footer .mc4wp-form-fields:-moz-placeholder {
     color: #595959;
 }
+.site-footer .widgettitle,
 .site-footer .widget-title {
     margin-bottom: 1.58em;
     margin-top: 0;
@@ -2840,4 +2826,42 @@ object {
 }
 .gallery-caption {
     display: block;
+}
+/*--------------------------------------------------------------
+## 404 Page
+--------------------------------------------------------------*/
+.error-404.not-found .widget-title,
+.error-404.not-found .widgettitle {
+	margin-top: 0;
+}
+.error-404.not-found .page-content {
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+	"desc-404 recent-entries-404" 
+	"search-404 recent-entries-404" 
+	"archive-404 categories-404" 
+	"tags-404 categories-404";
+    grid-gap: 1em 5em;
+	grid-template-rows: max-content;
+}
+.error-404.not-found .page-content>p:first-of-type {
+	grid-area: desc-404;
+	margin: 0;
+}
+.error-404.not-found .page-content>.search-form {
+	align-items: flex-start;
+	grid-area: search-404;
+}
+.error-404.not-found .page-content>.widget_recent_entries {
+	grid-area: recent-entries-404;
+}
+.error-404.not-found .page-content>.widget_archive {
+	grid-area: archive-404;
+}
+.error-404.not-found .page-content>.widget_categories {
+	grid-area: categories-404;
+}
+.error-404.not-found .page-content>.widget_tag_cloud {
+	grid-area: tags-404;
 }
