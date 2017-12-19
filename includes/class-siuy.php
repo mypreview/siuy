@@ -99,8 +99,7 @@ if (!class_exists('Siuy')):
 			* @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 			*/
 			add_theme_support('post-thumbnails');
-			add_image_size('siuy-featured-image', 793, 400, true);
-			add_image_size('siuy-posts-widget-featured-image', 284, 200, true);
+			add_image_size('siuy-featured-image-posts-widget', 284, 200, true);
 			// This theme uses wp_nav_menu() in one location.
 			register_nav_menus(array(
 				'primary-menu' => __('Primary', 'siuy')
