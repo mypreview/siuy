@@ -81,7 +81,7 @@ if (!class_exists('Siuy_Posts_Widget')):
                             ?>
                             <div class="entry-thumb">
                                 <a href="<?php the_permalink(); ?>" target="_self">
-                                    <?php the_post_thumbnail('siuy-posts-widget-featured-image', array('itemprop' => 'image')); ?>
+                                    <?php the_post_thumbnail('siuy-featured-image-posts-widget', array('itemprop' => 'image')); ?>
                                 </a>
                             </div><!-- .entry-thumb -->
                             <?php
