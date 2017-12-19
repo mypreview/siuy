@@ -123,12 +123,14 @@ if (!class_exists('Siuy')):
 			*/
 			add_theme_support('post-formats', array(
 				'aside',
-				'image',
-				'video',
-				'quote',
-				'link',
+				'audio',
+				'chat',
 				'gallery',
-				'audio'
+				'image',
+				'link',
+				'quote',
+				'status',
+				'video'
 			));
 			/**
 			 * Enable support for site logo
