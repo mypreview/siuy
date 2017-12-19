@@ -50,8 +50,8 @@ endif;
 		if (get_comment_pages_count() > 1 && get_option('page_comments')): ?>
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation" aria-label="<?php esc_html_e('Comment Navigation Above', 'siuy'); ?>">
 			<span class="screen-reader-text"><?php esc_html_e('Comment navigation', 'siuy'); ?></span>
-			<div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments', 'siuy')); ?></div>
-			<div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'siuy')); ?></div>
+			<div class="nav-previous"><?php previous_comments_link(__('Older Comments', 'siuy')); ?></div>
+			<div class="nav-next"><?php next_comments_link(__('Newer Comments', 'siuy')); ?></div>
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // Check for comment navigation. ?>
 
@@ -70,8 +70,8 @@ endif;
 		if (get_comment_pages_count() > 1 && get_option('page_comments')): ?>
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation" aria-label="<?php esc_html_e('Comment Navigation Above', 'siuy'); ?>">
 			<span class="screen-reader-text"><?php esc_html_e('Comment navigation', 'siuy'); ?></span>
-			<div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments', 'siuy')); ?></div>
-			<div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'siuy')); ?></div>
+			<div class="nav-previous"><?php previous_comments_link(__('Older Comments', 'siuy')); ?></div>
+			<div class="nav-next"><?php next_comments_link(__('Newer Comments', 'siuy')); ?></div>
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // Check for comment navigation.
 
