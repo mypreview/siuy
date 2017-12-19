@@ -1,36 +1,17 @@
 <?php
 /**
- * Template part for displaying image posts
+ * The template for displaying posts in the `Chat` post format
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @link 	https://developer.wordpress.org/reference/functions/get_media_embedded_in_content/
  * @package Siuy
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
 	<header class="entry-header">
 		<?php 
-		// A list of found HTML images.
-		$get_images = get_media_embedded_in_content(apply_filters('the_content', get_the_content()), array('img'));
-		if ((has_post_thumbnail() || !empty($get_images)) && ! post_password_required() && ! is_attachment()): ?>
-		<div class="entry-thumb">
-			<?php if (! is_singular()): ?>
-			<a href="<?php the_permalink(); ?>" target="_self">
-			<?php
-			endif;
-			if (has_post_thumbnail()):
-				the_post_thumbnail('siuy-featured-image', array('itemprop' => 'image')); 
-			elseif (!has_post_thumbnail() && !empty($get_images)):
-				echo $get_images[0];
-			endif;
-			if (! is_singular()):
-			?>
-			</a>
-			<?php endif; ?>
-		</div><!-- .entry-thumb -->
-		<?php 
-		endif;
+		siuy_post_thumbnail();
+		
 		if (is_singular()):
 			the_title('<h1 class="entry-title" itemprop="headline">', '</h1>');
 		else:
@@ -43,8 +24,6 @@
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php if (is_singular()): ?>
 
 	<div class="entry-content" itemprop="mainContentOfPage">
 		<?php
@@ -68,15 +47,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<?php endif; ?>
-
 	<footer class="entry-footer">
-		<?php
-		$posted_readmore = true; 
-		if (! has_excerpt() && ! is_singular()):
-			$posted_readmore = false;
-		endif;
-		siuy_entry_footer($posted_categories = true, $posted_tags = true, $posted_comments = true, $posted_readmore); 
-		?>
+		<?php siuy_entry_footer($posted_categories = true, $posted_tags = true, $posted_comments = true, $posted_readmore = false);  ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
