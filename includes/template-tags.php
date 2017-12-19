@@ -103,7 +103,7 @@ if (!function_exists('siuy_post_thumbnail')):
 		?>
 
 		<div class="entry-thumb">
-			<?php the_post_thumbnail(array('itemprop' => 'image')); ?>
+			<?php the_post_thumbnail('post-thumbnail', array('itemprop' => 'image')); ?>
 		</div><!-- .entry-thumb -->
 
 		<?php else: ?>
