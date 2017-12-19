@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * The template for displaying posts in the `Quote` post format.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -9,21 +9,7 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
 	<header class="entry-header">
-		<?php if (has_post_thumbnail() && ! post_password_required() && ! is_attachment()): ?>
-		<div class="entry-thumb">
-			<a href="<?php the_permalink(); ?>" target="_self">
-				<?php the_post_thumbnail('siuy-featured-image', array('itemprop' => 'image')); ?>
-			</a>
-		</div><!-- .entry-thumb -->
-		<?php 
-		endif;
-		if (is_singular()):
-			the_title('<h1 class="entry-title" itemprop="headline">', '</h1>');
-		else:
-			the_title('<h2 class="entry-title" itemprop="headline"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
-		endif;
-
-		if ('post' === get_post_type()): ?>
+		<?php if ('post' === get_post_type()): ?>
 		<div class="entry-meta">
 			<?php siuy_posted_on(); ?>
 		</div><!-- .entry-meta -->
@@ -67,12 +53,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php
-		$posted_readmore = true; 
-		if (! has_excerpt() && ! is_singular()):
-			$posted_readmore = false;
-		endif;
-		siuy_entry_footer($posted_categories = true, $posted_tags = true, $posted_comments = true, $posted_readmore); 
-		?>
+		<?php siuy_entry_footer($posted_categories = true, $posted_tags = true, $posted_comments = true, $posted_readmore = false); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
