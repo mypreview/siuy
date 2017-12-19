@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Siuy\n"
-"POT-Creation-Date: 2017-12-19 08:23+0400\n"
-"PO-Revision-Date: 2017-12-19 08:23+0400\n"
+"POT-Creation-Date: 2017-12-19 21:25+0400\n"
+"PO-Revision-Date: 2017-12-19 21:25+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -65,11 +65,11 @@ msgid "Comment navigation"
 msgstr ""
 
 #: comments.php:53 comments.php:73
-msgid "&larr; Older Comments"
+msgid "Older Comments"
 msgstr ""
 
 #: comments.php:54 comments.php:74
-msgid "Newer Comments &rarr;"
+msgid "Newer Comments"
 msgstr ""
 
 #: comments.php:80
@@ -205,50 +205,50 @@ msgstr ""
 msgid "Number of posts to show:"
 msgstr ""
 
-#: includes/class-siuy.php:106
+#: includes/class-siuy.php:105
 msgid "Primary"
 msgstr ""
 
-#: includes/class-siuy.php:163
+#: includes/class-siuy.php:162
 msgid "Default Header Image"
 msgstr ""
 
-#: includes/class-siuy.php:213
+#: includes/class-siuy.php:212
 msgid "Sidebar"
 msgstr ""
 
-#: includes/class-siuy.php:215
+#: includes/class-siuy.php:214
 msgid "Widgets added to this region will appear in archive pages."
 msgstr ""
 
-#: includes/class-siuy.php:223
+#: includes/class-siuy.php:222
 #, php-format
 msgid "Footer %d"
 msgstr ""
 
-#: includes/class-siuy.php:225
+#: includes/class-siuy.php:224
 #, php-format
 msgid "Widgetized Footer Area %d."
 msgstr ""
 
-#: includes/class-siuy.php:292
+#: includes/class-siuy.php:291
 msgctxt "cardo_and_lato font: on or off"
 msgid "on"
 msgstr ""
 
-#: includes/template-functions.php:82
+#: includes/template-functions.php:99
 msgid "Write a comment..."
 msgstr ""
 
-#: includes/template-functions.php:97
+#: includes/template-functions.php:114
 msgid "Name"
 msgstr ""
 
-#: includes/template-functions.php:98
+#: includes/template-functions.php:115
 msgid "E-mail"
 msgstr ""
 
-#: includes/template-functions.php:99
+#: includes/template-functions.php:116
 msgid "Website"
 msgstr ""
 
@@ -308,16 +308,20 @@ msgid "Search Results for: %s"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-audio.php:42 template-parts/content-image.php:53
-#: template-parts/content-quote.php:51 template-parts/content-video.php:42
-#: template-parts/content.php:47
+#: template-parts/content-aside.php:24 template-parts/content-audio.php:33
+#: template-parts/content-chat.php:33 template-parts/content-gallery.php:34
+#: template-parts/content-link.php:29 template-parts/content-quote.php:37
+#: template-parts/content-status.php:24 template-parts/content-video.php:33
+#: template-parts/content.php:36
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: template-parts/content-audio.php:53 template-parts/content-image.php:64
-#: template-parts/content-page.php:22 template-parts/content-quote.php:63
-#: template-parts/content-video.php:53 template-parts/content.php:59
+#: template-parts/content-aside.php:35 template-parts/content-audio.php:44
+#: template-parts/content-chat.php:44 template-parts/content-gallery.php:44
+#: template-parts/content-link.php:40 template-parts/content-page.php:22
+#: template-parts/content-quote.php:49 template-parts/content-status.php:35
+#: template-parts/content-video.php:44 template-parts/content.php:48
 msgid "Pages:"
 msgstr ""
 
