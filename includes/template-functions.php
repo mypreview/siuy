@@ -33,6 +33,24 @@ function siuy_body_classes($classes)
 }
 add_filter('body_class', 'siuy_body_classes', 10, 1);
 /**
+ * Adds an `∞` character at the end of the post 
+ * that links to the post permalink.
+ *
+ * @link 		http://justintadlock.com/archives/2012/09/06/post-formats-aside
+ * @return 		string
+ * @since 	    1.1.0
+ */
+function siuy_aside_to_infinity_and_beyond($content) 
+
+{
+	if (has_post_format('aside') && !is_singular()):
+		$content .= ' <a href="' . esc_url(get_permalink()) . '">&#8734;</a>';
+	endif;
+
+	return $content;
+}
+add_filter('the_content', 'siuy_aside_to_infinity_and_beyond', 9);
+/**
  * Accesible offcanvas panel.
  *
  * @return 		void
@@ -54,7 +72,7 @@ add_action('siuy_before_page_content', 'siuy_offcanvas', 10);
  * Sample implementation of the Custom Header feature.
  *
  * @return 		void
- * @since 	    1.0.0
+ * @since 	    1.1.0
  */
 function siuy_header_image()
 
