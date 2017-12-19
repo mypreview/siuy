@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Siuy\n"
-"POT-Creation-Date: 2017-12-12 19:06+0400\n"
-"PO-Revision-Date: 2017-12-12 19:06+0400\n"
+"POT-Creation-Date: 2017-12-19 08:23+0400\n"
+"PO-Revision-Date: 2017-12-19 08:23+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -56,7 +56,23 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:64
+#: comments.php:51 comments.php:71
+msgid "Comment Navigation Above"
+msgstr ""
+
+#: comments.php:52 comments.php:72
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:53 comments.php:73
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:54 comments.php:74
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:80
 msgid "Comments are closed."
 msgstr ""
 
@@ -88,92 +104,104 @@ msgid ""
 "Please upgrade and try again."
 msgstr ""
 
-#: includes/class-siuy-customizer.php:80
+#: includes/class-siuy-customizer.php:85
+msgid "Hide Site Tagline"
+msgstr ""
+
+#: includes/class-siuy-customizer.php:86
+msgid "This checkbox will hide the site tagline from view."
+msgstr ""
+
+#: includes/class-siuy-customizer.php:105
 msgid "Layout"
 msgstr ""
 
-#: includes/class-siuy-customizer.php:93
+#: includes/class-siuy-customizer.php:118
 msgid "General Layout"
 msgstr ""
 
-#: includes/class-siuy-customizer.php:94
+#: includes/class-siuy-customizer.php:119
 msgid "Reposition sidebar area from right to left or vice versa."
 msgstr ""
 
-#: includes/class-siuy-posts-widget.php:26
+#: includes/class-siuy-posts-widget.php:27
 msgid "Posts"
 msgstr ""
 
-#: includes/class-siuy-posts-widget.php:29
+#: includes/class-siuy-posts-widget.php:30
 msgid ""
 "A simple widget that displays blog posts with a few additional adjustments."
 msgstr ""
 
-#: includes/class-siuy-posts-widget.php:109 includes/template-tags.php:78
+#: includes/class-siuy-posts-widget.php:110 includes/template-tags.php:78
 msgid "Read more"
 msgstr ""
 
-#: includes/class-siuy-posts-widget.php:152
+#: includes/class-siuy-posts-widget.php:153
 msgid "Title:"
 msgstr ""
 
-#: includes/class-siuy-posts-widget.php:156
-msgid "None"
-msgstr ""
-
 #: includes/class-siuy-posts-widget.php:157
-msgid "ID"
-msgstr ""
-
-#: includes/class-siuy-posts-widget.php:158
-msgid "Author"
+msgid "Order by"
 msgstr ""
 
 #: includes/class-siuy-posts-widget.php:159
-msgid "Title"
+msgid "None"
 msgstr ""
 
 #: includes/class-siuy-posts-widget.php:160
-msgid "Date"
+msgid "ID"
 msgstr ""
 
 #: includes/class-siuy-posts-widget.php:161
-msgid "Modified"
+msgid "Author"
 msgstr ""
 
 #: includes/class-siuy-posts-widget.php:162
-msgid "Rand"
+msgid "Title"
 msgstr ""
 
 #: includes/class-siuy-posts-widget.php:163
+msgid "Date"
+msgstr ""
+
+#: includes/class-siuy-posts-widget.php:164
+msgid "Modified"
+msgstr ""
+
+#: includes/class-siuy-posts-widget.php:165
+msgid "Rand"
+msgstr ""
+
+#: includes/class-siuy-posts-widget.php:166
 msgid "Comment Count"
 msgstr ""
 
-#: includes/class-siuy-posts-widget.php:167
+#: includes/class-siuy-posts-widget.php:171
 msgid "Display post featured image?"
 msgstr ""
 
-#: includes/class-siuy-posts-widget.php:171
+#: includes/class-siuy-posts-widget.php:175
 msgid "Show post title?"
 msgstr ""
 
-#: includes/class-siuy-posts-widget.php:175
+#: includes/class-siuy-posts-widget.php:179
 msgid "Show post date?"
 msgstr ""
 
-#: includes/class-siuy-posts-widget.php:179
+#: includes/class-siuy-posts-widget.php:183
 msgid "Show post read more link?"
 msgstr ""
 
-#: includes/class-siuy-posts-widget.php:183
+#: includes/class-siuy-posts-widget.php:187
 msgid "Show post excerpt?"
 msgstr ""
 
-#: includes/class-siuy-posts-widget.php:186
+#: includes/class-siuy-posts-widget.php:190
 msgid "Excerpt length (words):"
 msgstr ""
 
-#: includes/class-siuy-posts-widget.php:190
+#: includes/class-siuy-posts-widget.php:194
 msgid "Number of posts to show:"
 msgstr ""
 
@@ -181,29 +209,29 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-#: includes/class-siuy.php:160
+#: includes/class-siuy.php:163
 msgid "Default Header Image"
 msgstr ""
 
-#: includes/class-siuy.php:201
+#: includes/class-siuy.php:213
 msgid "Sidebar"
 msgstr ""
 
-#: includes/class-siuy.php:203
+#: includes/class-siuy.php:215
 msgid "Widgets added to this region will appear in archive pages."
 msgstr ""
 
-#: includes/class-siuy.php:211
+#: includes/class-siuy.php:223
 #, php-format
 msgid "Footer %d"
 msgstr ""
 
-#: includes/class-siuy.php:213
+#: includes/class-siuy.php:225
 #, php-format
 msgid "Widgetized Footer Area %d."
 msgstr ""
 
-#: includes/class-siuy.php:280
+#: includes/class-siuy.php:292
 msgctxt "cardo_and_lato font: on or off"
 msgid "on"
 msgstr ""
@@ -280,13 +308,16 @@ msgid "Search Results for: %s"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-image.php:50 template-parts/content.php:38
+#: template-parts/content-audio.php:42 template-parts/content-image.php:53
+#: template-parts/content-quote.php:51 template-parts/content-video.php:42
+#: template-parts/content.php:47
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: template-parts/content-image.php:61 template-parts/content-page.php:22
-#: template-parts/content.php:49
+#: template-parts/content-audio.php:53 template-parts/content-image.php:64
+#: template-parts/content-page.php:22 template-parts/content-quote.php:63
+#: template-parts/content-video.php:53 template-parts/content.php:59
 msgid "Pages:"
 msgstr ""
 
@@ -324,10 +355,14 @@ msgid ""
 "implementation eliminates all elements that clutter the page, and it "
 "complements your content perfectly while getting rid of unnecessary "
 "animations and slideshows while you can make your bold statement loud and "
-"clear with using themes Jumbotron component and thanks to Schema.org markup "
+"clear with using theme's Jumbotron component and thanks to Schema.org markup "
 "integration, your blog has a better chance of climbing those hyper-"
-"competitive rankings. If you like simplicity for news, stories and other "
-"writings, then Siuy is ready to blog!"
+"competitive rankings. Siuy uses a live customizer to arrange all things in "
+"real time, and it has several pre-built choices for header, footer, and even "
+"blog feed layouts. Things that would have cost you thousands upon thousands "
+"of dollars if you went to an agency are available for a minute fraction of "
+"that price. If you like simplicity for news, stories and other writings, "
+"then Siuy is ready to blog!"
 msgstr ""
 
 #. Author of the plugin/theme
