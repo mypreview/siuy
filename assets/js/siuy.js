@@ -90,8 +90,8 @@
     /* ---------------------------------------------- /*
      * Fluid width video embeds.
     /* ---------------------------------------------- */
-	if($('iframe[src*="youtube"]').length > 0 || $('iframe[src*="vimeo"]').length > 0) {
-		$('iframe[src*="youtube"], iframe[src*="vimeo"]').parent().fitVids();
+	if($('iframe[src*="youtube"]').length > 0 || $('iframe[src*="vimeo"]').length > 0 || $('iframe[src*="soundcloud"]').length > 0 || $('iframe[src*="mixcloud"]').length > 0) {
+		$('iframe[src*="youtube"], iframe[src*="vimeo"], iframe[src*="soundcloud"], iframe[src*="mixcloud"]').parent().fitVids();
 	}
 
 })(this, jQuery);
