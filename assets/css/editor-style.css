@@ -4,373 +4,153 @@ Description: Used to style the TinyMCE editor.
 */
 
 /*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
 # Typography
+# Elements
+# Alignments
+# Captions
+# Galleries
 --------------------------------------------------------------*/
 
-blockquote> p,
-body,
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'Cardo', Helvetica, Arial, sans-serif;
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+blockquote> p, body, h1, h2, h3, h4 {
+	font-family: 'Cardo', Helvetica, Arial, sans-serif;
 }
-h5 {
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
+.wp-caption-text, h5 {
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
-table th,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #000000;
+table th, h1, h2, h3, h4, h5, h6 {
+	color: #000000;
 }
 body {
-    color: #595959;
+	color: #595959;
 	line-height: 1.8;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
 	line-height: 1.33;
 }
 h6 {
-    font-size: 14px;
-    font-size: 0.875rem;
+	font-size: 14px;
+	font-size: 0.875rem;
 }
-kbd,
-tt,
-var,
-pre {
+kbd, tt, var, pre {
 	font-size: 15px;
-    font-size: 0.9375rem;
+	font-size: 0.9375rem;
 }
-table td,
-body {
-    font-size: 16px;
-    font-size: 1rem;
+table td {
+	font-size: 16px;
+	font-size: 1rem;
 }
-table th,
-h5 {
-    font-size: 18px;
-    font-size: 1.125rem;
+table th, h5 {
+	font-size: 18px;
+	font-size: 1.125rem;
 }
-blockquote cite {
-    font-size: 20px;
-    font-size: 1.25rem;
+blockquote cite, body {
+	font-size: 20px;
+	font-size: 1.25rem;
 }
 h4 {
-    font-size: 24px;
-    font-size: 1.5rem;
+	font-size: 24px;
+	font-size: 1.5rem;
 }
-blockquote,
-h3 {
-    font-size: 36px;
-    font-size: 2.25rem;
+blockquote, h3 {
+	font-size: 36px;
+	font-size: 2.25rem;
 }
 h2 {
-    font-size: 48px;
-    font-size: 3rem;
+	font-size: 48px;
+	font-size: 3rem;
 }
 h1 {
 	font-size: 64px;
 	font-size: 4rem;
 }
-.comment-list .comment-meta .comment-metadata time,
-.content-area .site-main article .entry-footer,
-.content-area .site-main article .entry-content  {
-    font-weight: 400;
+body {
+	font-weight: 400;
 }
-input,
-.slinky-menu a span,
-.widget-title,
-.siuy-posts-widget .entry-date,
-select,
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
-textarea {
-    font-weight: 500;
+h1, h5, h6 {
+	font-weight: 600;
 }
-.post-navigation .nav-links a,
-.site-title,
-.content-area .site-main article .entry-meta .byline,
-.content-area .site-main article .entry-meta .entry-date,
-.siuy-posts-widget .entry-date,
-.siuy-posts-widget .entry-title > a,
-.site-footer .widget-title,
-.content-area .site-main article .entry-footer > span.readmore > a,
-.siuy-posts-widget .entry-content > a.readmore,
-h1,
-h5,
-h6 {
-    font-weight: 600;
-}
-.mc4wp-form-fields input[name="EMAIL"],
-select {
-    font-weight: bold;
-}
-.post-navigation .nav-links a,
-.main-navigation .nav-menu li > a,
-.content-area .site-main article .entry-meta .byline,
-.content-area .site-main article .entry-meta .entry-date,
-.content-area .site-main article .entry-footer > span.readmore > a,
-.comments-area > .comments-title,
-.comments-area .comment-reply-title,
-.comments-area .no-comments,
-.comment-notes,
-.logged-in-as a,
-.comments-area .comment-list .reply > a,
-.siuy-posts-widget .entry-title > a,
-.siuy-posts-widget .entry-date,
-.siuy-posts-widget .entry-content > a.readmore,
-.mc4wp-form-fields input[name="EMAIL"] {
-    text-transform: uppercase;
-}
-.comment-list .comment-author span.says,
-dfn,
-cite,
-em,
-i,
-blockquote {
+dfn, blockquote cite, em, i, address, blockquote {
 	font-style: italic;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    clear: both;
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
 }
 p {
-    margin-bottom: 1.9em;
+	margin-bottom: 1.9em;
 }
 blockquote {
 	color: #2f2f2f;
 }
 address {
-    margin: 0 0 1.5em;
+	margin: 0 0 1.5em;
 }
 pre {
-    background: #eee;
-    font-family: "Courier 10 Pitch", Courier, monospace;
-    line-height: 1.6;
-    margin-bottom: 1.6em;
-    max-width: 100%;
-    overflow: auto;
-    padding: 1.6em;
-    white-space: pre-wrap;
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+	white-space: pre-wrap;
 }
-code,
-kbd,
-tt,
-var {
-    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+code, kbd, tt, var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
-abbr,
-acronym {
-    border-bottom: 1px dotted #666;
-    cursor: help;
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
 }
-mark,
-ins {
-    background: #fff9c0;
-    text-decoration: none;
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
 }
 big {
-    font-size: 125%;
-}
-.site-header .site-description {
-    margin-left: 10px;
-}
-.c-offcanvas > .siuy-slinky-menu ul > li > a {
-    color: #a89b8e;
-    transition: color 170ms ease-in-out;
-}
-.main-navigation .nav-menu li > a {
-    background-color: transparent;
-    letter-spacing: 1.7px;
-    transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
-}
-.main-navigation .nav-menu > li.current-menu-parent > a,
-.main-navigation .nav-menu > li.current-menu-item > a {
-    font-weight: 900;
-    letter-spacing: 1.9px;
-}
-.main-navigation .nav-menu .sub-menu li > a {
-    letter-spacing: 1.71px;
-    line-height: 30px;
-    text-transform: capitalize;
-}
-.content-area .site-main article .entry-meta .entry-date {
-    color: #87878752;
-}
-.content-area .site-main article .entry-title > a,
-.content-area .site-main article .entry-meta .byline a,
-.content-area .site-main article .entry-footer a {
-    color: inherit;
-}
-.comments-area > .comments-title,
-.comments-area .comment-reply-title {
-    letter-spacing: 1.78px;
-}
-.comments-area .no-comments,
-.comment-notes,
-.logged-in-as a {
-    font-size: 70%;
-    letter-spacing: 1.78px;
-}
-.comment-list .comment-author span.says {
-    color: #59595970;
-}
-.widget-title {
-    color: #2F2F2F;
-}
-.widget_calendar tbody #today {
-    color: #FFFFFF;
-}
-.site-footer .site-info,
-.site-footer .site-info a {
-    color: #A89B8E;
-}
-.widget_nav_menu ul li,
-.widget_rss ul li,
-.widget_recent_entries ul li,
-.widget_recent_comments ul li,
-.widget_meta ul li,
-.widget_pages ul li,
-.widget_categories ul li,
-.widget_archive ul li {
-    letter-spacing: 0.0714286em;
-    line-height: 34px;
-}
-select {
-    letter-spacing: 0.0714286em;
-    line-height: 2.3;
-}
-.widget_calendar tfoot #next {
-    text-align: right;
+	font-size: 125%;
 }
 @media (max-width: 63em) and (min-width: 50.5em) {
 	h1 {
 		font-size: 56px;
 		font-size: 3.5rem;
 	}
-	.single .post .entry-header .entry-title, 
 	h2 {
 		font-size: 40px;
 		font-size: 2.5rem;
 	}
-	blockquote, 
-	body:not(.single) .post .entry-header .entry-title, 
-	h3 {
+	blockquote, h3 {
 		font-size: 29px;
 		font-size: 1.812rem;
-	}
-	.site-title {
-		font-size: 28px;
-		font-size: 1.75rem;
 	}
 	h4 {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
-	blockquote cite, 
-	.content-area .site-main article .entry-content {
+	blockquote cite, .content-area .site-main article .entry-content {
 		font-size: 18px;
 		font-size: 1.125rem;
 	}
-	table th, 
-	.widget-title, 
-	.c-offcanvas > .siuy-slinky-menu ul > li > a, 
-	h5 {
+	table th, h5 {
 		font-size: 17px;
 		font-size: 1.065rem;
 	}
-	table td, 
-	.comments-area > .comments-title, 
-	.comments-area .comment-reply-title, 
-	body, 
-	optgroup {
+	table td {
 		font-size: 14.5px;
 		font-size: 0.910rem;
 	}
-	kbd,
-	tt,
-	var,
-	pre {
+	kbd, tt, var, pre {
 		font-size: 14px;
 		font-size: 0.875rem;
 	}
-	.comment-list .comment-meta .comment-metadata time, 
-	.comment-list .comment-content, 
-	.siuy-posts-widget .entry-title > a, 
-	.widget_rss ul li .rssSummary, 
-	.widget_text .textwidget, 
-	.siuy-posts-widget .entry-content, 
-	.mc4wp-form-fields input[name="EMAIL"], 
-	.site-footer .widget-areas, 
-	.widget_nav_menu ul li, 
-	.widget_rss ul li, 
-	.widget_recent_entries ul li, 
-	.widget_recent_comments ul li, 
-	.widget_meta ul li, 
-	.widget_pages ul li, 
-	.widget_categories ul li, 
-	.widget_archive ul li, 
-	.comments-area label:focus, 
-	.screen-reader-text:focus, 
-	input, select, input[type="text"], 
-	input[type="email"], 
-	input[type="url"], 
-	input[type="password"], 
-	input[type="search"], 
-	input[type="number"], 
-	input[type="tel"], 
-	input[type="range"], 
-	input[type="date"], 
-	input[type="month"], 
-	input[type="week"], 
-	input[type="time"], 
-	input[type="datetime"], 
-	input[type="datetime-local"], 
-	input[type="color"], 
-	textarea, 
 	h6 {
 		font-size: 13px;
 		font-size: 0.812rem;
 	}
-	button,
-	input[type="button"],
-	input[type="reset"],
-	input[type="submit"],
-	.site-header .site-description,
-	.content-area .site-main article .entry-meta .byline,
-	.content-area .site-main article .entry-meta .entry-date,
-	.content-area .site-main article .entry-footer,
-	.wp-caption-text,
-	.comment-list .comment-meta .comment-metadata .edit-link .comment-edit-link,
-	.site-footer .site-info,
-	.site-footer .site-info a,
-	.main-navigation .nav-menu .sub-menu li > a {
+	.wp-caption-text {
 		font-size: 11px;
 		font-size: 0.688rem;
 	}
@@ -384,103 +164,210 @@ select {
 		font-size: 40px;
 		font-size: 2.5rem;
 	}
-	.single .post .entry-header .entry-title {
-		font-size: 32px;
-		font-size: 2rem;
-	} 
-	body:not(.single) .post .entry-header .entry-title, 
 	h3 {
 		font-size: 29px;
 		font-size: 1.812rem;
 	}
-	.site-title {
-		font-size: 28px;
-		font-size: 1.75rem;
-	}
-	blockquote,
-	h4 {
+	blockquote, h4 {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
-	blockquote cite, 
-	.content-area .site-main article .entry-content {
+	blockquote cite, body {
 		font-size: 18px;
 		font-size: 1.125rem;
 	}
-	table th, 
-	.widget-title, 
-	.c-offcanvas > .siuy-slinky-menu ul > li > a, 
-	h5 {
+	table th, h5 {
 		font-size: 17px;
 		font-size: 1.065rem;
 	}
-	table td, 
-	.comments-area > .comments-title, 
-	.comments-area .comment-reply-title, 
-	body, 
-	optgroup {
+	table td {
 		font-size: 14.5px;
 		font-size: 0.910rem;
 	}
-	kbd,
-	tt,
-	var,
-	pre {
+	kbd, tt, var, pre {
 		font-size: 14px;
 		font-size: 0.875rem;
 	}
-	.comment-list .comment-meta .comment-metadata time, 
-	.comment-list .comment-content, 
-	.siuy-posts-widget .entry-title > a, 
-	.widget_rss ul li .rssSummary, 
-	.widget_text .textwidget, 
-	.siuy-posts-widget .entry-content, 
-	.mc4wp-form-fields input[name="EMAIL"], 
-	.site-footer .widget-areas, 
-	.widget_nav_menu ul li, 
-	.widget_rss ul li, 
-	.widget_recent_entries ul li, 
-	.widget_recent_comments ul li, 
-	.widget_meta ul li, 
-	.widget_pages ul li, 
-	.widget_categories ul li, 
-	.widget_archive ul li, 
-	.comments-area label:focus, 
-	.screen-reader-text:focus, 
-	input, select, input[type="text"], 
-	input[type="email"], 
-	input[type="url"], 
-	input[type="password"], 
-	input[type="search"], 
-	input[type="number"], 
-	input[type="tel"], 
-	input[type="range"], 
-	input[type="date"], 
-	input[type="month"], 
-	input[type="week"], 
-	input[type="time"], 
-	input[type="datetime"], 
-	input[type="datetime-local"], 
-	input[type="color"], 
-	textarea, 
 	h6 {
 		font-size: 13px;
 		font-size: 0.812rem;
 	}
-	button,
-	input[type="button"],
-	input[type="reset"],
-	input[type="submit"],
-	.site-header .site-description,
-	.content-area .site-main article .entry-meta .byline,
-	.content-area .site-main article .entry-meta .entry-date,
-	.content-area .site-main article .entry-footer,
-	.wp-caption-text,
-	.comment-list .comment-meta .comment-metadata .edit-link .comment-edit-link,
-	.site-footer .site-info,
-	.site-footer .site-info a,
-	.main-navigation .nav-menu .sub-menu li > a {
+	.wp-caption-text {
 		font-size: 11px;
 		font-size: 0.688rem;
 	}
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+body {
+	background: #fff;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+ul, ol {
+	margin: 0 0 1em 0;
+}
+ul {
+	padding-left: 0.85em;
+}
+ol {
+	padding-left: 1.2em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+li > ul, li > ol {
+	margin-bottom: 0;
+	margin-left: 0.1em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+img {
+	height: auto;
+	max-width: 100%;
+}
+figure {
+	margin: 1em 0;
+}
+table {
+	border: solid 2px #ebebeb;
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+table tfoot tr, table thead tr {
+	border-bottom: solid 2px #ebebeb;
+}
+table tbody tr {
+	border-bottom: solid 1px #ebebeb;
+}
+tbody>tr:nth-of-type(odd) {
+	background-color: #f9f9f9;
+}
+table tr td, table tr th {
+	border-right: solid 1px #ebebeb;
+	padding: 12px;
+}
+blockquote {
+	border-color: #edeae7;
+	border-style: solid;
+	border-width: 1px 0 1px 0;
+	margin: 2em 0 1.2em;
+	padding-right: 0.9em;
+	position: relative;
+}
+blockquote> p {
+	margin-bottom: 0.95em;
+	margin-top: 0.35em;
+}
+cite:before {
+	content: "- ";
+}
+blockquote:after {
+	bottom: 0.36em;
+	color: #edeae7;
+	content: "\275E";
+	font-size: 87px;
+	font-style: normal;
+	line-height: 0;
+	position: absolute;
+	right: 0;
+}
+code {
+	background-color: #f9f2f4;
+	border-radius: 4px;
+	color: #c7254e;
+	font-size: 90%;
+	padding: 2px 4px;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.wp-caption-text {
+	text-align: left;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+.gallery-caption {
+	display: block;
 }
