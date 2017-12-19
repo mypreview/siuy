@@ -9,6 +9,8 @@
 if (!function_exists('siuy_posted_on')):
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
+	 *
+	 * @since  1.0.0
 	 */
 	function siuy_posted_on($posted_by = true, $posted_time = true)
 
@@ -37,6 +39,8 @@ endif;
 if (!function_exists('siuy_entry_footer')):
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
+	 *
+	 * @since  1.0.0
 	 */
 	function siuy_entry_footer($posted_categories = true, $posted_tags = true, $posted_comments = true, $posted_readmore = true)
 
@@ -77,5 +81,57 @@ if (!function_exists('siuy_entry_footer')):
 		if (!is_single() && $posted_readmore):
 			echo '<span class="readmore"><a href="' . esc_url(get_the_permalink()) . '" target="_self">' . esc_html__('Read more', 'siuy') . '<span class="readmore-icon"></span><span class="readmore-icon-after"></span></a></span>';
 		endif;
+	}
+endif;
+if (!function_exists('siuy_post_thumbnail')):
+	/**
+	 * Displays an optional post thumbnail.
+	 * 
+	 * Wraps the post thumbnail in an anchor element on index views, or a div
+	 * element when on single views.
+	 *
+	 * @since  1.1.0
+	 */
+	function siuy_post_thumbnail()
+
+	{
+		if (post_password_required() || is_attachment() || ! has_post_thumbnail()):
+			return;
+		endif;
+
+		if (is_singular()):
+		?>
+
+		<div class="entry-thumb">
+			<?php the_post_thumbnail(array('itemprop' => 'image')); ?>
+		</div><!-- .entry-thumb -->
+
+		<?php else: ?>
+
+		<div class="entry-thumb">
+			<a class="entry-thumb" href="<?php the_permalink(); ?>" aria-hidden="true">
+				<?php the_post_thumbnail('post-thumbnail', array('itemprop' => 'image', 'alt' => the_title_attribute('echo=0'))); ?>
+			</a>
+		</div><!-- .entry-thumb -->
+
+		<?php endif; // End is_singular()
+	}
+endif;
+if (!function_exists('siuy_get_link_url')):
+	/**
+	 * Return the post URL.
+	 * 
+	 * @uses get_url_in_content() to get the URL in the post meta (if it exists) or
+ 	 * the first link found in the post content.
+ 	 *
+ 	 * @since  1.1.0
+	 */
+	function siuy_get_link_url()
+
+	{
+		$content = get_the_content();
+		$has_url = get_url_in_content($content);
+
+		return ($has_url) ? $has_url : apply_filters('the_permalink', get_permalink());
 	}
 endif;
