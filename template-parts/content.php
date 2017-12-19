@@ -9,20 +9,9 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
 	<header class="entry-header">
-		<?php if (has_post_thumbnail() && ! post_password_required() && ! is_attachment()): ?>
-		<div class="entry-thumb">
-			<?php if (! is_singular()): ?>
-			<a href="<?php the_permalink(); ?>" target="_self">
-			<?php 
-			endif;
-			the_post_thumbnail('siuy-featured-image', array('itemprop' => 'image'));
-			if (! is_singular()):
-			?>
-			</a>
-			<?php endif; ?>
-		</div><!-- .entry-thumb -->
 		<?php 
-		endif;
+		siuy_post_thumbnail();
+		
 		if (is_singular()):
 			the_title('<h1 class="entry-title" itemprop="headline">', '</h1>');
 		else:
