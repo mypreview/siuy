@@ -12,6 +12,10 @@ File skip link focus fix - Helps with accessibility for keyboard only users.
 The GPL version 2 or (at your option) any later version
 https://git.io/vWdr2
 
+Stroke 7 Icon Font Set — Stroke icons inspired by iOS 7
+Royalty free for use in both personal and commercial projects - Copyright (c) 2014 pixeden
+https://www.pixeden.com/icon-fonts/stroke-7-icon-font-set
+
 FitVids.js - A lightweight, easy-to-use jQuery plugin for fluid width video embeds
 The WTFPL License - Version 2, December 2004 Davatron5000
 https://github.com/davatron5000/FitVids.js/issues/173
@@ -27,6 +31,14 @@ https://github.com/WordPress/WordPress/tree/master/wp-content/themes/twentythirt
 Twenty Sixteen — Free WordPress Theme
 The GPL version 2 or (at your option) any later version
 https://github.com/WordPress/twentysixteen
+
+Twenty Seventeen — Free WordPress Theme
+The GPL version 2 or (at your option) any later version
+https://github.com/WordPress/twentyseventeen#twenty-seventeen
+
+Storefront — Free WordPress Theme
+The GPL version 2 or (at your option) any later version
+https://github.com/woocommerce/storefront
 
 _s or underscores — Free Starter WordPress Theme
 The GPL version 2 or (at your option) any later version
