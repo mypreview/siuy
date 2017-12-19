@@ -1,3 +1,6 @@
+/* -------------------------------------------------------- /*
+ * The core JS libraries can be found in /assets/js/vendor/
+/* -------------------------------------------------------- */
 /*!
  * modernizr v3.3.1
  * Build http://modernizr.com/download?-cssanimations-csstransforms-csstransforms3d-csstransitions-flexbox-touchevents-addtest-domprefixes-hasevent-mq-prefixed-prefixes-setclasses-shiv-testallprops-testprop-teststyles-dontmin-cssclassprefix:support-
