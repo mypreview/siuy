@@ -13,3 +13,52 @@ body {
 	direction: rtl;
 	unicode-bidi: embed;
 }
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+.rtl .site-header .site-description {
+	margin-left: 0;
+	margin-right: 10px;
+}
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.rtl .main-navigation ul ul > li.menu-item-has-children > a:after {
+	left: 0;
+	right: auto;
+	transform: rotate(90deg) translateY(-40%);
+}
+.rtl .main-navigation ul.sub-menu>li > ul, 
+.rtl .main-navigation ul.sub-menu>li > ul {
+	right: 100%;
+	left: auto;
+}
+.rtl .main-navigation li {
+    float: right;
+}
+.rtl .main-navigation ul.sub-menu>li:hover > ul, 
+.rtl .main-navigation ul.sub-menu>li:focus > ul {
+	margin-left: 0;
+    margin-right: 13px;
+}
+@media screen and (min-width: 63.5em) {
+	.rtl .main-navigation ul.sub-menu>li:hover > ul:before, 
+	.rtl .main-navigation ul.sub-menu>li.focus > ul:before {
+		left: auto;
+		right: -9px;
+	}
+}
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+#content.site-content {
+	direction: ltr;
+}
+#secondary {
+	direction: rtl;
+}
