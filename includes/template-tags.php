@@ -109,7 +109,7 @@ if (!function_exists('siuy_post_thumbnail')):
 		<?php else: ?>
 
 		<div class="entry-thumb">
-			<a class="entry-thumb" href="<?php the_permalink(); ?>" aria-hidden="true">
+			<a class="thumb" href="<?php the_permalink(); ?>" aria-hidden="true">
 				<?php the_post_thumbnail('post-thumbnail', array('itemprop' => 'image', 'alt' => the_title_attribute('echo=0'))); ?>
 			</a>
 		</div><!-- .entry-thumb -->
