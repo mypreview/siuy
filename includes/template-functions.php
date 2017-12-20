@@ -97,7 +97,7 @@ add_action('siuy_before_site_content', 'siuy_header_image', 10);
 function siuy_comment_textarea_placeholder($args)
 
 {
-	$args['comment_field'] = str_replace('textarea', 'textarea placeholder="' . esc_attr__('Write a comment...', 'siuy') . '"', $args['comment_field']);
+	$args['comment_field'] = str_replace('textarea', 'textarea placeholder="* ' . esc_attr__('Write a comment...', 'siuy') . '"', $args['comment_field']);
 	return $args;
 }
 add_filter('comment_form_defaults', 'siuy_comment_textarea_placeholder', 10, 1);
@@ -112,9 +112,9 @@ function siuy_comment_form_fields($fields)
 
 {
 	foreach($fields as & $field):
-		$field = str_replace('id="author"', 'id="author" placeholder="' . esc_attr__('Name', 'siuy') . '"', $field);
-		$field = str_replace('id="email"', 'id="email" placeholder="' . esc_attr__('E-mail', 'siuy') . '"', $field);
-		$field = str_replace('id="url"', 'id="url" placeholder="' . esc_attr__('Website', 'siuy') . '"', $field);
+		$field = str_replace('id="author"', 'id="author" placeholder="* ' . esc_attr__('Name', 'siuy') . '"', $field);
+		$field = str_replace('id="email"', 'id="email" placeholder="* ' . esc_attr__('E-mail', 'siuy') . '"', $field);
+		$field = str_replace('id="url"', 'id="url" placeholder="* ' . esc_attr__('Website', 'siuy') . '"', $field);
 	endforeach;
 	return $fields;
 }
