@@ -194,7 +194,14 @@ if (!class_exists('Siuy_Customizer')):
 			$customizer_css = '';
 			$display_header_text = (bool) display_header_text();
 			$toggle_site_tagline = (bool) get_theme_mod('siuy_toggle_site_tagline', false);
+			$background_color = get_background_color();
 			$header_text_color = get_header_textcolor();
+			
+			$customizer_css.= "
+	            .post.format-chat .entry-content p:after {
+	        		background-color: #{$background_color};
+	        	}
+        	";
 			// Has the site title and tagline text been hidden?
 			if (!$display_header_text):
 				$customizer_css.= "
