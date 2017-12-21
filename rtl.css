@@ -8,7 +8,50 @@ of your CSS stylesheet in a separate stylesheet file named rtl.css.
 https://codex.wordpress.org/Right-to-Left_Language_Support
 
 */
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Stroke 7
+# Typography
+# Elements
+# Forms
+    ## Search form
+	## Post password form
+# Links
+# Navigation
+    ## Menus
+    ## Small menu
+    ## Next and previous navigation
+    ## JS-OffCanvas
+    ## Slinky
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+    ## Siuy posts
+    ## MailChimp
+    ## Calendar
+    ## Link list
+# Content
+    ## Posts and pages
+    ## Meta tags
+    ## Read more link
+    ## Post formats
+    ## Post format chat
+    ## Comments
+    ## 404 Page
+# Footer
+    ## Widget area
+# Infinite scroll
+# Media
+    ## Captions
+    ## Galleries
+--------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
 body {
 	direction: rtl;
 	unicode-bidi: embed;
@@ -16,7 +59,66 @@ body {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-
+.widget_calendar tfoot #next {
+	text-align: left;
+}
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+ol,
+ul {
+	padding-left: 0;
+}
+ul {
+	padding-right: 0.85em;
+	
+}
+ol {
+	padding-right: 1.2em;
+}
+li > ul, li > ol {
+	margin-left: 0;
+	margin-right: 0.1em;
+}
+table tr td, table tr th {
+	border-left: solid 1px #ebebeb;
+	border-right: 0px;
+}
+blockquote {
+	padding-right: 0;
+	padding-left: 0.9em;
+}
+blockquote:after {
+	left: 0;
+	right: auto;
+}
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+form button, input[type="button"], input[type="reset"], input[type="submit"] {
+	background: linear-gradient(to right, #EDEAE7 50%, #d6cfc7 50%);
+	background-position: left bottom;
+}
+button:active, button:focus, input[type="button"]:active, input[type="button"]:focus, input[type="reset"]:active, input[type="reset"]:focus, input[type="submit"]:active, input[type="submit"]:focus, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+	background-position: right bottom;
+}
+select {
+	background-position: calc(0.1% + 0px) calc(1em + 2px), calc(0.2% + 4.2px) calc(1em + 2px), 100% 0;
+}
+input[type="checkbox"] {
+	margin-right: 0;
+	margin-left: 3px;
+}
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+.logged-in-as a:before, .comment-content a:after, #cancel-comment-reply-link:before, .reply a:after, .comment-list .comment-meta .comment-metadata time:before, .comment-navigation a:before, .posts-navigation a:before, .entry-meta a:before, .entry-footer .comments-link a:before, .entry-footer .tags-links a:before, .entry-footer .cat-links a:before, .edit-link a:before, .comment-list .comment-author a:before, .entry-content a:after {
+	right: 0;
+}
+.comment-navigation .nav-previous a:before, .posts-navigation .nav-previous a:before {
+	left: 0;
+	right: auto;
+}
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -25,9 +127,21 @@ body {
 	margin-left: 0;
 	margin-right: 10px;
 }
+#site-navigation .customize-partial-edit-shortcut {
+	left: 0;
+	right: auto;
+}
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+.main-navigation ul {
+	float: left;
+}
+.main-navigation ul.menu>li > ul, 
+.main-navigation ul.menu>li > ul {
+	left: 0;
+	right: auto;
+}
 .rtl .main-navigation ul ul > li.menu-item-has-children > a:after {
 	left: 0;
 	right: auto;
@@ -38,6 +152,13 @@ body {
 	right: 100%;
 	left: auto;
 }
+.main-navigation ul.menu>li:hover > ul, 
+.main-navigation ul.menu>li:focus > ul {
+	margin-left: -10px;
+	margin-right: 0;
+	left: 0;
+	right: auto;
+}
 .rtl .main-navigation li {
     float: right;
 }
@@ -45,13 +166,114 @@ body {
 .rtl .main-navigation ul.sub-menu>li:focus > ul {
 	margin-left: 0;
     margin-right: 13px;
+	left: auto;
+	right: 100%;
+}
+.main-navigation li {
+	float: right;
+}
+.main-navigation .nav-menu > li.menu-item-has-children > a:after {
+	margin-right: 2px;
+    margin-left: 0;
+    right: auto;
+    left: -15px;
+}
+.main-navigation ul ul > li.menu-item-has-children > a:after {
+	left: 0;
+	right: auto;
+	margin-right: 2px;
+	margin-left: auto;
+}
+/*--------------------------------------------------------------
+## Small menu
+--------------------------------------------------------------*/
+.siuy-menu-toggle, .main-navigation.toggled ul {
+	padding-right: 0;
+	padding-left: 0;
+}
+.hamburger-nav-icon {
+	float: left;
+	margin: 0.188em 0.438em 0 0;
 }
 @media screen and (min-width: 63.5em) {
+	.main-navigation .nav-menu > li {
+		margin-left: 30px;
+		margin-right: auto;
+	}
+	.main-navigation .nav-menu > li.menu-item-has-children {
+		padding-left: 25.15px;
+		padding-right: 0;
+	}
+	.main-navigation .nav-menu > li:last-child {
+		margin-left: 0;
+		margin-right: auto;
+	}
+	#site-navigation ul.menu>li>ul.sub-menu:before {
+		left: 47px;
+		right: auto;
+	}
 	.rtl .main-navigation ul.sub-menu>li:hover > ul:before, 
 	.rtl .main-navigation ul.sub-menu>li.focus > ul:before {
 		left: auto;
 		right: -9px;
 	}
+}
+/*--------------------------------------------------------------
+## Next and previous navigation
+--------------------------------------------------------------*/
+.comment-navigation .nav-previous, .posts-navigation .nav-previous {
+	float: right;
+}
+.comment-navigation .nav-next, .posts-navigation .nav-next {
+	float: left;
+	text-align: left;
+}
+.post-navigation .nav-next a {
+	text-align: left;
+}
+.post-navigation .nav-previous a:before, .post-navigation .nav-next a:after {
+	right: 0;
+	left: auto;
+}
+.post-navigation .nav-previous:after, .post-navigation .nav-previous a:after, .post-navigation .nav-next a:before, .post-navigation .nav-previous a:after {
+	right: auto;
+	left: 0;
+}
+.post-navigation .nav-next:hover a:before {
+	left: 100%;
+	right: auto;
+}
+.post-navigation .nav-previous:hover a:before {
+	left: auto;
+	right: 100%;
+}
+.post-navigation .nav-next:after {
+	left: -30%;
+	right: auto;
+}
+.post-navigation .nav-previous:hover:after {
+	left: 50%;
+	right: auto;
+}
+.post-navigation .nav-next:hover:after {
+	right: 50%;
+	left: auto;
+}
+.comment-navigation .nav-previous a, .posts-navigation .nav-previous a {
+	margin-left: auto;
+	margin-right: 30px;
+}
+.comment-navigation .nav-next a, .posts-navigation .nav-next a {
+	margin-left: 30px;
+	margin-right: auto;
+}
+.comment-navigation .nav-next a:after, .posts-navigation .nav-next a:after {
+	right: auto;
+	left: -30px;
+}
+.comment-navigation .nav-previous a:after, .posts-navigation .nav-previous a:after {
+	left: auto;
+	right: -30px;
 }
 /*--------------------------------------------------------------
 # Content
@@ -61,4 +283,26 @@ body {
 }
 #secondary {
 	direction: rtl;
+}
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Link list
+--------------------------------------------------------------*/
+.widget.widget_nav_menu ul.sub-menu, .widget:not(.widget_text) ul.children {
+	border-right: 1px solid #dee5ea;
+	border-left: 0px;
+}
+.widget.widget_nav_menu ul.sub-menu li, .widget:not(.widget_text) ul.children li {
+	padding-left: 0;
+	padding-right: 14px;
+}
+.widget.widget_nav_menu ul.sub-menu li::before, .widget:not(.widget_text) ul.children li::before {
+	left: auto;
+	right: 0;
+}
+#secondary .widget_archive>ul>li>a:before, #secondary .widget_recent_comments>ul>li:before, #secondary .widget_categories>ul>li>a:before, #secondary .widget_pages>ul>li>a:before {
+	margin-left: 3px;
+	margin-right: -9px;
 }
