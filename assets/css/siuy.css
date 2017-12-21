@@ -1362,7 +1362,7 @@ input[type="checkbox"]+label {
 }
 
 /*--------------------------------------------------------------
-## Links
+# Links
 --------------------------------------------------------------*/
 a {
 	-moz-transition: all 0.5s ease;
@@ -1653,14 +1653,15 @@ a:focus {
 		justify-content: flex-end;
 	}
 }
-.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
 
 /*--------------------------------------------------------------
 ## Next and previous navigation
 --------------------------------------------------------------*/
+
+.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
 .post-navigation {
 	padding-bottom: 40px;
 }
