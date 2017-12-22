@@ -215,14 +215,16 @@ if (!class_exists('Siuy')):
 				'id' => 'sidebar',
 				'description' => __('Widgets added to this region will appear in archive pages.', 'siuy')
 			);
-			// Footer
 			$footer_widget_areas = apply_filters('siuy_footer_widget_areas', 3);
 			if (is_int($footer_widget_areas)):
 				for ($i = 1; $i <= intval($footer_widget_areas); $i++):
 					$footer = sprintf('footer_%d', $i);
 					$sidebar_args[$footer] = array(
+						/* translators: %d: Decimal, i.e. 1. */
 						'name' => sprintf(__('Footer %d', 'siuy') , $i) ,
+						/* translators: %d: Decimal, i.e. 1. */
 						'id' => sprintf('footer-%d', $i) ,
+						/* translators: %d: Decimal, i.e. 1. */
 						'description' => sprintf(__('Widgetized Footer Area %d.', 'siuy') , $i)
 					);
 				endfor;
