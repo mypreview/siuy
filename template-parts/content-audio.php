@@ -27,23 +27,43 @@
 
 	<div class="entry-content" itemprop="mainContentOfPage">
 		<?php
-		the_content(sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'siuy'),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		));
+		$content = apply_filters('the_content', get_the_content());
+		$audio = get_media_embedded_in_content($content, array('audio'));
 
-		wp_link_pages(array(
-			'before' => '<div class="page-links">' . esc_html__('Pages:', 'siuy'),
-			'after'  => '</div>',
-		));
+		// If not a single post, highlight the video file.
+		if (! is_single() && ! empty($audio)):
+			
+			foreach ($audio as $audio_html):
+				?>
+				<div class="entry-audio">
+					<?php echo $audio_html; ?>
+				</div>
+				<?php
+			endforeach;
+
+		endif;
+
+		if (is_single() || empty($audio)):
+
+			the_content(sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'siuy'),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			));
+
+			wp_link_pages(array(
+				'before' => '<div class="page-links">' . esc_html__('Pages:', 'siuy'),
+				'after'  => '</div>',
+			));
+
+		endif;
 		?>
 	</div><!-- .entry-content -->
 

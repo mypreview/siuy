@@ -11,6 +11,22 @@
 	<header class="entry-header">
 		<?php 
 		siuy_post_thumbnail();
+
+		$content = apply_filters('the_content', get_the_content());
+		$video = get_media_embedded_in_content($content, array('video', 'object', 'embed', 'iframe'));
+
+		// If not a single post, highlight the video file.
+		if (! is_single() && ! empty($video)):
+
+			foreach ($video as $video_html):
+				?>
+				<div class="entry-video">
+					<?php echo $video_html; ?>
+				</div>
+				<?php
+			endforeach;
+			
+		endif;
 		
 		if (is_singular()):
 			the_title('<h1 class="entry-title" itemprop="headline">', '</h1>');
@@ -27,23 +43,28 @@
 
 	<div class="entry-content" itemprop="mainContentOfPage">
 		<?php
-		the_content(sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'siuy'),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		));
 
-		wp_link_pages(array(
-			'before' => '<div class="page-links">' . esc_html__('Pages:', 'siuy'),
-			'after'  => '</div>',
-		));
+		if (is_single() || empty($video)):
+
+			the_content(sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'siuy'),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			));
+
+			wp_link_pages(array(
+				'before' => '<div class="page-links">' . esc_html__('Pages:', 'siuy'),
+				'after'  => '</div>',
+			));
+
+		endif;
 		?>
 	</div><!-- .entry-content -->
 
