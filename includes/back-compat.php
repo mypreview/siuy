@@ -39,6 +39,7 @@ add_action('after_switch_theme', 'siuy_switch_theme');
 if (!function_exists('siuy_upgrade_notice')):
 	function siuy_upgrade_notice()
 	{
+		/* translators: %s: Version number, i.e. 4.6. */
 		$message = sprintf(__('Siuy requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'siuy') , $GLOBALS['wp_version']);
 		printf('<div class="error"><p>%s</p></div>', $message);
 	}
@@ -52,6 +53,7 @@ endif;
 if (!function_exists('siuy_customize')):
 	function siuy_customize()
 	{
+		/* translators: %s: Version number, i.e. 4.6. */
 		wp_die(sprintf(__('Siuy requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'siuy') , $GLOBALS['wp_version']) , '', array(
 			'back_link' => true,
 		));
@@ -68,6 +70,7 @@ if (!function_exists('siuy_preview')):
 	function siuy_preview()
 	{
 		if (isset($_GET['preview'])):
+			/* translators: %s: Version number, i.e. 4.6. */
 			wp_die(sprintf(__('Siuy requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'siuy') , $GLOBALS['wp_version']));
 		endif;
 	}
