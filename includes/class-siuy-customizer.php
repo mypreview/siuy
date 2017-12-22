@@ -70,6 +70,7 @@ if (!class_exists('Siuy_Customizer')):
 		{
 			// Load Customizer custom controls.
 			require get_parent_theme_file_path('/includes/class-siuy-customizer-custom-controls.php');
+
 			/**
 			 * "Site Identity" section
 			 * Hide site title
@@ -79,7 +80,10 @@ if (!class_exists('Siuy_Customizer')):
 			$wp_customize->add_setting('siuy_toggle_site_tagline', array(
 				'default' => apply_filters('siuy_toggle_site_tagline_default_value', false) ,
 				'capability' => 'edit_theme_options',
-				'sanitize_callback' => array($this, 'sanitize_checkbox')
+				'sanitize_callback' => array(
+					$this,
+					'sanitize_checkbox'
+				)
 			));
 			$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'siuy_toggle_site_tagline', array(
 				'label' => __('Hide Site Tagline', 'siuy') ,
@@ -139,20 +143,40 @@ if (!class_exists('Siuy_Customizer')):
 				// Site title
 				$wp_customize->selective_refresh->add_partial('blogname', array(
 					'selector' => '.site-title a',
-					'render_callback' => function ()
-					{
-						return bloginfo('name');
-					}
+					'render_callback' => array(
+						$this,
+						'partial_blogname'
+					)
 				));
 				// Tagline
 				$wp_customize->selective_refresh->add_partial('blogdescription', array(
 					'selector' => '.site-description',
-					'render_callback' => function ()
-					{
-						return bloginfo('description');
-					}
+					'render_callback' => array(
+						$this,
+						'partial_blogdescription'
+					)
 				));
 			endif;
+		}
+		/**
+		 * Render the site title for the selective refresh partial.
+		 *
+		 * @since 1.1.0
+		 */
+		public function partial_blogname()
+
+		{
+			bloginfo('name');
+		}
+		/**
+		 * Render the site tagline for the selective refresh partial.
+		 *
+		 * @since 1.1.0
+		 */
+		public function partial_blogdescription()
+
+		{
+			bloginfo('description');
 		}
 		/**
 		 * Checkbox sanitization callback.
@@ -192,11 +216,10 @@ if (!class_exists('Siuy_Customizer')):
 
 		{
 			$customizer_css = '';
-			$display_header_text = (bool) display_header_text();
-			$toggle_site_tagline = (bool) get_theme_mod('siuy_toggle_site_tagline', false);
+			$display_header_text = (bool)display_header_text();
+			$toggle_site_tagline = (bool)get_theme_mod('siuy_toggle_site_tagline', false);
 			$background_color = get_background_color();
 			$header_text_color = get_header_textcolor();
-			
 			$customizer_css.= "
 	            .post.format-chat .entry-content p:after {
 	        		background-color: #{$background_color};
