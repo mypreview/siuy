@@ -21,7 +21,7 @@
  * @since 		1.0.0
  */
 // Assign the "Siuy" info to constants.
-$siuy_theme = wp_get_theme(' siuy');
+$siuy_theme = wp_get_theme('siuy');
 define('SIUY_THEME_NAME', $siuy_theme->get('Name'));
 define('SIUY_THEME_URI', $siuy_theme->get('ThemeURI'));
 define('SIUY_THEME_AUTHOR', $siuy_theme->get('Author'));
@@ -38,7 +38,7 @@ endif;
  *
  * @since 1.0.0
  */
-$siuy = ( object )array(
+$siuy = (object)array(
 	'version' => SIUY_THEME_VERSION,
 	'main' => require 'includes/class-siuy.php',
 	'customizer' => require 'includes/class-siuy-customizer.php',
