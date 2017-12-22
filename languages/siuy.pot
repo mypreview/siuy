@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Siuy\n"
-"POT-Creation-Date: 2017-12-19 21:25+0400\n"
-"PO-Revision-Date: 2017-12-19 21:25+0400\n"
+"POT-Creation-Date: 2017-12-22 12:05+0400\n"
+"PO-Revision-Date: 2017-12-22 12:05+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -96,31 +96,32 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: includes/back-compat.php:42 includes/back-compat.php:55
-#: includes/back-compat.php:71
+#. translators: %s: Version number, i.e. 4.6.
+#: includes/back-compat.php:43 includes/back-compat.php:57
+#: includes/back-compat.php:74
 #, php-format
 msgid ""
 "Siuy requires at least WordPress version 4.7. You are running version %s. "
 "Please upgrade and try again."
 msgstr ""
 
-#: includes/class-siuy-customizer.php:85
+#: includes/class-siuy-customizer.php:89
 msgid "Hide Site Tagline"
 msgstr ""
 
-#: includes/class-siuy-customizer.php:86
+#: includes/class-siuy-customizer.php:90
 msgid "This checkbox will hide the site tagline from view."
 msgstr ""
 
-#: includes/class-siuy-customizer.php:105
+#: includes/class-siuy-customizer.php:109
 msgid "Layout"
 msgstr ""
 
-#: includes/class-siuy-customizer.php:118
+#: includes/class-siuy-customizer.php:122
 msgid "General Layout"
 msgstr ""
 
-#: includes/class-siuy-customizer.php:119
+#: includes/class-siuy-customizer.php:123
 msgid "Reposition sidebar area from right to left or vice versa."
 msgstr ""
 
@@ -133,7 +134,7 @@ msgid ""
 "A simple widget that displays blog posts with a few additional adjustments."
 msgstr ""
 
-#: includes/class-siuy-posts-widget.php:110 includes/template-tags.php:78
+#: includes/class-siuy-posts-widget.php:110 includes/template-tags.php:82
 msgid "Read more"
 msgstr ""
 
@@ -209,29 +210,31 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-#: includes/class-siuy.php:162
+#: includes/class-siuy.php:164
 msgid "Default Header Image"
 msgstr ""
 
-#: includes/class-siuy.php:212
+#: includes/class-siuy.php:214
 msgid "Sidebar"
 msgstr ""
 
-#: includes/class-siuy.php:214
+#: includes/class-siuy.php:216
 msgid "Widgets added to this region will appear in archive pages."
 msgstr ""
 
-#: includes/class-siuy.php:222
+#. translators: %d: Decimal, i.e. 1.
+#: includes/class-siuy.php:224
 #, php-format
 msgid "Footer %d"
 msgstr ""
 
-#: includes/class-siuy.php:224
+#. translators: %d: Decimal, i.e. 1.
+#: includes/class-siuy.php:228
 #, php-format
 msgid "Widgetized Footer Area %d."
 msgstr ""
 
-#: includes/class-siuy.php:291
+#: includes/class-siuy.php:295
 msgctxt "cardo_and_lato font: on or off"
 msgid "on"
 msgstr ""
@@ -253,50 +256,50 @@ msgid "Website"
 msgstr ""
 
 #. translators: %s: post date.
-#: includes/template-tags.php:23
+#: includes/template-tags.php:25
 #, php-format
 msgctxt "post date"
 msgid "%s on"
 msgstr ""
 
 #. translators: %s: post author.
-#: includes/template-tags.php:26
+#: includes/template-tags.php:28
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: includes/template-tags.php:47
+#: includes/template-tags.php:51
 msgid ", "
 msgstr ""
 
 #. translators: 1: list of categories.
-#: includes/template-tags.php:50
+#: includes/template-tags.php:54
 #, php-format
 msgid "Posted in %1$s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: includes/template-tags.php:53
+#: includes/template-tags.php:57
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: 1: list of tags.
-#: includes/template-tags.php:56
+#: includes/template-tags.php:60
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
 #. translators: %s: post title
-#: includes/template-tags.php:63
+#: includes/template-tags.php:67
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: includes/template-tags.php:72 template-parts/content-page.php:35
+#: includes/template-tags.php:76 template-parts/content-page.php:35
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
@@ -310,18 +313,19 @@ msgstr ""
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content-aside.php:24 template-parts/content-audio.php:33
 #: template-parts/content-chat.php:33 template-parts/content-gallery.php:34
-#: template-parts/content-link.php:29 template-parts/content-quote.php:37
-#: template-parts/content-status.php:24 template-parts/content-video.php:33
-#: template-parts/content.php:36
+#: template-parts/content-image.php:33 template-parts/content-link.php:29
+#: template-parts/content-quote.php:37 template-parts/content-status.php:24
+#: template-parts/content-video.php:33 template-parts/content.php:36
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #: template-parts/content-aside.php:35 template-parts/content-audio.php:44
 #: template-parts/content-chat.php:44 template-parts/content-gallery.php:44
-#: template-parts/content-link.php:40 template-parts/content-page.php:22
-#: template-parts/content-quote.php:49 template-parts/content-status.php:35
-#: template-parts/content-video.php:44 template-parts/content.php:48
+#: template-parts/content-image.php:44 template-parts/content-link.php:40
+#: template-parts/content-page.php:22 template-parts/content-quote.php:49
+#: template-parts/content-status.php:35 template-parts/content-video.php:44
+#: template-parts/content.php:48
 msgid "Pages:"
 msgstr ""
 
@@ -359,7 +363,7 @@ msgid ""
 "implementation eliminates all elements that clutter the page, and it "
 "complements your content perfectly while getting rid of unnecessary "
 "animations and slideshows while you can make your bold statement loud and "
-"clear with using theme's Jumbotron component and thanks to Schema.org markup "
+"clear with using themes Jumbotron component and thanks to Schema.org markup "
 "integration, your blog has a better chance of climbing those hyper-"
 "competitive rankings. Siuy uses a live customizer to arrange all things in "
 "real time, and it has several pre-built choices for header, footer, and even "
