@@ -78,7 +78,9 @@ if (!function_exists('siuy_entry_footer')):
 				'class' => array() ,
 			) ,
 		)) , get_the_title()) , '<span class="edit-link">', '</span>');
-		if (!is_single() && $posted_readmore):
+
+		// Post readme button
+		if (! is_single() && $posted_readmore):
 			echo '<span class="readmore"><a href="' . esc_url(get_the_permalink()) . '" target="_self">' . esc_html__('Read more', 'siuy') . '<span class="readmore-icon"></span><span class="readmore-icon-after"></span></a></span>';
 		endif;
 	}
@@ -133,5 +135,25 @@ if (!function_exists('siuy_get_link_url')):
 		$has_url = get_url_in_content($content);
 
 		return ($has_url) ? $has_url : apply_filters('the_permalink', get_permalink());
+	}
+endif;
+if (!function_exists('siuy_author_bio')):
+	/**
+	 * Displays Author Bio.
+	 * 
+ 	 * @since  1.1.0
+	 */
+	function siuy_author_bio()
+
+	{
+		if ('post' !== get_post_type()):
+			return;
+		endif;
+		if (! defined('JETPACK__VERSION') || ! function_exists('jetpack_author_bio')):
+			return;
+		endif;
+		if (get_option('jetpack_content_author_bio')):
+			jetpack_author_bio();
+		endif;
 	}
 endif;
