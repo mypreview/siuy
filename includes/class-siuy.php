@@ -52,6 +52,14 @@ if (!class_exists('Siuy')):
 				$this,
 				'add_attribute'
 			) , 10, 3);
+			add_filter('excerpt_length', array(
+				$this,
+				'custom_excerpt_length'
+			) , 10, 1);
+			add_filter('excerpt_more', array(
+				$this,
+				'custom_excerpt_more'
+			) , 10, 1);
 		}
 		/**
 		 * Sets up theme defaults and registers support for various WordPress features.
@@ -151,7 +159,7 @@ if (!class_exists('Siuy')):
 			));
 			// Setup the WordPress core custom header feature.
 			add_theme_support('custom-header', apply_filters('siuy_custom_header_args', array(
-				'default-image' => get_parent_theme_file_uri('assets/admin/img/siuy-header-background.jpg') ,
+				'default-image' => get_parent_theme_file_uri('assets/admin/img/header-image.jpg') ,
 				'default-text-color' => 'FF5252',
 				'width' => 1920,
 				'height' => 774,
@@ -159,8 +167,8 @@ if (!class_exists('Siuy')):
 			)));
 			register_default_headers(apply_filters('siuy_register_default_headers', array(
 				'default-image' => array(
-					'url' => '%s/assets/admin/img/siuy-header-background.jpg',
-					'thumbnail_url' => '%s/assets/admin/img/siuy-header-background.jpg',
+					'url' => '%s/assets/admin/img/header-image.jpg',
+					'thumbnail_url' => '%s/assets/admin/img/header-image.jpg',
 					'description' => __('Default Header Image', 'siuy') ,
 				) ,
 			)));
@@ -332,6 +340,26 @@ if (!class_exists('Siuy')):
 		{
 			$atts['itemprop'] = 'url';
 			return $atts;
+		}
+		/**
+		 * Control Excerpt Length Using Filters.
+		 *
+		 * @since 1.0.0
+		 */
+		public function custom_excerpt_length($length)
+
+		{
+			return apply_filters('siuy_excerpt_length', 40);
+		}
+		/**
+		 * Adds the ... to the end of excerpt read more link.
+		 *
+		 * @since 1.0.0
+		 */
+		public function custom_excerpt_more($more)
+
+		{
+			return apply_filters('siuy_excerpt_more', '...');
 		}
 		/**
 		 * Schema type.
