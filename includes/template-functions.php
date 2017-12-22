@@ -78,7 +78,6 @@ function siuy_header_image()
 
 {
 	if ((is_home() || is_front_page()) && (get_header_image())):
-		$image = (!empty(get_header_image())) ? get_header_image() : '';
 		?>
 		<div class="site-header-image">
 		<?php the_header_image_tag(); ?>
