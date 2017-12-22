@@ -22,6 +22,9 @@ get_header(); ?>
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
 				get_template_part('template-parts/content', get_post_format());
+
+				// Display Author Bio
+				siuy_author_bio();
 				
 			else:
 				/*
@@ -32,11 +35,14 @@ get_header(); ?>
 
 			endif;
 
-			the_post_navigation();
-
 			// If comments are open or we have at least one comment, load up the comment template.
 			if (comments_open() || get_comments_number()) :
 				comments_template();
+			endif;
+
+			// Displays the navigation to next/previous post
+			if ('post' === get_post_type()):
+				the_post_navigation();
 			endif;
 
 		endwhile; // End of the loop.
