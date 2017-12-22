@@ -3,32 +3,33 @@ Theme Name: Siuy
 Description: Used to style the TinyMCE editor.
 */
 
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Typography
 # Elements
-
 # Alignments
 # Captions
 # Galleries
 --------------------------------------------------------------*/
 
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 blockquote> p, body, h1, h2, h3, h4 {
-	font-family: 'Cardo', Helvetica, Arial, sans-serif;
+	font-family: 'Cardo', Helvetica, Arial, sans-serif !important;
 }
 .wp-caption-text, h5 {
-	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	font-family: 'Lato', Helvetica, Arial, sans-serif !important;
 }
 table th, h1, h2, h3, h4, h5, h6 {
 	color: #000000;
 }
 body {
 	color: #595959;
-	line-height: 1.8;
+	line-height: 1.8 !important;
 }
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.33;
@@ -50,8 +51,8 @@ table th, h5 {
 	font-size: 1.125rem;
 }
 blockquote cite, body {
-	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 20px !important;
+	font-size: 1.25rem !important;
 }
 h4 {
 	font-size: 24px;
@@ -199,11 +200,15 @@ big {
 	}
 }
 
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-body {
+body.mce-content-body.wp-autoresize {
 	background: #fff;
+	margin: 0 auto !important;
+	max-width: 792px !important;
+	padding: 0 15px !important;
 }
 hr {
 	background-color: #ccc;
@@ -217,8 +222,16 @@ ul, ol {
 ul {
 	padding-left: 0.85em;
 }
+.mce-content-body[dir="rtl"] ul {
+	padding-left: 0;
+	padding-right: 0.85em;
+}
 ol {
 	padding-left: 1.2em;
+}
+.mce-content-body[dir="rtl"] ol {
+	padding-left: 0;
+	padding-right: 1.2em;
 }
 ul {
 	list-style: disc;
@@ -229,6 +242,10 @@ ol {
 li > ul, li > ol {
 	margin-bottom: 0;
 	margin-left: 0.1em;
+}
+.mce-content-body[dir="rtl"] li > ul, .mce-content-body[dir="rtl"] li > ol {
+	margin-left: 0;
+	margin-right: 0.1em;
 }
 dt {
 	font-weight: bold;
@@ -244,22 +261,26 @@ figure {
 	margin: 1em 0;
 }
 table {
-	border: solid 2px #ebebeb;
+	border: solid 2px #ebebeb !important;
 	margin: 0 0 1.5em;
 	width: 100%;
 }
 table tfoot tr, table thead tr {
-	border-bottom: solid 2px #ebebeb;
+	border-bottom: solid 2px #ebebeb !important;
 }
 table tbody tr {
-	border-bottom: solid 1px #ebebeb;
+	border-bottom: solid 1px #ebebeb !important;
 }
 tbody>tr:nth-of-type(odd) {
 	background-color: #f9f9f9;
 }
 table tr td, table tr th {
-	border-right: solid 1px #ebebeb;
+	border-right: solid 1px #ebebeb !important;
 	padding: 12px;
+}
+.mce-content-body[dir="rtl"] table tr td, .mce-content-body[dir="rtl"] table tr th {
+	border-left: solid 1px #ebebeb !important;
+	border-right: 0px;
 }
 blockquote {
 	border-color: #edeae7;
@@ -270,6 +291,7 @@ blockquote {
 	position: relative;
 }
 blockquote> p {
+	line-height: 1.8;
 	margin-bottom: 0.95em;
 	margin-top: 0.35em;
 }
@@ -279,58 +301,72 @@ cite:before {
 blockquote:after {
 	bottom: 0.36em;
 	color: #edeae7;
-	content: "\275E";
-	font-size: 87px;
+	content: "”";
+	font-size: 95px;
 	font-style: normal;
 	line-height: 0;
 	position: absolute;
 	right: 0;
 }
-code {
+.mce-content-body[dir="rtl"] blockquote {
+	padding-left: 0.9em;
+	padding-right: 0;
+}
+.mce-content-body[dir="rtl"] blockquote:after {
+	content: "“";
+	left: 0;
+	right: auto;
+}
+.mce-content-body code {
 	background-color: #f9f2f4;
 	border-radius: 4px;
 	color: #c7254e;
 	font-size: 90%;
 	padding: 2px 4px;
 }
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-
 a {
-    color: #878787;
-    text-decoration: none;
-	position:relative;
+	-moz-transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+	color: #ff5252;
+	position: relative;
+	text-decoration: none;
+	transition: all 0.5s ease;
 }
 a:hover {
 	color: #ff5252;
 }
 a:hover:before {
-    max-width: 100%;
-    width: 100%;
+	max-width: 100%;
+	width: 100%;
 }
 a:before {
+	-moz-transition: max-width 0.5s;
+	-webkit-transition: max-width 0.5s;
+	border-bottom: 1px solid #ff5252;
+	bottom: 0;
+	color: #ff5252;
+	content: attr(data-hover);
+	left: 0;
+	max-width: 0;
+	overflow: hidden;
 	position: absolute;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    max-width: 0;
-    border-bottom: 1px solid #ff5252;
-    color: #ff5252;
-    content: attr(data-hover);
-    -webkit-transition: max-width 0.5s;
-    -moz-transition: max-width 0.5s;
-    transition: max-width 0.5s;
+	transition: max-width 0.5s;
+}
+.mce-content-body[dir="rtl"] a:before {
+	left: auto;
+	right: 0;
 }
 a:visited {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 a:focus {
-    outline: thin dotted;
+	outline: thin dotted;
 }
+
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
@@ -351,6 +387,7 @@ a:focus {
 	margin-right: auto;
 }
 
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
@@ -369,44 +406,48 @@ a:focus {
 .wp-caption-text {
 	text-align: left;
 }
+.mce-content-body[dir="rtl"] .wp-caption-text {
+	text-align: right;
+}
+
 
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
 .gallery {
-    margin-bottom: 1.5em;
 	display: grid;
 	grid-gap: 25px;
+	margin-bottom: 1.5em;
 }
 .gallery-item {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
 }
 .gallery.gallery-columns-2 {
-    grid-template-columns: repeat(2,1fr);
+	grid-template-columns: repeat(2,1fr);
 }
 .gallery.gallery-columns-3 {
-    grid-template-columns: repeat(3,1fr);
+	grid-template-columns: repeat(3,1fr);
 }
 .gallery-columns-4 {
-    grid-template-columns: repeat(4,1fr);
+	grid-template-columns: repeat(4,1fr);
 }
 .gallery-columns-5 {
-    grid-template-columns: repeat(5,1fr);
+	grid-template-columns: repeat(5,1fr);
 }
 .gallery-columns-6 {
-    grid-template-columns: repeat(6,1fr);
+	grid-template-columns: repeat(6,1fr);
 }
 .gallery-columns-7 {
-    grid-template-columns: repeat(7,1fr);
+	grid-template-columns: repeat(7,1fr);
 }
 .gallery-columns-8 {
-    grid-template-columns: repeat(8,1fr);
+	grid-template-columns: repeat(8,1fr);
 }
 .gallery-columns-9 {
-    grid-template-columns: repeat(9,1fr);
+	grid-template-columns: repeat(9,1fr);
 }
 .gallery-caption {
-    display: block;
+	display: block;
 }
