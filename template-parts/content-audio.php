@@ -1,8 +1,10 @@
 <?php
 /**
- * The template for displaying posts in the `Audio` post format
+ * The template for displaying posts in the `Audio` post format.
+ * Inspired by Twenty Seventeen `content-audio.php`
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @link https://github.com/WordPress/twentyseventeen/blob/master/components/post/content-audio.php
  *
  * @package Siuy
  */

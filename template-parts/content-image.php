@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying posts in the `Image` post format
- *
+ * 
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Siuy

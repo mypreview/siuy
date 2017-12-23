@@ -1,8 +1,10 @@
 <?php
 /**
  * The template for displaying posts in the `Gallery` post format.
+ * Inspired by Twenty Seventeen `content-gallery.php`
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @link https://github.com/WordPress/twentyseventeen/blob/master/components/post/content-gallery.php
  *
  * @package Siuy
  */

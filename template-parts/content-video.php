@@ -1,8 +1,10 @@
 <?php
 /**
  * The template for displaying posts in the `Video` post format
- *
+ * Inspired by Twenty Seventeen `content-video.php`
+ * 
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @link https://github.com/WordPress/twentyseventeen/blob/master/components/post/content-video.php
  *
  * @package Siuy
  */
