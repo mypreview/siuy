@@ -1,7 +1,7 @@
 <?php
 /**
  * Siuy back compat functionality
- * Inspired by Twenty Sixteen back-compat.php
+ * Inspired by Twenty Sixteen `back-compat.php`
  *
  * Prevents Siuy from running on WordPress versions prior to 4.7,
  * since this theme is not meant to be backward compatible beyond that and
