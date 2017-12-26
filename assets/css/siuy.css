@@ -1043,6 +1043,7 @@ h5,
 h6 {
     line-height: 1.33;
 }
+.site-description,
 .site-title,
 button,
 input[type="button"],
@@ -1876,7 +1877,10 @@ input[type="checkbox"]+label {
 
 .search-form {
     align-items: flex-end;
-    display: flex;
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
     padding-bottom: 8px;
 }
 .search-form label {
@@ -2009,26 +2013,30 @@ a:focus {
     padding: 0 15px;
 }
 .site-header .site-description {
-    margin-left: 10px;
+    margin: 19px 0 0 10px;
 }
 .site-header .site-branding {
-    align-items: baseline;
-    display: flex;
+    align-items: center;
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
 }
 #site-navigation .customize-partial-edit-shortcut {
     right: 0;
 }
 .site-title {
-    -moz-margin-after: 0.67em;
-    -moz-margin-before: 0.67em;
-    -webkit-margin-after: 0.67em;
-    -webkit-margin-before: 0.67em;
-    margin-after: 0.67em;
-    margin-before: 0.67em;
+    margin: 0;
 }
 @media (max-width: 21em) {
     .site-header .site-branding {
         flex-direction: column;
+		align-items: left;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		justify-content: center;
     }
     .site-header .site-title {
         margin-bottom: 0;
@@ -2043,7 +2051,10 @@ a:focus {
 
 #site-navigation > #primary-menu,
 #site-navigation .menu-main-menu-container {
-    display: flex;
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
     justify-content: flex-end;
 }
 .main-navigation ul {
@@ -2103,7 +2114,7 @@ a:focus {
 .main-navigation ul.nav-menu>li:focus > ul {
     margin-right: -10px;
     right: 0;
-    transform: translateY(12px);
+    transform: translateY(7px);
 }
 .main-navigation ul.children>li:hover > ul,
 .main-navigation ul.children>li:focus > ul,
@@ -2117,6 +2128,7 @@ a:focus {
 .main-navigation li {
     float: left;
     position: relative;
+	margin-top: 5px;
 }
 .main-navigation a {
     display: block;
@@ -2254,7 +2266,10 @@ a:focus {
 }
 @media screen and (max-width: 63.5em) {
     .main-navigation {
-        display: flex;
+        display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
         justify-content: flex-end;
     }
 }
@@ -2292,7 +2307,10 @@ a:focus {
 }
 .post-navigation .nav-next,
 .post-navigation .nav-previous {
-    display: flex;
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
     overflow: hidden;
     position: relative;
 }
@@ -2457,8 +2475,8 @@ a:focus {
     overflow: hidden;
     position: fixed;
     top: 0;
-	overflow-x: hidden;
-	overflow-y: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .c-offcanvas--opening {
     transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
@@ -2643,8 +2661,9 @@ a:focus {
     -webkit-box-align: center;
     align-items: center;
     display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
 }
 .slinky-menu a span {
     -ms-flex: 1;
@@ -2660,8 +2679,9 @@ a:focus {
 }
 .slinky-menu .header {
     display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
 }
 .slinky-menu .header .title {
     -ms-flex: 1;
@@ -2988,7 +3008,10 @@ a:focus {
 .widget:not(.widget_text) ul.children > li,
 .widget.widget_nav_menu ul > li,
 .widget:not(.widget_text) > ul > li:not(.recentcomments) {
-    display: flex;
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     margin-bottom: 5px;
@@ -3492,7 +3515,10 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 --------------------------------------------------------------*/
 
 .post.format-chat .entry-content {
-    display: flex;
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
     flex-direction: column;
 }
 .post.format-chat .entry-content>p {
@@ -3649,7 +3675,10 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 }
 .comments-area .comment-list .comment-author {
     align-items: flex-start;
-    display: flex;
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
     justify-content: space-between;
 }
 .comments-area .comment-list .comment-author .says {
@@ -3670,7 +3699,10 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 }
 .comments-area .comment-list .comment-meta {
     align-items: flex-start;
-    display: flex;
+    display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
