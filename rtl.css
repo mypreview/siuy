@@ -137,7 +137,7 @@ body.rtl {
 }
 
 .rtl select {
-	background-position: calc(0.1%+ 0px) calc(1em+ 2px), calc(0.2%+ 4.2px) calc(1em+ 2px), 100% 0;
+	background-position: calc(0.1% + 0px) calc(1em + 2px), calc(0.2% + 4.2px) calc(1em + 2px), 100% 0;
 }
 
 .rtl input[type="checkbox"] {
@@ -556,24 +556,45 @@ body.rtl {
 ## Post formats
 --------------------------------------------------------------*/
 
-body.rtl:not(.single-post) .format-standard.post-password-required .entry-title,
-body.rtl:not(.single-post) .tag-post-formats:not(.format-standard) .entry-title,
-body.rtl:not(.single-post) .sticky h2.entry-title {
+body:not(.single-post) .content-area .format-standard.post-password-required .entry-title,
+body:not(.single-post) .content-area .format-image .entry-title,
+body:not(.single-post) .content-area .format-chat .entry-title,
+body:not(.single-post) .content-area .format-link .entry-title,
+body:not(.single-post) .content-area .format-status .entry-title,
+body:not(.single-post) .content-area .format-aside .entry-title,
+body:not(.single-post) .content-area .format-video .entry-title,
+body:not(.single-post) .content-area .format-audio .entry-title,
+body:not(.single-post) .content-area .format-gallery .entry-title,
+body:not(.single-post) .content-area .sticky h2.entry-title {
 	margin-left: 0;
 	margin-right: 1.5em;
 }
 
-.single-post.rtl .format-standard.post-password-required .entry-title,
-.single-post.rtl .tag-post-formats:not(.format-standard) .entry-title,
-.single-post.rtl .sticky h2.entry-title {
+.single-post .content-area .format-standard.post-password-required .entry-title,
+.single-post .content-area .format-image .entry-title,
+.single-post .content-area .format-chat .entry-title,
+.single-post .content-area .format-link .entry-title,
+.single-post .content-area .format-status .entry-title,
+.single-post .content-area .format-aside .entry-title,
+.single-post .content-area .format-video .entry-title,
+.single-post .content-area .format-audio .entry-title,
+.single-post .content-area .format-gallery .entry-title,
+.single-post .content-area .sticky h2.entry-title {
 	margin-left: 0;
 	margin-right: 1.2em;
 }
 
-.rtl .format-link:before,
-.rtl .post-password-required .entry-title:before,
-.rtl .tag-post-formats .entry-title:before,
-.rtl .sticky h2.entry-title:before {
+.content-area .format-link:before,
+.content-area .post-password-required .entry-title:before,
+.content-area .format-image .entry-title:before,
+.content-area .format-chat .entry-title:before,
+.content-area .format-link .entry-title:before,
+.content-area .format-status .entry-title:before,
+.content-area .format-aside .entry-title:before,
+.content-area .format-video .entry-title:before,
+.content-area .format-audio .entry-title:before,
+.content-area .format-gallery .entry-title:before,
+.content-area .sticky h2.entry-title:before {
 	right: 0;
 }
 
