@@ -1188,7 +1188,9 @@ h5,
 h6 {
 	color: #000000;
 }
-
+body #page .post.format-chat .entry-content>p:nth-child(even) {
+	color: #ffffff;
+}
 input,
 select,
 textarea,
@@ -1204,6 +1206,10 @@ textarea,
 .mc4wp-form-fields input[name="EMAIL"],
 .site-footer .widget-areas .mc4wp-form-fields input,
 .site-footer .widget-areas .mc4wp-form-fields button,
+.wp-caption-text,
+.reply> a,
+.comment-list .edit-link a,
+.content-area .site-main article .entry-footer,
 body,
 optgroup {
 	color: #595959;
@@ -1251,13 +1257,6 @@ input[type="submit"],
 .main-navigation .nav-menu> li.current-menu-parent> a,
 .main-navigation .nav-menu> li.current-menu-item> a {
 	color: #454545;
-}
-
-.wp-caption-text,
-.reply> a,
-.comment-list .edit-link a,
-.content-area .site-main article .entry-footer {
-	color: #666666;
 }
 
 blockquote> p,
@@ -1631,8 +1630,8 @@ big {
 	color: #87878752;
 }
 
-.content-area .site-main article .entry-title> a,
-.content-area .site-main article .entry-meta .byline a,
+body #page .content-area article .entry-title> a,
+body #page .content-area article .entry-meta .byline a,
 .entry-footer a {
 	color: inherit;
 }
@@ -2174,7 +2173,7 @@ select {
 	appearance: none;
 	background-color: transparent;
 	background-image: linear-gradient(45deg, transparent 50%, #979797 50%), linear-gradient(135deg, #979797 50%, transparent 50%), linear-gradient(to right, #ffffff00, #ffffff00);
-	background-position: calc(99.8% - 3.5px) calc(1em+ 2px), calc(99.9% - 0px) calc(1em+ 2px), 100% 0;
+	background-position: calc(99.8% - 3.5px) calc(1em + 2px), calc(99.9% - 0px) calc(1em + 2px), 100% 0;
 	background-repeat: no-repeat;
 	background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
 	border-bottom-color: #979797;
@@ -2874,6 +2873,10 @@ a:focus {
 /*--------------------------------------------------------------
 ## JS-OffCanvas
 --------------------------------------------------------------*/
+
+body.has-offcanvas--visible {
+	overflow: hidden;
+}
 
 .c-offcanvas> .siuy-slinky-menu ul> li> a {
 	color: #a89b8e;
@@ -4010,25 +4013,53 @@ article .entry-footer> span.readmore>a:hover:before {
 --------------------------------------------------------------*/
 
 body:not(.single-post) .content-area .format-standard.post-password-required .entry-title,
-body:not(.single-post) .content-area .tag-post-formats:not(.format-standard) .entry-title,
+body:not(.single-post) .content-area .format-image .entry-title,
+body:not(.single-post) .content-area .format-chat .entry-title,
+body:not(.single-post) .content-area .format-link .entry-title,
+body:not(.single-post) .content-area .format-status .entry-title,
+body:not(.single-post) .content-area .format-aside .entry-title,
+body:not(.single-post) .content-area .format-video .entry-title,
+body:not(.single-post) .content-area .format-audio .entry-title,
+body:not(.single-post) .content-area .format-gallery .entry-title,
 body:not(.single-post) .content-area .sticky h2.entry-title {
 	margin-left: 1.5em;
 }
 
 .single-post .content-area .format-standard.post-password-required .entry-title,
-.single-post .content-area .tag-post-formats:not(.format-standard) .entry-title,
+.single-post .content-area .format-image .entry-title,
+.single-post .content-area .format-chat .entry-title,
+.single-post .content-area .format-link .entry-title,
+.single-post .content-area .format-status .entry-title,
+.single-post .content-area .format-aside .entry-title,
+.single-post .content-area .format-video .entry-title,
+.single-post .content-area .format-audio .entry-title,
+.single-post .content-area .format-gallery .entry-title,
 .single-post .content-area .sticky h2.entry-title {
 	margin-left: 1.2em;
 }
 
 .single-post .content-area .post-password-required .entry-title:before,
-.single-post .content-area .tag-post-formats .entry-title:before {
+.single-post .content-area .format-image .entry-title:before,
+.single-post .content-area .format-chat .entry-title:before,
+.single-post .content-area .format-link .entry-title:before,
+.single-post .content-area .format-status .entry-title:before,
+.single-post .content-area .format-aside .entry-title:before,
+.single-post .content-area .format-video .entry-title:before,
+.single-post .content-area .format-audio .entry-title:before,
+.single-post .content-area .format-gallery .entry-title:before {
 	line-height: 1.6;
 }
 
 .content-area .format-link:before,
 .content-area .post-password-required .entry-title:before,
-.content-area .tag-post-formats .entry-title:before,
+.content-area .format-image .entry-title:before,
+.content-area .format-chat .entry-title:before,
+.content-area .format-link .entry-title:before,
+.content-area .format-status .entry-title:before,
+.content-area .format-aside .entry-title:before,
+.content-area .format-video .entry-title:before,
+.content-area .format-audio .entry-title:before,
+.content-area .format-gallery .entry-title:before,
 .content-area .sticky h2.entry-title:before {
 	color: #edeae7;
 	font-family: 'Pe-icon-7-stroke';
@@ -4164,7 +4195,6 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 .post.format-chat .entry-content>p:nth-child(even) {
 	background-color: #ff5252;
 	border-radius: 0.3em 0.3em 0 0.3em;
-	color: #fff;
 	margin: 1em 0.5em 1em auto;
 }
 
@@ -4439,7 +4469,14 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 		grid-template-columns: 1fr;
 	}
 	.single-post .post-password-required .entry-title:before,
-	.single-post .tag-post-formats .entry-title:before {
+	.single-post .content-area .format-image .entry-title:before,
+	.single-post .content-area .format-chat .entry-title:before,
+	.single-post .content-area .format-link .entry-title:before,
+	.single-post .content-area .format-status .entry-title:before,
+	.single-post .content-area .format-aside .entry-title:before,
+	.single-post .content-area .format-video .entry-title:before,
+	.single-post .content-area .format-audio .entry-title:before,
+	.single-post .content-area .format-gallery .entry-title:before {
 		line-height: 1.2;
 	}
 	.error-404.not-found .page-content {
