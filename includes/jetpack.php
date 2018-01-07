@@ -33,7 +33,7 @@ function siuy_jetpack_setup()
 			'categories' => '.cat-links',
 			'tags' => '.tags-links',
 			'author' => '.byline',
-			'comment' => '.comments-link',
+			'comment' => '.comments-link'
 		) ,
 		'featured-images' => array(
 			'archive' => true,
