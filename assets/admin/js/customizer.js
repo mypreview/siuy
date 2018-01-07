@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Siuy
- * @since       1.1.0
+ * @since       1.1.1
  */
 (function(window, $, undefined) {
     "use strict";
@@ -49,7 +49,7 @@
                     'clip': 'auto',
                     'position': 'relative'
                 });
-                $('.site-title a, .site-description').css({
+                $('body #page .site-title a, body #page .site-description').css({
                     'color': to
                 });
             }
