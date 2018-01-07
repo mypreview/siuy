@@ -113,7 +113,7 @@ function siuy_comment_form_fields($fields)
 	foreach($fields as & $field):
 		$field = str_replace('id="author"', 'id="author" placeholder="* ' . esc_attr__('Name', 'siuy') . '"', $field);
 		$field = str_replace('id="email"', 'id="email" placeholder="* ' . esc_attr__('E-mail', 'siuy') . '"', $field);
-		$field = str_replace('id="url"', 'id="url" placeholder="* ' . esc_attr__('Website', 'siuy') . '"', $field);
+		$field = str_replace('id="url"', 'id="url" placeholder="' . esc_attr__('Website', 'siuy') . '"', $field);
 	endforeach;
 	return $fields;
 }
@@ -169,3 +169,24 @@ function siuy_footer_widget_areas()
 	endif;
 }	
 add_action('siuy_footer', 'siuy_footer_widget_areas', 10);
+/**
+ * Overwriting the default JetPack gallery width
+ *
+ * @link        https://developer.jetpack.com/hooks/tiled_gallery_content_width/
+ * @return 		string
+ * @since 	    1.0.0
+ */
+function siuy_jetpack_tiled_gallery_width($size)
+
+{
+	if (!defined('JETPACK__VERSION')):
+		return $size;
+	endif;
+	if (Siuy::is_fluid_template()):
+		$size = '1200';
+	else:
+		$size = '800';
+	endif;
+	return $size;
+}
+add_filter('tiled_gallery_content_width', 'siuy_jetpack_tiled_gallery_width', 10, 1);
