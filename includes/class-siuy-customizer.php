@@ -210,7 +210,7 @@ if (!class_exists('Siuy_Customizer')):
 		/**
 		 * Add extra CSS styles to a registered stylesheet.
 		 *
-		 * @since 1.1.0
+		 * @since 1.1.1
 		 */
 		public static function inline_style()
 
@@ -249,7 +249,7 @@ if (!class_exists('Siuy_Customizer')):
 			*/
 			if (get_theme_support('custom-header', 'default-text-color') !== $header_text_color):
 				$customizer_css.= "
-		            .site-title a, .site-description {
+		            body #page .site-title a, body #page .site-description {
 	            		color: #{$header_text_color};
 	            	}
 	        	";
