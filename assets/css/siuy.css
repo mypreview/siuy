@@ -1119,6 +1119,8 @@ h4 {
 	font-family: 'Cardo', Helvetica, Arial, sans-serif;
 }
 
+.single-post .entry-author,
+.single-post .entry-author .author-title,
 .post.format-chat .entry-content p,
 .content-area .site-main article .entry-meta .byline,
 .content-area .site-main article .entry-meta .entry-date,
@@ -1232,6 +1234,7 @@ input[type="submit"],
 	color: #63574C;
 }
 
+.single-post .entry-author .author-title,
 .post-navigation .nav-links a,
 .content-area .site-main article .entry-footer> span.readmore> a,
 .siuy-posts-widget .entry-content> a.readmore,
@@ -1247,6 +1250,7 @@ input[type="submit"],
 	color: #878787;
 }
 
+.single-post .entry-author .author-link,
 .logged-in-as a,
 #cancel-comment-reply-link,
 .mc4wp-form-fields input[name="EMAIL"],
@@ -1383,6 +1387,7 @@ input[type="submit"],
 	font-size: 0.812rem;
 }
 
+.single-post .entry-author,
 .comment-list .comment-meta .comment-metadata time,
 .comment-list .comment-content,
 .widget-area .siuy-posts-widget .entry-title,
@@ -1419,6 +1424,7 @@ pre {
 	font-size: 0.9375rem;
 }
 
+.single-post .entry-author .author-title,
 table td,
 .comments-area> .comments-title,
 .comments-area .comment-reply-title,
@@ -2329,6 +2335,7 @@ a {
 	color: #ff5252;
 }
 
+.single-post .entry-author .author-link:hover:before,
 .logged-in-as a:hover:before,
 .comment-content a:hover:after,
 #cancel-comment-reply-link:hover:before,
@@ -2347,6 +2354,7 @@ a {
 	width: 100%;
 }
 
+.single-post .entry-author .author-link::before,
 .logged-in-as a:before,
 .comment-content a:after,
 #cancel-comment-reply-link:before,
@@ -2364,7 +2372,7 @@ a {
 	-moz-transition: max-width 0.5s;
 	-o-transition: max-width 0.5s;
 	-webkit-transition: max-width 0.5s;
-	border-bottom: 1px solid #ff5252;
+	border-bottom: 1px solid;
 	bottom: 0;
 	color: #ff5252;
 	content: attr(data-hover);
@@ -2374,6 +2382,23 @@ a {
 	position: absolute;
 	transition: max-width 0.5s;
 	z-index: 0;
+}
+
+.logged-in-as a:before,
+.comment-content a:after,
+#cancel-comment-reply-link:before,
+.reply a:after,
+.comment-list .comment-meta .comment-metadata time:before,
+.comment-navigation a:before,
+.posts-navigation a:before,
+.entry-meta a:before,
+.entry-footer .comments-link a:before,
+.entry-footer .tags-links a:before,
+.entry-footer .cat-links a:before,
+.edit-link a:before,
+.comment-list .comment-author a:before,
+.entry-content a:after {
+	border-color: #ff5252;
 }
 
 .comment-content a>img,
@@ -4678,19 +4703,19 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	border-bottom: 1px solid #979797;
 }
 
-.site-footer .mc4wp-form-fields::-webkit-input-placeholder {
+.site-footer .mc4wp-form-fields input::-webkit-input-placeholder {
 	color: #595959;
 }
 
-.site-footer .mc4wp-form-fields::-moz-placeholder {
+.site-footer .mc4wp-form-fields input::-moz-placeholder {
 	color: #595959;
 }
 
-.site-footer .mc4wp-form-fields:-ms-input-placeholder {
+.site-footer .mc4wp-form-fields input:-ms-input-placeholder {
 	color: #595959;
 }
 
-.site-footer .mc4wp-form-fields:-moz-placeholder {
+.site-footer .mc4wp-form-fields input:-moz-placeholder {
 	color: #595959;
 }
 
@@ -4738,6 +4763,14 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	}
 }
 
+@media (max-width: 50.5em) and (min-width: 38.5em) {
+	#content.site-content> .widget-area {
+		column-count: 2;
+		-webkit-column-gap: 5em;
+		column-gap: 5em;
+		column-rule: 1px solid #ebebeb;
+	}
+}
 @media (max-width: 45.5em) {
 	.site-footer .widget-areas.widget-col-1 .column .widget_categories>ul,
 	.site-footer .widget-areas.widget-col-2 .column:last-of-type .widget_categories>ul,
@@ -4747,6 +4780,12 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	.site-footer .widget-areas .column .widget_categories>ul {
 		-webkit-column-count: 2;
 		column-count: 2;
+	}
+}
+@media (max-width: 38.5em) {
+	.siuy-posts-widget> article {
+		max-width: 280px;
+		margin: 0 auto;
 	}
 }
 
@@ -4885,4 +4924,62 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+# Jetpack
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Author bio
+--------------------------------------------------------------*/
+.single-post .entry-author:after {
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(15%, rgba(235, 235, 235, 1)), color-stop(85%, rgba(235, 235, 235, 1)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 15%, rgba(235, 235, 235, 1) 85%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 15%, rgba(235, 235, 235, 1) 85%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 1)), color-stop(15%, rgba(235, 235, 235, 1)), color-stop(85%, rgba(235, 235, 235, 1)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 15%, rgba(235, 235, 235, 1) 85%, rgba(255, 255, 255, 0) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff00', GradientType=1);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    margin-top: 45px;
+	margin-bottom: 45px;
+    width: 100%;
+}
+.single-post .entry-author .author-avatar img {
+	border-radius: 100%;
+}
+.single-post .entry-author .author-avatar {
+	width: 102px;	
+	float: left;
+	margin-right: 40px;
+}
+.single-post .entry-author>p,
+.single-post .entry-author .author-heading {
+	width: calc(100% - 145px);
+	float: right;
+}
+.single-post .entry-author>p {
+	margin: 0;
+}
+.single-post .entry-author .author-bio + p {
+	background-color: #F9F9F9;
+    padding: 20px 30px;
+}
+.single-post .entry-author .author-title {
+	width: calc(100% - 200px);
+	-webkit-margin-before: 0;
+	-moz-margin-before: 0;
+	-o-margin-before: 0;
+	-ms-margin-before: 0;
+	margin-top: 0;
+}
+.single-post .entry-author .author-link {
+	position: absolute;
+    right: 0;
+	max-width: 180px;
+}
+.single-post .entry-author .author-link::before {
+	border-color: #D4D4D4;
 }
