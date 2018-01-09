@@ -1119,6 +1119,7 @@ h4 {
 	font-family: 'Cardo', Helvetica, Arial, sans-serif;
 }
 
+.comments-area .comment-awaiting-moderation,
 .single-post .entry-author,
 .single-post .entry-author .author-title,
 .post.format-chat .entry-content p,
@@ -1313,6 +1314,8 @@ h6 {
 	line-height: 1.33;
 }
 
+.comment-edit-link,
+.comments-area .comment-list .comment-meta,
 .site-description,
 .site-title,
 button,
@@ -1387,6 +1390,7 @@ input[type="submit"],
 	font-size: 0.812rem;
 }
 
+.comments-area .comment-awaiting-moderation,
 .single-post .entry-author,
 .comment-list .comment-meta .comment-metadata time,
 .comment-list .comment-content,
@@ -1735,6 +1739,7 @@ select {
 		font-size: 17px;
 		font-size: 1.065rem;
 	}
+	.single-post .entry-author .author-title,
 	.post.format-chat .entry-content>p,
 	table td,
 	.comments-area> .comments-title,
@@ -1751,6 +1756,7 @@ select {
 		font-size: 14px;
 		font-size: 0.875rem;
 	}
+	.single-post .entry-author .author-link,
 	.comment-list .comment-meta .comment-metadata time,
 	.comment-list .comment-content,
 	.siuy-posts-widget .entry-title> a,
@@ -1851,6 +1857,7 @@ select {
 		font-size: 17px;
 		font-size: 1.065rem;
 	}
+	.single-post .entry-author .author-title,
 	table td,
 	.comments-area> .comments-title,
 	.comments-area .comment-reply-title,
@@ -1867,6 +1874,7 @@ select {
 		font-size: 14px;
 		font-size: 0.875rem;
 	}
+	.single-post .entry-author .author-link,
 	.comment-list .comment-meta .comment-metadata time,
 	.comment-list .comment-content,
 	.siuy-posts-widget .entry-title> a,
@@ -2779,19 +2787,6 @@ a:focus {
 	padding-bottom: 40px;
 }
 
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-
 .post-navigation .nav-links {
 	display: grid;
 	grid-gap: 30px;
@@ -2960,7 +2955,23 @@ a:focus {
 	left: -30px;
 }
 
+.comment-navigation .nav-next,
+.posts-navigation .nav-next {
+	text-align: right;
+}
+@media (min-width: 38.5em) {
+	.comment-navigation .nav-previous,
+	.posts-navigation .nav-previous {
+		float: left;
+		width: 50%;
+	}
 
+	.comment-navigation .nav-next,
+	.posts-navigation .nav-next {
+		float: right;
+		width: 50%;
+	}
+}
 /*--------------------------------------------------------------
 ## JS-OffCanvas
 --------------------------------------------------------------*/
@@ -4052,6 +4063,7 @@ body:not(.single-post) .content-area .site-main> article.post:last-of-type:after
 
 .content-area .edit-link:before {
 	content: "\e62c";
+	margin-top: 1.2px;
 }
 
 
@@ -4473,6 +4485,8 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 .comments-area .children {
 	list-style: none;
 	margin-left: 0;
+	display: flex;
+    flex-direction: column;
 }
 
 .comments-area .children> li {
@@ -4507,20 +4521,24 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	z-index: 10;
 }
 
+.comments-area .children .comment-content {
+	margin-top: 5px;
+}
+
+.comments-area .children .comment-author img {
+	width: 65px;
+}
+
 .comments-area .comment-list .comment {
 	margin-bottom: 58px;
 }
 
-.comments-area .comment-list .comment-author {
-	-ms-flex-align: start;
-	-ms-flex-pack: justify;
-	-webkit-box-align: start;
-	-webkit-box-pack: justify;
-	align-items: flex-start;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	justify-content: space-between;
+.comments-area .comment-list .comment:last-child {
+	margin-bottom: 0;
+}
+
+.comments-area .comment-list .comment .comment-respond {
+	margin-bottom: 30px;
 }
 
 .comments-area .comment-list .comment-author .says {
@@ -4534,6 +4552,7 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 .comments-area .comment-list> li> article> .comment-content {
 	background-color: #F9F9F9;
 	padding: 20px 30px;
+	margin-top: 11px;
 }
 
 .comments-area .comment-list .comment-content> p:first-of-type {
@@ -4542,22 +4561,6 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 
 .comments-area .comment-list .comment-content> p:last-of-type {
 	margin-bottom: 0;
-}
-
-.comments-area .comment-list .comment-meta {
-	-ms-flex-align: start;
-	-ms-flex-direction: row;
-	-ms-flex-pack: justify;
-	-webkit-box-align: start;
-	-webkit-box-direction: normal;
-	-webkit-box-orient: horizontal;
-	-webkit-box-pack: justify;
-	align-items: flex-start;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
 }
 
 .comments-area .comment-list .comment-meta .comment-metadata .edit-link {
@@ -4585,7 +4588,84 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	pointer-events: none;
 }
 
-@media screen and (min-width: 50.5em) {
+@media (min-width: 58.5em) {
+	.comments-area .comment-list .comment-content {
+		width: calc(100% - 140px);
+		float: right;
+	}
+	.comments-area .comment-list .comment-author {
+		width: calc(55% - 142px);
+		margin-left: 140px;
+	}
+}
+
+@media (min-width: 53.5em) {
+	.comments-area .comment-list .comment-author> img {
+		position: absolute;
+		left: 0;
+	}
+	.comments-area .comment-awaiting-moderation,
+	.comments-area .comment-list .comment-metadata {
+		width: 45%;
+		float: right;
+		text-align: right;
+	}
+	.comments-area .comment-list .comment-author {
+		-ms-flex-align: start;
+		-ms-flex-pack: justify;
+		-webkit-box-align: start;
+		-webkit-box-pack: justify;
+		align-items: flex-start;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		float: left;
+	}
+}
+@media (max-width: 58.5em) and (min-width: 53.5em) {
+	.comments-area .comment-list .comment-author {
+		width: calc(50% - 75px);
+		margin-left: 75px;
+	}
+	.comments-area .comment-list .comment-content {
+		width: calc(100% - 100px);
+		float: right;
+	}
+	.comments-area .comment-list .comment-author> img {
+		width: 75px;
+	}
+}
+
+@media (max-width: 53.5em) and (min-width: 50.5em) {
+	.comments-area .comment-list .comment-meta {
+		display: inline-block;
+		width: 100%;
+	}
+	.comments-area .comment-list .comment-author .fn {
+		margin-left: 15px;
+	}
+	.comments-area .comment-list .comment-author> img {
+		width: 45px;
+		float: left;
+	}
+	.comments-area .comment-awaiting-moderation,
+	.comments-area .comment-list .comment-metadata {
+		margin-left: 61px;
+	}
+	.comments-area .children .comment-content {
+		margin-top: 10px;
+	}
+	.comments-area .comment-list .reply {
+		margin-bottom: 30px;
+		margin-top: 0;
+	}
+	.comments-area .children> li> article {
+		padding-right: 20px;
+	}
+}
+
+@media (min-width: 50.5em) {
+	
 	.right-sidebar .content-area .site-main {
 		margin-left: 0;
 		margin-right: 4em;
@@ -4598,7 +4678,7 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	}
 }
 
-@media screen and (max-width: 65.5em) and (min-width: 50.5em) {
+@media (max-width: 65.5em) and (min-width: 50.5em) {
 	.right-sidebar .content-area .site-main {
 		margin-right: 2.65em;
 	}
@@ -4607,7 +4687,65 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	}
 }
 
+@media (max-width: 50.5em) and (min-width: 38.5em){
+	.comments-area .comment-list .comment-author {
+		-ms-flex-align: start;
+		-ms-flex-pack: justify;
+		-webkit-box-align: start;
+		-webkit-box-pack: justify;
+		align-items: flex-start;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		float: left;
+	}
+	.comments-area .comment-list .comment-author> img {
+		position: absolute;
+		left: 0;
+		width: 75px;
+	}
+	.comments-area .comment-list .comment-author {
+		width: calc(50% - 75px);
+		margin-left: 75px;
+	}
+	.comments-area .comment-list .comment-content {
+		width: calc(100% - 100px);
+		float: right;
+	}
+	.comments-area .comment-awaiting-moderation,
+	.comments-area .comment-list .comment-metadata {
+		width: 47%;
+		float: right;
+		text-align: right;
+	}
+}
+
 @media (max-width: 38.5em) {
+	.comments-area .comment-list .comment-author> img {
+		width: 45px;
+		float: left;
+	}
+	.comments-area .comment-list .comment-author .fn {
+		margin-left: 15px;
+	}
+	.comments-area .comment-awaiting-moderation,
+	.comments-area .comment-list .comment-metadata {
+		margin-left: 61px;
+	}
+	.comments-area .comment-list .comment-meta {
+		display: inline-block;
+		width: 100%;
+	}
+	.comments-area .comment-list .reply {
+		margin-bottom: 30px;
+		margin-top: 0;
+	}
+	.comments-area .children .comment-content {
+		margin-top: 10px;
+	}
+	.comments-area .children> li> article {
+		padding-right: 20px;
+	}
 	.post .entry-footer {
 		display: grid;
 	}
@@ -4636,16 +4774,6 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	}
 	.error-404.not-found .page-content {
 		grid-template-areas: "desc-404 esc-404" "recent-entries-404 recent-entries-404" "search-404 search-404" "archive-404 archive-404" "categories-404 categories-404" "tags-404 tags-404";
-	}
-}
-
-@media screen and (min-width: 37.5em) {
-	.comments-area .comment-list .comment-author .fn {
-		margin-left: 38px;
-	}
-	.comments-area .comment-list .comment-content {
-		margin-left: 140px;
-		margin-top: -65px;
 	}
 }
 
@@ -4951,13 +5079,10 @@ object {
 	border-radius: 100%;
 }
 .single-post .entry-author .author-avatar {
-	width: 102px;	
 	float: left;
-	margin-right: 40px;
 }
 .single-post .entry-author>p,
 .single-post .entry-author .author-heading {
-	width: calc(100% - 145px);
 	float: right;
 }
 .single-post .entry-author>p {
@@ -4968,18 +5093,48 @@ object {
     padding: 20px 30px;
 }
 .single-post .entry-author .author-title {
-	width: calc(100% - 200px);
 	-webkit-margin-before: 0;
 	-moz-margin-before: 0;
 	-o-margin-before: 0;
 	-ms-margin-before: 0;
 	margin-top: 0;
 }
-.single-post .entry-author .author-link {
-	position: absolute;
-    right: 0;
-	max-width: 180px;
-}
 .single-post .entry-author .author-link::before {
 	border-color: #D4D4D4;
+}
+@media (min-width: 58.5em) {
+	.single-post .entry-author>p,
+	.single-post .entry-author .author-heading {
+		width: calc(100% - 145px);
+	}
+	.single-post .entry-author .author-avatar {
+		width: 102px;	
+		margin-right: 40px;
+	}
+}
+@media (max-width: 58.5em) {
+	.single-post .entry-author>p,
+	.single-post .entry-author .author-heading {
+		width: calc(100% - 100px);
+	}
+	.single-post .entry-author .author-avatar {
+		width: 75px;	
+		margin-right: 20px;
+	}
+}
+@media (min-width: 38.5em) {
+	.single-post .entry-author .author-title {
+		width: calc(100% - 200px);
+	}
+	.single-post .entry-author .author-link {
+		position: absolute;
+		right: 0;
+		max-width: 180px;
+	}
+}
+@media (max-width: 38.5em) {
+	.single-post .entry-author .author-link {
+		width: auto;
+		float: right;
+	}
 }
