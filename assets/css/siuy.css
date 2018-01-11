@@ -1368,7 +1368,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.children > .comment .comment-metadata time,
+.children> .comment .comment-metadata time,
 .site-header .site-description,
 .content-area .site-main article .entry-meta .byline,
 .content-area .site-main article .entry-meta .entry-date,
@@ -1397,7 +1397,7 @@ input[type="submit"],
 .comments-area .children .comment-author .fn a,
 .comments-area .comment-awaiting-moderation,
 .single-post .entry-author,
-.comment-list > .comment > .comment-body  .comment-metadata time,
+.comment-list> .comment> .comment-body .comment-metadata time,
 .comment-list .comment-content,
 .widget-area .siuy-posts-widget .entry-title,
 .widget_rss ul li .rssSummary,
@@ -2210,7 +2210,7 @@ select {
 	background-image: -webkit-linear-gradient(45deg, transparent 50%, #979797 50%), -webkit-linear-gradient(315deg, #979797 50%, transparent 50%), -webkit-linear-gradient(left, #ffffff00, #ffffff00);
 	background-image: -o-linear-gradient(45deg, transparent 50%, #979797 50%), -o-linear-gradient(315deg, #979797 50%, transparent 50%), -o-linear-gradient(left, #ffffff00, #ffffff00);
 	background-image: linear-gradient(45deg, transparent 50%, #979797 50%), linear-gradient(135deg, #979797 50%, transparent 50%), linear-gradient(to right, #ffffff00, #ffffff00);
-	background-position: calc(99.8% - 3.5px) calc(1em + 2px), calc(99.9% - 0px) calc(1em + 2px), 100% 0;
+	background-position: calc(99.8% - 3.5px) calc(1em+ 2px), calc(99.9% - 0px) calc(1em+ 2px), 100% 0;
 	background-repeat: no-repeat;
 	background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
 	border-bottom-color: #979797;
@@ -2964,19 +2964,21 @@ a:focus {
 .posts-navigation .nav-next {
 	text-align: right;
 }
+
 @media (min-width: 38.5em) {
 	.comment-navigation .nav-previous,
 	.posts-navigation .nav-previous {
 		float: left;
 		width: 50%;
 	}
-
 	.comment-navigation .nav-next,
 	.posts-navigation .nav-next {
 		float: right;
 		width: 50%;
 	}
 }
+
+
 /*--------------------------------------------------------------
 ## JS-OffCanvas
 --------------------------------------------------------------*/
@@ -3077,7 +3079,7 @@ body.has-offcanvas--visible {
 
 .c-offcanvas-bg.is-animating,
 .c-offcanvas-bg.is-open {
-	background-color: #FFFFFF78;
+	background-color: rgba(255, 255, 255, 0.47058823529411764);
 	left: 0;
 	visibility: visible;
 }
@@ -4283,16 +4285,18 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 .content-area .format-aside {
 	-o-border-image: -o-linear-gradient(#edeae7, rgba(0, 0, 0, 0)) 1 100%;
 	-o-border-image: -o-linear-gradient(top, #edeae7, rgba(0, 0, 0, 0)) 1 100%;
+	-o-border-image: -o-linear-gradient(top, #edeae7, rgba(0, 0, 0, 0)) 1 100%;
 	-webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(#edeae7), to(rgba(0, 0, 0, 0))) 1 100%;
 	-webkit-border-image: -webkit-linear-gradient(#edeae7, rgba(0, 0, 0, 0)) 1 100%;
 	-webkit-border-image: -webkit-linear-gradient(top, #edeae7, rgba(0, 0, 0, 0)) 1 100%;
 	-webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(#edeae7), to(rgba(0, 0, 0, 0))) 1 100%;
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(237, 234, 231, 1)), color-stop(7%, rgba(237, 234, 231, 1)), color-stop(43%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
-	background: linear-gradient(to bottom, rgba(237, 234, 231, 1) 0%, rgba(237, 234, 231, 1) 7%, rgba(255, 255, 255, 0) 43%, rgba(255, 255, 255, 0) 100%);
-	background: -webkit-linear-gradient(top, rgba(237, 234, 231, 1) 0%, rgba(237, 234, 231, 1) 7%, rgba(255, 255, 255, 0) 43%, rgba(255, 255, 255, 0) 100%);
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237, 234, 231, 1)), color-stop(7%, rgba(237, 234, 231, 1)), color-stop(43%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
-	background: #fff;
+	-webkit-border-image: -webkit-linear-gradient(top, #edeae7, rgba(0, 0, 0, 0)) 1 100%;
 	background: -o-linear-gradient(top, rgba(237, 234, 231, 1) 0%, rgba(237, 234, 231, 1) 7%, rgba(255, 255, 255, 0) 43%, rgba(255, 255, 255, 0) 100%);
+	background: #fff;
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237, 234, 231, 1)), color-stop(7%, rgba(237, 234, 231, 1)), color-stop(43%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
+	background: -webkit-linear-gradient(top, rgba(237, 234, 231, 1) 0%, rgba(237, 234, 231, 1) 7%, rgba(255, 255, 255, 0) 43%, rgba(255, 255, 255, 0) 100%);
+	background: linear-gradient(to bottom, rgba(237, 234, 231, 1) 0%, rgba(237, 234, 231, 1) 7%, rgba(255, 255, 255, 0) 43%, rgba(255, 255, 255, 0) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(237, 234, 231, 1)), color-stop(7%, rgba(237, 234, 231, 1)), color-stop(43%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
 	border-image: -webkit-gradient(linear, left top, left bottom, from(#edeae7), to(rgba(0, 0, 0, 0))) 1 100%;
 	border-image: linear-gradient(to bottom, #edeae7, rgba(0, 0, 0, 0)) 1 100%;
 	border-style: solid;
@@ -4488,10 +4492,15 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 }
 
 .comments-area .children {
+	-ms-flex-direction: column;
+	-webkit-box-direction: normal;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
 	list-style: none;
 	margin-left: 0;
-	display: flex;
-    flex-direction: column;
 }
 
 .comments-area .children .children {
@@ -4530,7 +4539,7 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	z-index: 10;
 }
 
-.comments-area .children> li:only-child> article:after, 
+.comments-area .children> li:only-child> article:after,
 .comments-area .children> li:only-child:after,
 .comments-area .children> li:last-child:after {
 	width: 0;
@@ -4544,19 +4553,19 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	width: 65px;
 }
 
-.comments-area .comment-list > .comment {
+.comments-area .comment-list> .comment {
 	margin-bottom: 58px;
 }
 
-.comments-area .comment-list > .comment:last-child {
+.comments-area .comment-list> .comment:last-child {
 	margin-bottom: 0;
 }
 
-.comments-area .children > .comment {
-    padding-bottom: 58px;
+.comments-area .children> .comment {
+	padding-bottom: 58px;
 }
 
-.comments-area .children > .comment:last-child {
+.comments-area .children> .comment:last-child {
 	padding-bottom: 0;
 }
 
@@ -4574,8 +4583,8 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 
 .comments-area .comment-list> li> article> .comment-content {
 	background-color: #F9F9F9;
-	padding: 20px 30px;
 	margin-top: 11px;
+	padding: 20px 30px;
 }
 
 .comments-area .comment-list .comment-content> p:first-of-type {
@@ -4612,19 +4621,19 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 }
 
 @media (min-width: 58.5em) {
-	.comment-list > .comment > .comment-body  .comment-content {
+	.comment-list> .comment> .comment-body .comment-content {
 		width: calc(100% - 140px);
 	}
-	.comment-list > .comment > .comment-body .comment-author {
-		width: calc(55% - 142px);
+	.comment-list> .comment> .comment-body .comment-author {
 		margin-left: 140px;
+		width: calc(55% - 142px);
 	}
-	.comments-area .children > .comment .comment-content {
+	.comments-area .children> .comment .comment-content {
 		width: calc(100% - 89px);
 	}
-	.comments-area .children > .comment .comment-author {
-		width: calc(55% - 89px);
+	.comments-area .children> .comment .comment-author {
 		margin-left: 89px;
+		width: calc(55% - 89px);
 	}
 }
 
@@ -4633,14 +4642,14 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 		float: right;
 	}
 	.comments-area .comment-list .comment-author> img {
-		position: absolute;
 		left: 0;
+		position: absolute;
 	}
 	.comments-area .comment-awaiting-moderation,
 	.comments-area .comment-list .comment-metadata {
-		width: 45%;
 		float: right;
 		text-align: right;
+		width: 45%;
 	}
 	.comments-area .comment-list .comment-author {
 		-ms-flex-align: start;
@@ -4654,23 +4663,24 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 		float: left;
 	}
 }
+
 @media (max-width: 58.5em) and (min-width: 53.5em) {
-	.comment-list > .comment > .comment-body .comment-author {
-		width: calc(50% - 100px);
+	.comment-list> .comment> .comment-body .comment-author {
 		margin-left: 100px;
+		width: calc(50% - 100px);
 	}
-	.comment-list > .comment > .comment-body .comment-content {
+	.comment-list> .comment> .comment-body .comment-content {
 		width: calc(100% - 100px);
 	}
-	.comment-list > .comment > .comment-body .comment-author> img {
+	.comment-list> .comment> .comment-body .comment-author> img {
 		width: 75px;
 	}
-	.comments-area .children > .comment .comment-content {
+	.comments-area .children> .comment .comment-content {
 		width: calc(100% - 65px);
 	}
-	.comments-area .children > .comment .comment-author {
-		width: calc(55% - 65px);
+	.comments-area .children> .comment .comment-author {
 		margin-left: 65px;
+		width: calc(55% - 65px);
 	}
 	.comments-area .children .comment-author img {
 		width: 50px;
@@ -4686,7 +4696,7 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 		float: left;
 		margin-right: 10px;
 	}
-	.comment-list > .comment > .comment-body .comment-author> img {
+	.comment-list> .comment> .comment-body .comment-author> img {
 		width: 65px;
 	}
 	.comments-area .children .comment-author img {
@@ -4705,7 +4715,6 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 }
 
 @media (min-width: 50.5em) {
-	
 	.right-sidebar .content-area .site-main {
 		margin-left: 0;
 		margin-right: 4em;
@@ -4727,7 +4736,7 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	}
 }
 
-@media (max-width: 50.5em) and (min-width: 38.5em){
+@media (max-width: 50.5em) and (min-width: 38.5em) {
 	.comments-area .comment-list .comment-author {
 		-ms-flex-align: start;
 		-ms-flex-pack: justify;
@@ -4740,26 +4749,26 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 		float: left;
 	}
 	.comments-area .comment-list .comment-author> img {
-		position: absolute;
 		left: 0;
+		position: absolute;
 	}
-	.comment-list > .comment > .comment-body .comment-author {
-		width: calc(50% - 100px);
+	.comment-list> .comment> .comment-body .comment-author {
 		margin-left: 100px;
+		width: calc(50% - 100px);
 	}
-	.comment-list > .comment > .comment-body .comment-content {
+	.comment-list> .comment> .comment-body .comment-content {
 		width: calc(100% - 100px);
 	}
-	.comment-list > .comment > .comment-body .comment-author> img {
+	.comment-list> .comment> .comment-body .comment-author> img {
 		width: 75px;
 	}
-	.comments-area .children > .comment .comment-content {
+	.comments-area .children> .comment .comment-content {
 		width: calc(100% - 65px);
 	}
 	.comment-awaiting-moderation,
-	.comments-area .children > .comment .comment-author {
-		width: calc(55% - 65px);
+	.comments-area .children> .comment .comment-author {
 		margin-left: 65px;
+		width: calc(55% - 65px);
 	}
 	.comments-area .children .comment-author img {
 		width: 50px;
@@ -4771,10 +4780,10 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 
 @media (max-width: 38.5em) {
 	.comments-area .comment-list .comment-author> img {
-		margin-right: 5px;
 		float: left;
+		margin-right: 5px;
 	}
-	.comment-list > .comment > .comment-body .comment-author> img {
+	.comment-list> .comment> .comment-body .comment-author> img {
 		width: 65px;
 	}
 	.comments-area .children .comment-author img {
@@ -4830,6 +4839,7 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 		margin-right: 0;
 	}
 }
+
 
 /*--------------------------------------------------------------
 # Footer
@@ -4946,12 +4956,15 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 
 @media (max-width: 50.5em) and (min-width: 38.5em) {
 	#content.site-content> .widget-area {
-		column-count: 2;
+		-webkit-column-count: 2;
 		-webkit-column-gap: 5em;
+		-webkit-column-rule: 1px solid #ebebeb;
+		column-count: 2;
 		column-gap: 5em;
 		column-rule: 1px solid #ebebeb;
 	}
 }
+
 @media (max-width: 45.5em) {
 	.site-footer .widget-areas.widget-col-1 .column .widget_categories>ul,
 	.site-footer .widget-areas.widget-col-2 .column:last-of-type .widget_categories>ul,
@@ -4963,10 +4976,11 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 		column-count: 2;
 	}
 }
+
 @media (max-width: 38.5em) {
 	.siuy-posts-widget> article {
-		max-width: 280px;
 		margin: 0 auto;
+		max-width: 280px;
 	}
 }
 
@@ -5107,87 +5121,101 @@ object {
 	display: block;
 }
 
+
 /*--------------------------------------------------------------
 # Jetpack
 --------------------------------------------------------------*/
 
+
 /*--------------------------------------------------------------
 ## Author bio
 --------------------------------------------------------------*/
+
 .single-post .entry-author:after {
 	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(15%, rgba(235, 235, 235, 1)), color-stop(85%, rgba(235, 235, 235, 1)), color-stop(100%, rgba(255, 255, 255, 0)));
-    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 15%, rgba(235, 235, 235, 1) 85%, rgba(255, 255, 255, 0) 100%);
-    background: -o-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 15%, rgba(235, 235, 235, 1) 85%, rgba(255, 255, 255, 0) 100%);
-    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 1)), color-stop(15%, rgba(235, 235, 235, 1)), color-stop(85%, rgba(235, 235, 235, 1)), to(rgba(255, 255, 255, 0)));
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 15%, rgba(235, 235, 235, 1) 85%, rgba(255, 255, 255, 0) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff00', GradientType=1);
-    content: "";
-    display: inline-block;
-    height: 1px;
-    margin-top: 45px;
+	background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 15%, rgba(235, 235, 235, 1) 85%, rgba(255, 255, 255, 0) 100%);
+	background: -o-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 15%, rgba(235, 235, 235, 1) 85%, rgba(255, 255, 255, 0) 100%);
+	background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 1)), color-stop(15%, rgba(235, 235, 235, 1)), color-stop(85%, rgba(235, 235, 235, 1)), to(rgba(255, 255, 255, 0)));
+	background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 15%, rgba(235, 235, 235, 1) 85%, rgba(255, 255, 255, 0) 100%);
+	content: "";
+	display: inline-block;
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff00', GradientType=1);
+	height: 1px;
 	margin-bottom: 45px;
-    width: 100%;
+	margin-top: 45px;
+	width: 100%;
 }
+
 .single-post .entry-author .author-avatar img {
 	border-radius: 100%;
 }
+
 .single-post .entry-author .author-avatar {
 	float: left;
 }
+
 .single-post .entry-author>p,
 .single-post .entry-author .author-heading {
 	float: right;
 }
+
 .single-post .entry-author>p {
 	margin: 0;
 }
-.single-post .entry-author .author-bio + p {
+
+.single-post .entry-author .author-bio+ p {
 	background-color: #F9F9F9;
-    padding: 20px 30px;
+	padding: 20px 30px;
 }
+
 .single-post .entry-author .author-title {
-	-webkit-margin-before: 0;
 	-moz-margin-before: 0;
-	-o-margin-before: 0;
 	-ms-margin-before: 0;
+	-o-margin-before: 0;
+	-webkit-margin-before: 0;
 	margin-top: 0;
 }
+
 .single-post .entry-author .author-link::before {
 	border-color: #D4D4D4;
 }
+
 @media (min-width: 58.5em) {
 	.single-post .entry-author>p,
 	.single-post .entry-author .author-heading {
 		width: calc(100% - 145px);
 	}
 	.single-post .entry-author .author-avatar {
-		width: 102px;	
 		margin-right: 40px;
+		width: 102px;
 	}
 }
+
 @media (max-width: 58.5em) {
 	.single-post .entry-author>p,
 	.single-post .entry-author .author-heading {
 		width: calc(100% - 100px);
 	}
 	.single-post .entry-author .author-avatar {
-		width: 75px;	
 		margin-right: 20px;
+		width: 75px;
 	}
 }
+
 @media (min-width: 38.5em) {
 	.single-post .entry-author .author-title {
 		width: calc(100% - 200px);
 	}
 	.single-post .entry-author .author-link {
+		max-width: 180px;
 		position: absolute;
 		right: 0;
-		max-width: 180px;
 	}
 }
+
 @media (max-width: 38.5em) {
 	.single-post .entry-author .author-link {
-		width: auto;
 		float: right;
+		width: auto;
 	}
 }
