@@ -44,6 +44,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
     ## Captions
     ## Galleries
+#Jetpack
+	## Author bio
 --------------------------------------------------------------*/
 
 
@@ -1366,6 +1368,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
+.children > .comment .comment-metadata time,
 .site-header .site-description,
 .content-area .site-main article .entry-meta .byline,
 .content-area .site-main article .entry-meta .entry-date,
@@ -1390,9 +1393,11 @@ input[type="submit"],
 	font-size: 0.812rem;
 }
 
+.comments-area .children .comment-author .fn,
+.comments-area .children .comment-author .fn a,
 .comments-area .comment-awaiting-moderation,
 .single-post .entry-author,
-.comment-list .comment-meta .comment-metadata time,
+.comment-list > .comment > .comment-body  .comment-metadata time,
 .comment-list .comment-content,
 .widget-area .siuy-posts-widget .entry-title,
 .widget_rss ul li .rssSummary,
@@ -4489,6 +4494,10 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
     flex-direction: column;
 }
 
+.comments-area .children .children {
+	margin-right: 15px;
+}
+
 .comments-area .children> li {
 	position: relative;
 }
@@ -4500,7 +4509,7 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 .comments-area .children> li:after {
 	background-color: #EBEBEB;
 	content: '';
-	height: 95%;
+	height: 100%;
 	pointer-events: none;
 	position: absolute;
 	right: 0;
@@ -4521,20 +4530,34 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	z-index: 10;
 }
 
+.comments-area .children> li:only-child> article:after, 
+.comments-area .children> li:only-child:after,
+.comments-area .children> li:last-child:after {
+	width: 0;
+}
+
 .comments-area .children .comment-content {
-	margin-top: 5px;
+	margin-top: 2px;
 }
 
 .comments-area .children .comment-author img {
 	width: 65px;
 }
 
-.comments-area .comment-list .comment {
+.comments-area .comment-list > .comment {
 	margin-bottom: 58px;
 }
 
-.comments-area .comment-list .comment:last-child {
+.comments-area .comment-list > .comment:last-child {
 	margin-bottom: 0;
+}
+
+.comments-area .children > .comment {
+    padding-bottom: 58px;
+}
+
+.comments-area .children > .comment:last-child {
+	padding-bottom: 0;
 }
 
 .comments-area .comment-list .comment .comment-respond {
@@ -4589,17 +4612,26 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 }
 
 @media (min-width: 58.5em) {
-	.comments-area .comment-list .comment-content {
+	.comment-list > .comment > .comment-body  .comment-content {
 		width: calc(100% - 140px);
-		float: right;
 	}
-	.comments-area .comment-list .comment-author {
+	.comment-list > .comment > .comment-body .comment-author {
 		width: calc(55% - 142px);
 		margin-left: 140px;
+	}
+	.comments-area .children > .comment .comment-content {
+		width: calc(100% - 89px);
+	}
+	.comments-area .children > .comment .comment-author {
+		width: calc(55% - 89px);
+		margin-left: 89px;
 	}
 }
 
 @media (min-width: 53.5em) {
+	.comments-area .comment-list .comment-content {
+		float: right;
+	}
 	.comments-area .comment-list .comment-author> img {
 		position: absolute;
 		left: 0;
@@ -4623,16 +4655,25 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	}
 }
 @media (max-width: 58.5em) and (min-width: 53.5em) {
-	.comments-area .comment-list .comment-author {
-		width: calc(50% - 75px);
-		margin-left: 75px;
+	.comment-list > .comment > .comment-body .comment-author {
+		width: calc(50% - 100px);
+		margin-left: 100px;
 	}
-	.comments-area .comment-list .comment-content {
+	.comment-list > .comment > .comment-body .comment-content {
 		width: calc(100% - 100px);
-		float: right;
 	}
-	.comments-area .comment-list .comment-author> img {
+	.comment-list > .comment > .comment-body .comment-author> img {
 		width: 75px;
+	}
+	.comments-area .children > .comment .comment-content {
+		width: calc(100% - 65px);
+	}
+	.comments-area .children > .comment .comment-author {
+		width: calc(55% - 65px);
+		margin-left: 65px;
+	}
+	.comments-area .children .comment-author img {
+		width: 50px;
 	}
 }
 
@@ -4641,16 +4682,15 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 		display: inline-block;
 		width: 100%;
 	}
-	.comments-area .comment-list .comment-author .fn {
-		margin-left: 15px;
-	}
 	.comments-area .comment-list .comment-author> img {
-		width: 45px;
 		float: left;
+		margin-right: 10px;
 	}
-	.comments-area .comment-awaiting-moderation,
-	.comments-area .comment-list .comment-metadata {
-		margin-left: 61px;
+	.comment-list > .comment > .comment-body .comment-author> img {
+		width: 65px;
+	}
+	.comments-area .children .comment-author img {
+		width: 45px;
 	}
 	.comments-area .children .comment-content {
 		margin-top: 10px;
@@ -4702,35 +4742,43 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	.comments-area .comment-list .comment-author> img {
 		position: absolute;
 		left: 0;
+	}
+	.comment-list > .comment > .comment-body .comment-author {
+		width: calc(50% - 100px);
+		margin-left: 100px;
+	}
+	.comment-list > .comment > .comment-body .comment-content {
+		width: calc(100% - 100px);
+	}
+	.comment-list > .comment > .comment-body .comment-author> img {
 		width: 75px;
 	}
-	.comments-area .comment-list .comment-author {
-		width: calc(50% - 75px);
-		margin-left: 75px;
+	.comments-area .children > .comment .comment-content {
+		width: calc(100% - 65px);
+	}
+	.comment-awaiting-moderation,
+	.comments-area .children > .comment .comment-author {
+		width: calc(55% - 65px);
+		margin-left: 65px;
+	}
+	.comments-area .children .comment-author img {
+		width: 50px;
 	}
 	.comments-area .comment-list .comment-content {
-		width: calc(100% - 100px);
 		float: right;
-	}
-	.comments-area .comment-awaiting-moderation,
-	.comments-area .comment-list .comment-metadata {
-		width: 47%;
-		float: right;
-		text-align: right;
 	}
 }
 
 @media (max-width: 38.5em) {
 	.comments-area .comment-list .comment-author> img {
-		width: 45px;
+		margin-right: 5px;
 		float: left;
 	}
-	.comments-area .comment-list .comment-author .fn {
-		margin-left: 15px;
+	.comment-list > .comment > .comment-body .comment-author> img {
+		width: 65px;
 	}
-	.comments-area .comment-awaiting-moderation,
-	.comments-area .comment-list .comment-metadata {
-		margin-left: 61px;
+	.comments-area .children .comment-author img {
+		width: 45px;
 	}
 	.comments-area .comment-list .comment-meta {
 		display: inline-block;
@@ -4777,6 +4825,11 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	}
 }
 
+@media (max-width: 21em) {
+	.comments-area .children .children {
+		margin-right: 0;
+	}
+}
 
 /*--------------------------------------------------------------
 # Footer
