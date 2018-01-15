@@ -54,6 +54,7 @@ jQuery Accesible Offcanvas Panels
 		$(document).trigger('enhance');
 	    $('#right.siuy-offcanvas').offcanvas({
 	        modifiers: 'right,overlay,push',
+	        closeButtonClass: 'close-btn',
 	        triggerButton: '.js-primary-offcanvas-toggler',
 	        onInit: function() {
 	            $(this).removeClass('is-hidden');
