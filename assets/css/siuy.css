@@ -45,7 +45,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     ## Captions
     ## Galleries
 #Jetpack
-	## Author bio
+	## Author bio 
+	## Slide Show
+	## Contact Form
 --------------------------------------------------------------*/
 
 
@@ -1106,7 +1108,7 @@ th {
 # Typography
 --------------------------------------------------------------*/
 
-blockquote> p,
+blockquote:not(.contact-form-submission)> p,
 .post-navigation .nav-links a,
 .comment-list .comment-author span.says,
 .widget_rss ul li .rssSummary,
@@ -1121,6 +1123,8 @@ h4 {
 	font-family: 'Cardo', Helvetica, Arial, sans-serif;
 }
 
+.contact-form-submission,
+.form-errors .form-error-message,
 .comments-area .comment-awaiting-moderation,
 .single-post .entry-author,
 .single-post .entry-author .author-title,
@@ -1247,7 +1251,7 @@ input[type="submit"],
 	color: #ff5252;
 }
 
-.single .entry-meta .byline,
+.entry-meta .byline,
 .site-footer,
 .site-footer a {
 	color: #878787;
@@ -1270,7 +1274,7 @@ input[type="submit"],
 	color: #454545;
 }
 
-blockquote> p,
+blockquote:not(.contact-form-submission)> p,
 .content-area .site-main article .entry-content {
 	line-height: 1.8;
 }
@@ -1393,6 +1397,7 @@ input[type="submit"],
 	font-size: 0.812rem;
 }
 
+div[id*=contact-form-] .contact-form-submission,
 .comments-area .children .comment-author .fn,
 .comments-area .children .comment-author .fn a,
 .comments-area .comment-awaiting-moderation,
@@ -1433,6 +1438,7 @@ pre {
 	font-size: 0.9375rem;
 }
 
+.form-error .form-errors,
 .single-post .entry-author .author-title,
 table td,
 .comments-area> .comments-title,
@@ -1443,6 +1449,7 @@ optgroup {
 	font-size: 1rem;
 }
 
+div[id*="contact-form-"] h3,
 .mc4wp-form-fields button,
 table th,
 .widgettitle,
@@ -1453,7 +1460,7 @@ h5 {
 	font-size: 1.125rem;
 }
 
-blockquote cite,
+blockquote:not(.contact-form-submission) cite,
 .content-area .site-main article .entry-content {
 	font-size: 20px;
 	font-size: 1.25rem;
@@ -1469,7 +1476,7 @@ h4 {
 	font-size: 1.87rem;
 }
 
-blockquote,
+blockquote:not(.contact-form-submission),
 body:not(.single) .content-area .post .entry-title,
 h3 {
 	font-size: 36px;
@@ -1572,7 +1579,7 @@ cite,
 em,
 i,
 address,
-blockquote {
+blockquote:not(.contact-form-submission) {
 	font-style: italic;
 }
 
@@ -1590,7 +1597,7 @@ p {
 	margin-bottom: 1.9em;
 }
 
-blockquote {
+blockquote:not(.contact-form-submission) {
 	color: #2f2f2f;
 }
 
@@ -1650,7 +1657,6 @@ big {
 }
 
 body #page .content-area article .entry-title> a,
-body #page .content-area article .entry-meta .byline a,
 .entry-footer a {
 	color: inherit;
 }
@@ -1716,7 +1722,7 @@ select {
 		font-size: 40px;
 		font-size: 2.5rem;
 	}
-	blockquote,
+	blockquote:not(.contact-form-submission),
 	body:not(.single) .post .entry-header .entry-title,
 	h3 {
 		font-size: 29px;
@@ -1730,7 +1736,7 @@ select {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
-	blockquote cite,
+	blockquote:not(.contact-form-submission) cite,
 	.content-area .site-main article .entry-content {
 		font-size: 18px;
 		font-size: 1.125rem;
@@ -1843,12 +1849,12 @@ select {
 		font-size: 28px;
 		font-size: 1.75rem;
 	}
-	blockquote,
+	blockquote:not(.contact-form-submission),
 	h4 {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
-	blockquote cite,
+	blockquote:not(.contact-form-submission) cite,
 	.content-area .site-main article .entry-content {
 		font-size: 18px;
 		font-size: 1.125rem;
@@ -2041,7 +2047,7 @@ table tr th {
 	padding: 12px;
 }
 
-blockquote {
+blockquote:not(.contact-form-submission) {
 	border-color: #edeae7;
 	border-style: solid;
 	border-width: 1px 0 1px 0;
@@ -2049,16 +2055,16 @@ blockquote {
 	position: relative;
 }
 
-.single blockquote:first-child,
-body:not(.single-post) blockquote {
+.single blockquote:not(.contact-form-submission):first-child,
+body:not(.single-post) blockquote:not(.contact-form-submission) {
 	margin: 1em 0 1.2em;
 }
 
-.single blockquote {
+.single blockquote:not(.contact-form-submission) {
 	margin: 2em 0 1.2em;
 }
 
-blockquote> p {
+blockquote:not(.contact-form-submission)> p {
 	margin-bottom: 0.95em;
 	margin-top: 0.35em;
 }
@@ -2067,7 +2073,7 @@ cite:before {
 	content: "- ";
 }
 
-blockquote:after {
+blockquote:not(.contact-form-submission):after {
 	bottom: 0.36em;
 	color: #edeae7;
 	content: "”";
@@ -2094,7 +2100,7 @@ code {
 }
 
 @media (max-width: 38.5em) {
-	blockquote:after {
+	blockquote:not(.contact-form-submission):after {
 		bottom: 0;
 	}
 }
@@ -2434,6 +2440,10 @@ a:focus {
 	outline: 0;
 }
 
+figure a:after{
+	display: none;
+}
+
 
 /*--------------------------------------------------------------
 # Navigation
@@ -2499,7 +2509,7 @@ a:focus {
 --------------------------------------------------------------*/
 
 #site-navigation> #primary-menu,
-#site-navigation .menu-main-menu-container {
+#site-navigation > div[class*="-container"] {
 	-ms-flex-pack: end;
 	-webkit-box-pack: end;
 	display: -webkit-box;
@@ -3222,6 +3232,14 @@ body.has-offcanvas--visible {
 
 .c-offcanvas .slinky-theme-default .back:hover {
 	background-color: transparent !important;
+}
+
+.c-offcanvas .close-btn {
+	background: transparent;
+	float: right;
+    color: #63574c;
+    font-size: 50px;
+	padding: 12px 16px;
 }
 
 @media (max-width: 21em) {
@@ -4292,7 +4310,6 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	-webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(#edeae7), to(rgba(0, 0, 0, 0))) 1 100%;
 	-webkit-border-image: -webkit-linear-gradient(top, #edeae7, rgba(0, 0, 0, 0)) 1 100%;
 	background: -o-linear-gradient(top, rgba(237, 234, 231, 1) 0%, rgba(237, 234, 231, 1) 7%, rgba(255, 255, 255, 0) 43%, rgba(255, 255, 255, 0) 100%);
-	background: #fff;
 	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237, 234, 231, 1)), color-stop(7%, rgba(237, 234, 231, 1)), color-stop(43%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
 	background: -webkit-linear-gradient(top, rgba(237, 234, 231, 1) 0%, rgba(237, 234, 231, 1) 7%, rgba(255, 255, 255, 0) 43%, rgba(255, 255, 255, 0) 100%);
 	background: linear-gradient(to bottom, rgba(237, 234, 231, 1) 0%, rgba(237, 234, 231, 1) 7%, rgba(255, 255, 255, 0) 43%, rgba(255, 255, 255, 0) 100%);
@@ -5218,4 +5235,37 @@ object {
 		float: right;
 		width: auto;
 	}
+}
+
+/*--------------------------------------------------------------
+## Slide Show
+--------------------------------------------------------------*/
+
+.jetpack-slideshow .slideshow-controls a:after{
+	display: none;
+}
+
+/*--------------------------------------------------------------
+## Contact Form
+--------------------------------------------------------------*/
+ 
+div[id*="contact-form-"] {
+	background-color: #F9F9F9;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+}
+div[id*="contact-form-"] h3 {
+	margin-top: 0;
+}
+.form-error ul.form-errors {
+	list-style: none;
+    padding: 0;
+    margin: 0;
+}
+div[id*="contact-form-"] .contact-form-submission {
+    margin: 0;
+    padding: 0;
+}
+div[id*="contact-form-"] .contact-form-submission br {
+	display: none;
 }
