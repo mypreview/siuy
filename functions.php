@@ -30,7 +30,8 @@ define('SIUY_THEME_VERSION', $siuy_theme->get('Version'));
 // Siuy only works in WordPress 4.7 or later.
 if (version_compare($GLOBALS['wp_version'], '4.7-alpha', '<')):
 	require 'includes/back-compat.php';
-
+	return;
+	
 endif;
 /**
  * Initialize all the things.
