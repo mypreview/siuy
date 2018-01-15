@@ -48,10 +48,6 @@ AppendAround - A pattern for responsive markup
 The MIT License - @scottjehl, Filament Group, Inc.
 https://github.com/filamentgroup/AppendAround/blob/master/LICENSE
 
-Select2 - Select2 is a jQuery based replacement for select boxes.
-The MIT License - Copyright (c) 2014 select2.
-https://github.com/select2/select2#copyright-and-license
-
 JS-OffCanvas - jQuery accessible Offcanvas plugin, using ARIA.
 The MIT License - Copyright (c) 2016 @vmitsaras.
 https://github.com/vmitsaras/js-offcanvas/blob/master/LICENSE
