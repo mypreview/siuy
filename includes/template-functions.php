@@ -61,6 +61,9 @@ function siuy_offcanvas()
 {
 	?>
 	<div id="right" class="siuy-offcanvas c-offcanvas is-hidden" role="complementary">
+		<button class="close-btn">
+			<i class="pe-7s-close"></i>
+		</button>
 		<div id="primary-slinky-menu" class="siuy-slinky-menu">
 		</div>
 		<div class="offcanvas-nav d-block d-md-none" data-set="bs"></div>
