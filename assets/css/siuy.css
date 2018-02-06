@@ -1123,6 +1123,7 @@ h4 {
 	font-family: 'Cardo', Helvetica, Arial, sans-serif;
 }
 
+div[id*="contact-form-"] h3,
 .contact-form-submission,
 .form-errors .form-error-message,
 .comments-area .comment-awaiting-moderation,
@@ -1223,6 +1224,7 @@ textarea,
 .reply> a,
 .comment-list .edit-link a,
 .content-area .site-main article .entry-footer,
+div[id*=contact-form-] h3:before,
 body,
 optgroup {
 	color: #595959;
@@ -1251,6 +1253,7 @@ input[type="submit"],
 	color: #ff5252;
 }
 
+div[id*=contact-form-] h3,
 .entry-meta .byline,
 .site-footer,
 .site-footer a {
@@ -1320,6 +1323,10 @@ h6 {
 	line-height: 1.33;
 }
 
+div[id*="contact-form-"] h3 {
+	line-height: 1.5;
+}
+
 .comment-edit-link,
 .comments-area .comment-list .comment-meta,
 .site-description,
@@ -1331,6 +1338,7 @@ input[type="submit"] {
 	line-height: normal;
 }
 
+div[id*="contact-form-"] h3,
 .wp-caption-text,
 .comment-list .comment-content,
 .comments-area .comment-list .reply> a,
@@ -1438,6 +1446,7 @@ pre {
 	font-size: 0.9375rem;
 }
 
+div[id*="contact-form-"] h3,
 .form-error .form-errors,
 .single-post .entry-author .author-title,
 table td,
@@ -1449,7 +1458,6 @@ optgroup {
 	font-size: 1rem;
 }
 
-div[id*="contact-form-"] h3,
 .mc4wp-form-fields button,
 table th,
 .widgettitle,
@@ -4578,8 +4586,9 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	margin-bottom: 0;
 }
 
-.comments-area .children> .comment {
+.comments-area .comment-list article {
 	padding-bottom: 58px;
+	overflow: hidden;
 }
 
 .comments-area .children> .comment:last-child {
@@ -4619,7 +4628,6 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 .comments-area .comment-list .reply {
 	clear: both;
 	display: block;
-	margin-bottom: 58px;
 	margin-top: 14px;
 	position: relative;
 	text-align: right;
@@ -4723,8 +4731,10 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 		margin-top: 10px;
 	}
 	.comments-area .comment-list .reply {
-		margin-bottom: 30px;
 		margin-top: 0;
+	}
+	.comments-area .comment-list article {
+		padding-bottom: 30px;
 	}
 	.comments-area .children> li> article {
 		padding-right: 20px;
@@ -4811,8 +4821,10 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 		width: 100%;
 	}
 	.comments-area .comment-list .reply {
-		margin-bottom: 30px;
 		margin-top: 0;
+	}
+	.comments-area .comment-list article {
+		padding-bottom: 30px;
 	}
 	.comments-area .children .comment-content {
 		margin-top: 10px;
@@ -5248,24 +5260,55 @@ object {
 /*--------------------------------------------------------------
 ## Contact Form
 --------------------------------------------------------------*/
- 
+
+
 div[id*="contact-form-"] {
-	background-color: #F9F9F9;
+	background-color: #f9f9f9;
     padding: 20px 30px;
     margin-bottom: 20px;
 }
 div[id*="contact-form-"] h3 {
 	margin-top: 0;
+	font-weight: 400;
 }
-.form-error ul.form-errors {
-	list-style: none;
-    padding: 0;
-    margin: 0;
+
+div[id*="contact-form-"] h3:before {
+	content: "\e66c";
+	font-family: 'Pe-icon-7-stroke';
+    font-size: 61px;
+    line-height: 1;
+    left: 20px;
 }
+
+div[id*="contact-form-"] .form-error h3:before {
+	content: "\e647";
+}
+
+.form-error ul.form-errors,
 div[id*="contact-form-"] .contact-form-submission {
     margin: 0;
     padding: 0;
 }
+
+.form-error ul.form-errors {
+	list-style: none;
+	margin-bottom: 20px;
+}
+
 div[id*="contact-form-"] .contact-form-submission br {
 	display: none;
+}
+
+@media (min-width: 38.5em) {
+	
+	div[id*="contact-form-"] h3:before {
+		position: absolute;
+	}
+	
+	.form-error ul.form-errors,
+	div[id*="contact-form-"] .contact-form-submission,
+	div[id*="contact-form-"] h3 {
+		margin-left: 82px;
+	}
+	
 }
