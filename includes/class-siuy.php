@@ -277,7 +277,8 @@ if (!class_exists('Siuy')):
 		/**
 		 * Add a pingback url auto-discovery header for singularly identifiable articles.
 		 *
-		 * @since 1.0.0
+		 * @see 	https://github.com/WordPress/twentyseventeen/blob/master/functions.php#L247
+		 * @since 	1.0.0
 		 */
 		public function pingback_header()
 
