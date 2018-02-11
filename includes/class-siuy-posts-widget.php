@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Siuy
- * @since       1.1.0
+ * @since       1.1.2
  */
 if (!defined('ABSPATH')):
     exit;
@@ -33,7 +33,7 @@ if (!class_exists('Siuy_Posts_Widget')):
         /**
          * Outputs the content of the widget.
          *
-         * @since 1.1.0
+         * @since 1.1.2
          */
         public function widget($args, $instance)
 
@@ -102,7 +102,7 @@ if (!class_exists('Siuy_Posts_Widget')):
                                 if (has_excerpt(get_the_ID())):
                                     the_excerpt();
                                 else:
-                                    echo '<p>' . wp_trim_words(get_the_content(), $post_excerpt_limit) . '</p>';
+                                    echo '<p>' . wp_kses_post(wp_trim_words(get_the_content(), $post_excerpt_limit)) . '</p>';
                                 endif;
 							endif;
 							if ($post_readmore_btn):
@@ -120,7 +120,7 @@ if (!class_exists('Siuy_Posts_Widget')):
         /**
          * Generates the administration form for the widget.
          * 
-         * @since 1.0.0
+         * @since 1.1.2
          */
         public function form($instance)
 
@@ -151,7 +151,7 @@ if (!class_exists('Siuy_Posts_Widget')):
             ?>
             <p>
                 <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e('Title:', 'siuy'); ?>:</label>
-                <input type="text" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" value="<?php echo $title; ?>" class="widefat" />
+                <input type="text" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" value="<?php echo esc_html($title); ?>" class="widefat" />
             </p>
             <p>
                 <label for="<?php echo esc_attr($this->get_field_id('post_orderby')); ?>"><?php esc_html_e('Order by', 'siuy'); ?>:</label>
@@ -188,11 +188,11 @@ if (!class_exists('Siuy_Posts_Widget')):
             </p>
             <p>
                 <label for="<?php echo esc_attr($this->get_field_id('post_excerpt_limit')); ?>"><?php esc_html_e('Excerpt length (words):', 'siuy'); ?></label>
-                <input type="number" id="<?php echo esc_attr($this->get_field_id('post_excerpt_limit')); ?>" name="<?php echo esc_attr($this->get_field_name('post_excerpt_limit')); ?>" value="<?php echo $post_excerpt_limit; ?>" class="tiny-text" />
+                <input type="number" id="<?php echo esc_attr($this->get_field_id('post_excerpt_limit')); ?>" name="<?php echo esc_attr($this->get_field_name('post_excerpt_limit')); ?>" value="<?php echo intval($post_excerpt_limit); ?>" class="tiny-text" />
             </p>
             <p>
                 <label for="<?php echo esc_attr($this->get_field_id('numberposts')); ?>"><?php esc_html_e('Number of posts to show:', 'siuy'); ?></label>
-                <input type="number" id="<?php echo esc_attr($this->get_field_id('numberposts')); ?>" name="<?php echo esc_attr($this->get_field_name('numberposts')); ?>" value="<?php echo $numberposts; ?>" class="tiny-text" />
+                <input type="number" id="<?php echo esc_attr($this->get_field_id('numberposts')); ?>" name="<?php echo esc_attr($this->get_field_name('numberposts')); ?>" value="<?php echo intval($numberposts); ?>" class="tiny-text" />
             </p>
             <?php
         }
