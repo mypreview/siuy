@@ -1,0 +1,6 @@
+- License
+  - [Siuy](siuy-wordpress-theme-license.md)
+  - [Siuy Plus](siuy-plus-plugin-license.md)
+- Changelog
+  - [Siuy](siuy-wordpress-theme-changelog.md)
+  - [Siuy Plus](siuy-plus-plugin-changelog.md)
