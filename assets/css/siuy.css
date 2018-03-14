@@ -3870,11 +3870,11 @@ body.blog.no-sidebar #content.container.site-content {
 }
 
 .right-sidebar #content.site-content {
-	    grid-template-areas: 'content sidebar';
+	        grid-template-areas: 'content sidebar';
 }
 
 .left-sidebar #content.site-content {
-	    grid-template-areas: 'sidebar content';
+	        grid-template-areas: 'sidebar content';
 }
 
 #content.site-content> .content-area {
@@ -3969,6 +3969,10 @@ body.blog.no-sidebar #content.container.site-content {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+
+.content-area .site-main {
+	position: relative;
+}
 
 .page-header .page-title {
 	margin-top: 0;
@@ -4486,7 +4490,7 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 	display: -ms-grid;
 	display: grid;
 	grid-gap: 1em 5em;
-	    grid-template-areas: "desc-404 recent-entries-404" "search-404 recent-entries-404" "archive-404 categories-404" "tags-404 categories-404";
+	        grid-template-areas: "desc-404 recent-entries-404" "search-404 recent-entries-404" "archive-404 categories-404" "tags-404 categories-404";
 	-ms-grid-columns: 1fr 1fr;
 	    grid-template-columns: 1fr 1fr;
 	grid-template-rows: -webkit-max-content;
@@ -4927,7 +4931,7 @@ body:not(.single-post) .content-area .sticky h2.entry-title {
 		line-height: 1.2;
 	}
 	.error-404.not-found .page-content {
-		    grid-template-areas: "desc-404 esc-404" "recent-entries-404 recent-entries-404" "search-404 search-404" "archive-404 archive-404" "categories-404 categories-404" "tags-404 tags-404";
+		        grid-template-areas: "desc-404 esc-404" "recent-entries-404 recent-entries-404" "search-404 search-404" "archive-404 archive-404" "categories-404 categories-404" "tags-404 tags-404";
 	}
 }
 
