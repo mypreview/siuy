@@ -77,3 +77,55 @@ if (!class_exists('Siuy_Radio_Image_Control')):
 		}
 	}
 endif;
+/**
+ * "Plus" theme section
+ * Using the Customize API for adding a "plus" link to the customizer.
+ *
+ * @see         https://github.com/justintadlock/trt-customizer-pro/blob/master/example-1/class-customize.php
+ * @author  	Mahdi Yazdani
+ * @since 	    1.1.4
+ */
+if (!class_exists('Siuy_Go_Plus_Control')):
+	class Siuy_Go_Plus_Control extends WP_Customize_Section
+	{
+		/**
+		 * Control type.
+		 *
+		 * @since 1.1.4
+		 */
+		public $type = 'siuy-plus';
+		public $go_plus_text = '';
+    	public $go_plus_url = '';
+		/**
+         * Add custom parameters to pass to the JS via JSON.
+         *
+         * @since 1.1.4
+         */
+        public function json()
+        {
+            $json = parent::json();
+            $json['go_plus_text'] = $this->go_plus_text;
+            $json['go_plus_url']  = esc_url($this->go_plus_url);
+            return $json;
+        }
+		/**
+         * Outputs the Underscore.js template.
+         *
+         * @since 1.1.4
+         */
+        protected function render_template()
+        
+        {
+            ?>
+            <li id="accordion-section-{{ data.id }}" class="accordion-section control-section control-section-{{ data.type }} cannot-expand">
+				<h3 class="accordion-section-title">
+					{{ data.title }}
+					<# if (data.go_plus_text && data.go_plus_url) { #>
+						<a href="{{ data.go_plus_url }}" class="button button-primary alignright" target="_blank">{{ data.go_plus_text }}</a>
+					<# } #>
+				</h3>
+			</li>
+            <?php
+        }
+	}
+endif;
