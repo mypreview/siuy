@@ -58,6 +58,9 @@ if (!class_exists('Siuy_Customizer')):
 
 		{
 			wp_enqueue_style('siuy-panel-customizer-styles', get_theme_file_uri('/assets/admin/css/panel-customizer.css') , array() , SIUY_THEME_VERSION);
+			wp_enqueue_script('siuy-panel-customizer-scripts', get_theme_file_uri('/assets/admin/js/panel-customizer.js') , array(
+				'jquery'
+			) , SIUY_THEME_VERSION, true);
 		}
 		/**
 		 * Theme Customizer along with several other settings.
@@ -137,8 +140,8 @@ if (!class_exists('Siuy_Customizer')):
              */
             $wp_customize->register_section_type('Siuy_Go_Plus_Control');
             $wp_customize->add_section(new Siuy_Go_Plus_Control($wp_customize, 'siuy_go_plus_control', array(
-                'title' => __('Siuy Plus', 'restarter') ,
-                'go_plus_text' => __('Upgrade Now!', 'restarter') ,
+                'title' => __('Siuy Plus', 'siuy') ,
+                'go_plus_text' => __('Upgrade Now!', 'siuy') ,
                 'go_plus_url' => esc_url(SIUY_THEME_URI)
             )));
 			/**
