@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     Siuy
- * @since       1.1.0
+ * @since       1.1.4
  */
 .siuy-radio-image input[type=radio] {
 	display: none;
@@ -25,4 +25,37 @@
 }
 .siuy-radio-image div.image.ui-buttonset input[type=radio]:checked + label img, .siuy-radio-image div.image.ui-buttonset label img:hover {
 	opacity: 1;
+}
+#accordion-section-siuy_go_plus_control {
+	display: list-item !important;
+	position: relative !important;
+	height: auto !important;
+}
+#accordion-section-siuy_go_plus_control .accordion-section-title:hover, #accordion-section-siuy_go_plus_control .accordion-section-title:focus {
+	background-color: #63574C;
+}
+#accordion-section-siuy_go_plus_control .accordion-section-title .button {
+	border: none;
+	box-shadow: none;
+	background-color: #A89B8E;
+	text-transform: uppercase;
+	min-width: 98% !important;
+	margin: 10px 0;
+	height: 36px !important;
+	line-height: 36px;
+	-webkit-transition: background-color 0.3s;
+	-o-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+	text-align: center;
+	display: block;
+	float: left;
+	text-shadow: none;
+	font-weight: 600;
+}
+.control-section-siuy-plus .accordion-section-title {
+	padding-bottom: 60px;
+	text-align: center;
+}
+#accordion-section-siuy_go_plus_control .accordion-section-title .button:hover {
+	background-color: #63574C;
 }
