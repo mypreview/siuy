@@ -130,6 +130,18 @@ if (!class_exists('Siuy_Customizer')):
 				)
 			)));
 			/**
+             * "Go Plus" section
+             * Go Plus button
+             *
+             * @since 1.1.4
+             */
+            $wp_customize->register_section_type('Siuy_Go_Plus_Control');
+            $wp_customize->add_section(new Siuy_Go_Plus_Control($wp_customize, 'siuy_go_plus_control', array(
+                'title' => __('Siuy Plus', 'restarter') ,
+                'go_plus_text' => __('Upgrade Now!', 'restarter') ,
+                'go_plus_url' => esc_url(SIUY_THEME_URI)
+            )));
+			/**
 			 * Render updates by JavaScript without reloading the entire preview window
 			 *
 			 * @since 1.1.0
