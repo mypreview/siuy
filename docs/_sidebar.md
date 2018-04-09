@@ -3,6 +3,8 @@
   - [Theme Installation](install-siuy-wordpress-theme.md)
   - [Child Theme Installation](install-siuy-wordpress-child-theme.md)
   - [Plugin Installation](install-siuy-plus-plugin.md)
+- Miscellaneous
+  - [Minimum Requirements](minimum-requirements.md)
 - License
   - [Siuy](siuy-wordpress-theme-license.md)
   - [Siuy Plus](siuy-plus-plugin-license.md)
