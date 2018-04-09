@@ -1,8 +1,8 @@
 - Installation
   - [WordPress Installation](wordpress-installation.md)
-  - [Theme Installation](install-restarter-wordpress-theme.md)
-  - [Child Theme Installation](install-restarter-wordpress-child-theme.md)
-  - [Plugin Installation](install-restarter-plus-plugin.md)
+  - [Theme Installation](install-siuy-wordpress-theme.md)
+  - [Child Theme Installation](install-siuy-wordpress-child-theme.md)
+  - [Plugin Installation](install-siuy-plus-plugin.md)
 - License
   - [Siuy](siuy-wordpress-theme-license.md)
   - [Siuy Plus](siuy-plus-plugin-license.md)
