@@ -32,6 +32,7 @@
 			"!/languages",
 			"!/style.css",
             "!/style-rtl.css",
+			"/docs",
 			"/src",
             "CONTRIBUTING.md",
             "CODE_OF_CONDUCT.md",
