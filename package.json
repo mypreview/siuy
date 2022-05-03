@@ -1,0 +1,59 @@
+{
+	"name": "@mypreview/siuy",
+	"version": "2.0.0",
+	"private": true,
+	"homepage": "https://mypreview.github.io/siuy",
+	"bugs": {
+		"url": "https://github.com/mypreview/siuy/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mypreview/siuy.git"
+	},
+	"license": "GPL-3.0-or-later",
+	"author": "Siuy",
+	"scripts": {
+		"analyze-bundles": "npm run build -- --webpack-bundle-analyzer",
+		"archive": "npm run pre-archive && rm -rf $npm_package_name && composer archive --file=$npm_package_name --format=zip",
+		"build": "wp-scripts build",
+		"dev": "wp-scripts start",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:css-fix": "wp-scripts lint-style --fix",
+		"lint:js": "wp-scripts lint-js",
+		"lint:js-fix": "wp-scripts lint-js --fix",
+		"lint:php": "composer lint:php",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"lint:wpcs": "composer phpcs",
+		"lint:wpcs-fix": "composer phpcbf",
+		"makepot": "composer make-pot",
+		"packages-update": "wp-scripts packages-update",
+		"pre-archive": "npm run format && npm run lint:css-fix && npm run lint:wpcs-fix && npm run build && npm run makepot"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit --no-verify": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.css": [
+			"npm run lint:css"
+		],
+		"*.{js,ts,tsx}": [
+			"npm run lint:js",
+			"npm run format"
+		],
+		"*.php": [
+			"npm run lint:wpcs"
+		]
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "22.5.0",
+		"husky": "7.0.4",
+		"license-checker-webpack-plugin": "0.2.1",
+		"lint-staged": "12.4.1",
+		"prettier": "npm:wp-prettier@^2.6.2-beta-1",
+		"webpack-notifier": "1.15.0",
+		"webpack-rtl-plugin": "2.0.0"
+	}
+}
