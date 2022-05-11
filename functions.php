@@ -153,7 +153,8 @@ function google_fonts(): void {
 	$fonts = apply_filters(
 		'siuy_google_font_args',
 		array(
-			'open-sans' => 'Open+Sans:300,400,500,700,900',
+			'lato'  => 'Lato:400,500,700,900',
+			'cardo' => 'Cardo:400,700',
 		)
 	);
     // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
