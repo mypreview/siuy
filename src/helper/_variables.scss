@@ -1,0 +1,80 @@
+// The valid variables for this function:
+// base
+@function gap( $gap-name ) {
+
+	@return var(--wp--custom--gap--#{$gap-name});
+}
+
+// The valid variables for this function:
+// background
+// primary
+// text
+@function color( $color-name ) {
+
+	@return var(--wp--preset--color--#{$color-name});
+}
+
+// The valid variables for this function:
+// h-1
+// h-2
+// h-3
+// h-4
+// h-5
+// h-6
+// normal
+// small
+// smallest
+@mixin font-size( $font-size-name ) {
+
+	font-size: var(--wp--custom--form--height--#{$font-size-name});
+}
+
+// The valid variables for this function:
+// normal
+// medium
+// semibold
+// bold
+// black
+@mixin font-weight( $font-weight-name ) {
+
+	font-weight: var(--wp--custom--form--height--#{$font-weight-name});
+}
+// The valid variables for this function:
+// base
+// heading
+// paragraph
+@mixin line-height( $line-height-name ) {
+
+	line-height: var(--wp--custom--form--height--#{$line-height-name});
+}
+
+// The valid variables for this function:
+// narrow
+// normal
+@mixin page-size( $page-size-name ) {
+
+	max-width: var(--wp--custom--form--height--#{$page-size-name});
+}
+
+// The valid variables for this function:
+@mixin page-padding {
+
+	padding-left: var(--wp--custom--page--padding--horizontal);
+	padding-right: var(--wp--custom--page--padding--horizontal);
+}
+
+// The valid variables for this function:
+// button
+// input
+@mixin form-height( $form-height-name ) {
+
+	height: var(--wp--custom--form--height--#{$form-height-name});
+}
+
+// The valid variables for this function:
+// button
+// input
+@mixin form-padding( $form-padding-name ) {
+
+	padding: var(--wp--custom--form--padding--#{$form-padding-name});
+}
