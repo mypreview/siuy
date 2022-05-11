@@ -55,5 +55,8 @@
 		"prettier": "npm:wp-prettier@^2.6.2-beta-1",
 		"webpack-notifier": "1.15.0",
 		"webpack-rtl-plugin": "2.0.0"
+	},
+	"dependencies": {
+		"@mypreview/unicorn-style-utils": "^1.0.0"
 	}
 }
