@@ -224,11 +224,6 @@ function body_classes( array $classes ): array {
 		$classes[] = 'customize-running';
 	}
 
-	// Add class if the current page is a blog post archive/single.
-	if ( is_blog_archive() ) {
-		$classes[] = 'blog-archive';
-	}
-
 	// Add class if the current browser runs on a mobile device.
 	if ( wp_is_mobile() ) {
 		$classes[] = 'is-mobile';
