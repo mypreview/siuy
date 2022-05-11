@@ -1,0 +1,20 @@
+a {
+	text-decoration: none;
+}
+
+p {
+	margin: {
+		top: 0;
+		bottom: gap(base);
+	}
+}
+
+b,
+strong {
+
+	@include font-weight(bold);
+}
+
+small {
+	font-size: 80%;
+}
