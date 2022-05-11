@@ -9,13 +9,13 @@
             "palette": [
                 {
                     "color": "#000000",
-                    "name": "Black",
-                    "slug": "black"
+                    "name": "Text",
+                    "slug": "text"
                 },
                 {
                     "color": "#FF5252",
-                    "name": "Sunset Orange",
-                    "slug": "sunset-orange"
+                    "name": "Primary",
+                    "slug": "primary"
                 },
                 {
                     "color": "#A89B8E",
@@ -65,8 +65,8 @@
                 },
                 {
                     "color": "#FFFFFF",
-                    "name": "White",
-                    "slug": "white"
+                    "name": "Background",
+                    "slug": "background"
                 }
             ]
         },
@@ -118,8 +118,8 @@
                     "horizontal": "24px"
                 },
                 "size": {
-                    "normal": "793px",
-                    "wide": "1200px"
+                    "normal": "1200px",
+                    "wide": "1400px"
                 }
             }
         },
@@ -181,7 +181,7 @@
         "typography": {
             "fontSize": "var(--wp--custom--font-size--normal)",
             "fontWeight": "var(--wp--custom--font-weight--normal)",
-            "fontFamily": "var(--wp--preset--font-family--lato)",
+            "fontFamily": "var(--wp--preset--font-family--cardo)",
             "lineHeight": "var(--wp--custom--line-height--paragraph)"
         },
         "elements": {
@@ -289,7 +289,7 @@
             },
             "link": {
                 "color": {
-                    "text": "var(--wp--preset--color--red)"
+                    "text": "var(--wp--preset--color--primary)"
                 }
             }
         },
@@ -308,8 +308,8 @@
             },
             "core/button": {
                 "color": {
-                    "background": "var(--wp--preset--color--sunset-orange)",
-                    "text": "var(--wp--preset--color--white)"
+                    "background": "var(--wp--preset--color--primary)",
+                    "text": "var(--wp--preset--color--background)"
                 },
                 "spacing": {
                     "padding": "var(--wp--custom--form--padding--button)"
@@ -322,12 +322,12 @@
             "core/calendar": {
                 "color": {
                     "background": "transparent",
-                    "text": "var(--wp--preset--color--black)"
+                    "text": "var(--wp--preset--color--text)"
                 },
                 "elements": {
                     "link": {
                         "color": {
-                            "text": "var(--wp--preset--color--black)"
+                            "text": "var(--wp--preset--color--text)"
                         }
                     }
                 },
@@ -339,14 +339,44 @@
                 "elements": {
                     "link": {
                         "color": {
-                            "text": "var(--wp--preset--color--black)"
+                            "text": "var(--wp--preset--color--text)"
                         }
                     }
                 },
                 "typography": {
                     "fontSize": "var(--wp--custom--font-size--small)"
                 }
+            },
+            "core/site-title": {
+                "typography": {
+                    "fontSize": "30px",
+                    "fontWeight": "var(--wp--custom--font-weight--bold)"
+                }
+            },
+            "core/navigation": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--lato)"
+                }
             }
         }
-    }
+    },
+    "templateParts": [
+        {
+            "name": "header",
+            "title": "Header",
+            "area": "header"
+        },
+        {
+            "name": "footer",
+            "title": "Footer",
+            "area": "footer"
+        }
+    ],
+    "customTemplates": [
+        {
+            "name": "no-title",
+            "title": "No title",
+            "postTypes": [ "post","page" ]
+        }
+    ]
 }
