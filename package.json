@@ -57,6 +57,6 @@
 		"webpack-rtl-plugin": "2.0.0"
 	},
 	"dependencies": {
-		"@mypreview/unicorn-style-utils": "^1.0.0"
+		"@mypreview/unicorn-style-utils": "^1.0.1"
 	}
 }
