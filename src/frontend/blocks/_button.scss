@@ -1,0 +1,8 @@
+.wp-block-button {
+
+	&__link {
+		@include box(middle, center);
+		min-height: 75px;
+		cursor: pointer;
+	}
+}
