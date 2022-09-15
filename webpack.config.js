@@ -8,7 +8,7 @@ module.exports = {
 	...defaultConfig,
 	entry: {
 		editor: resolve( process.cwd(), process.env.WP_SRC_DIRECTORY, 'editor/index.js' ),
-		frontend: resolve( process.cwd(), process.env.WP_SRC_DIRECTORY, 'frontend/index.js'),
+		frontend: resolve( process.cwd(), process.env.WP_SRC_DIRECTORY, 'frontend/index.js' ),
 	},
 	performance: {
 		hints: false,
