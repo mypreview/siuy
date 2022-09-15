@@ -1,0 +1,21 @@
+/**
+ * Helpers
+ */
+
+@import "~@mypreview/unicorn-style-utils/src/base";
+@import "~@mypreview/unicorn-style-utils/src/functions/preset";
+@import "~@mypreview/unicorn-style-utils/src/mixins";
+
+
+@mixin underline-hover {
+	transition: background-size 0.35s ease 0s, color 0.35s ease 0.35s;
+	background-image: linear-gradient(currentcolor, currentcolor);
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	background-size: 0% 1px;
+
+	&:hover {
+		background-size: 100% 1px;
+		background-position: 0 100%;
+	}
+}
