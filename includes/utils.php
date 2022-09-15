@@ -32,8 +32,8 @@ if ( ! function_exists( 'get_file_asset' ) ) :
 			return array();
 		}
 
-		$file_path       = get_parent_theme_file_path( sprintf( '/build/%s.js', $filename ) );
-		$file_asset_path = get_parent_theme_file_path( sprintf( '/build/%s.asset.php', $filename ) );
+		$file_path       = get_parent_theme_file_path( '/build/' . $filename . '.js' );
+		$file_asset_path = get_parent_theme_file_path( '/build/' . $filename . '.asset.php' );
 		$file_asset      = file_exists( $file_asset_path ) ? require $file_asset_path : array(
 			'dependencies' => $dependencies,
 			'version'      => file_exists( $file_path ) ? filemtime( $file_path ) : THEME['version'],
@@ -53,7 +53,7 @@ if ( ! function_exists( 'get_asset_handle' ) ) :
 	 * @return    string
 	 */
 	function get_asset_handle( string $asset_name = 'frontend', string $type = 'style' ): string {
-		$handle = sprintf( '%s-%s-%s', THEME['slug'] ?? '', $asset_name, $type );
+		$handle = THEME['slug'] . '-' . $asset_name . '-' . $type;
 		return $handle;
 	}
 endif;
@@ -73,14 +73,13 @@ if ( ! function_exists( 'enqueue_resources' ) ) :
 		}
 
 		$asset         = get_file_asset( $asset_name );
+		$version       = $asset['version'] ?? '1.0';
 		$style_handle  = get_asset_handle( $asset_name, 'style' );
 		$script_handle = get_asset_handle( $asset_name, 'script' );
 
-		// Style.
-		wp_enqueue_style( $style_handle, get_theme_file_uri( sprintf( '/build/%s.css', $asset_name ) ), array(), $asset['version'], 'screen' );
+		wp_enqueue_style( $style_handle, get_theme_file_uri( '/build/' . $asset_name . '.css' ), array(), $version, 'screen' );
+		wp_enqueue_script( $script_handle, get_theme_file_uri( '/build/' . $asset_name . '.js' ), $asset['dependencies'], $version, true );
 		wp_style_add_data( $style_handle, 'rtl', 'replace' );
-		// Script.
-		wp_enqueue_script( $script_handle, get_theme_file_uri( sprintf( '/build/%s.js', $asset_name ) ), $asset['dependencies'], $asset['version'], true );
 	}
 endif;
 
