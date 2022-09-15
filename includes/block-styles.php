@@ -26,9 +26,14 @@ function styles(): void {
 		'siuy_block_styles',
 		array(
 			array(
-				'block' => 'core/paragraph',
-				'name'  => 'subtitle',
-				'label' => _x( 'Subtitle', 'block style', 'siuy' ),
+				'block' => 'core/search',
+				'name'  => 'toggle-effect',
+				'label' => _x( 'Toggle effect', 'block style', 'siuy' ),
+			),
+			array(
+				'block' => 'core/navigation',
+				'name'  => 'main-navigation',
+				'label' => _x( 'Main navigation', 'block style', 'siuy' ),
 			),
 		)
 	);
