@@ -13,7 +13,7 @@
 	"license": "GPL-3.0-or-later",
 	"author": "Siuy",
 	"scripts": {
-		"archive": "npm run pre-archive && rm -rf $npm_package_name && composer install --no-dev && composer archive --file=$npm_package_name --format=zip && composer install -vvv",
+		"archive": "npm run pre-archive && rm -rf $npm_package_name && composer archive --file=$npm_package_name --format=zip",
 		"build": "wp-scripts build",
 		"dev": "wp-scripts start",
 		"format": "wp-scripts format",
