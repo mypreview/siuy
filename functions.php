@@ -36,9 +36,25 @@ define(
 	)
 );
 
-require get_parent_theme_file_path( '/includes/block-patterns.php' );
 require get_parent_theme_file_path( '/includes/block-styles.php' );
 require get_parent_theme_file_path( '/includes/utils.php' );
+
+/**
+ * Load the theme text domain for translation.
+ * Note: the first-loaded translation file overrides any following ones if the same translation is present.
+ *
+ * @since     2.0.0
+ * @return    void
+ */
+function load_textdomain(): void {
+	// Loads `wp-content/languages/themes/siuy-it_IT.mo`.
+	load_theme_textdomain( 'siuy', untrailingslashit( WP_LANG_DIR ) . '/themes/' );
+	// Loads `wp-content/themes/child-theme-name/languages/it_IT.mo`.
+	load_theme_textdomain( 'siuy', untrailingslashit( get_stylesheet_directory() ) . '/languages' );
+	// Loads `wp-content/themes/siuy/languages/it_IT.mo`.
+	load_theme_textdomain( 'siuy', untrailingslashit( get_template_directory() ) . '/languages' );
+}
+add_action( 'init', __NAMESPACE__ . '\load_textdomain', 10, 2 );
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -59,23 +75,6 @@ function theme_support(): void {
 	do_action( 'siuy_after_setup_theme' );
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\theme_support' );
-
-/**
- * Load the theme text domain for translation.
- * Note: the first-loaded translation file overrides any following ones if the same translation is present.
- *
- * @since     2.0.0
- * @return    void
- */
-function load_textdomain(): void {
-	// Loads `wp-content/languages/themes/siuy-it_IT.mo`.
-	load_theme_textdomain( 'siuy', sprintf( '%sthemes/', trailingslashit( WP_LANG_DIR ) ) );
-	// Loads `wp-content/themes/child-theme-name/languages/it_IT.mo`.
-	load_theme_textdomain( 'siuy', sprintf( '%s/languages', get_stylesheet_directory() ) );
-	// Loads `wp-content/themes/siuy/languages/it_IT.mo`.
-	load_theme_textdomain( 'siuy', sprintf( '%s/languages', get_template_directory() ) );
-}
-add_action( 'siuy_after_setup_theme', __NAMESPACE__ . '\load_textdomain', 10, 2 );
 
 /**
  * Handles JavaScript detection.
@@ -192,21 +191,21 @@ add_action( 'wp_resource_hints', __NAMESPACE__ . '\preconnect_gstatic', 10, 2 );
  */
 function body_classes( array $classes ): array {
 	// The list of WordPress global browser checks.
-	$browsers = apply_filters( 
+	$browsers = apply_filters(
 		'siuy_browser_names',
-		array( 
-			'is_iphone', 
-			'is_chrome', 
-			'is_safari', 
-			'is_NS4', 
-			'is_opera', 
-			'is_macIE', 
-			'is_winIE', 
-			'is_gecko', 
-			'is_lynx', 
-			'is_IE', 
-			'is_edge', 
-		) 
+		array(
+			'is_iphone',
+			'is_chrome',
+			'is_safari',
+			'is_NS4',
+			'is_opera',
+			'is_macIE',
+			'is_winIE',
+			'is_gecko',
+			'is_lynx',
+			'is_IE',
+			'is_edge',
+		)
 	);
 
 	// Adds a class to blogs with more than 1 published author.
@@ -224,11 +223,6 @@ function body_classes( array $classes ): array {
 		$classes[] = 'customize-running';
 	}
 
-	// Add class if the current page is a blog post archive/single.
-	if ( is_blog_archive() ) {
-		$classes[] = 'blog-archive';
-	}
-
 	// Add class if the current browser runs on a mobile device.
 	if ( wp_is_mobile() ) {
 		$classes[] = 'is-mobile';
@@ -244,8 +238,8 @@ function body_classes( array $classes ): array {
 				// phpcs:ignore PHPCompatibility.FunctionDeclarations.NewClosure.Found
 				function( $browser ) {
 					return $GLOBALS[ $browser ];
-				} 
-			) 
+				}
+			)
 		);
 	}
 
