@@ -1,0 +1,8 @@
+@each $field in (checkboxes, radio) {
+	.wp-block-mypreview-flash-form-field-#{$field}__input {
+
+		> div[class*="SortableChoice"] {
+			flex-direction: column;
+		}
+	}
+}
