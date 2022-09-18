@@ -86,19 +86,56 @@
 			"lineHeight": true,
 			"fontFamilies": [
 				{
-					"fontFamily": "Cardo, sans",
+					"fontFamily": "\"Cardo\", ui-sans-serif",
 					"name": "Cardo",
-					"slug": "primary"
+					"slug": "primary",
+					"fontFace": [
+						{
+							"fontFamily": "Cardo",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./fonts/Cardo-Regular.woff2" ]
+						},
+						{
+							"fontFamily": "Cardo",
+							"fontWeight": "400",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./fonts/Cardo-Italic.woff2" ]
+						}
+					]
 				},
 				{
-					"fontFamily": "Lato, sans-serif",
+					"fontFamily": "\"Lato\", ui-sans-serif",
 					"name": "Lato",
-					"slug": "secondary"
+					"slug": "secondary",
+					"fontFace": [
+						{
+							"fontFamily": "Lato",
+							"fontWeight": "400 900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [ "file:./fonts/Lato-Regular.woff2" ]
+						},
+						{
+							"fontFamily": "Lato",
+							"fontWeight": "400 900",
+							"fontStyle": "italic",
+							"fontStretch": "normal",
+							"src": [ "file:./fonts/Lato-Italic.woff2" ]
+						}
+					]
 				},
 				{
-					"fontFamily": "monospace",
-					"name": "Monospace",
-					"slug": "code"
+					"fontFamily": "ui-sans-serif, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", sans-serif",
+					"slug": "system-sans-serif",
+					"name": "System Sans Serif"
+				},
+				{
+					"fontFamily": "ui-monospace, Menlo, Consolas, Monaco, \"Liberation Mono\", \"Lucida Console\", monospace",
+					"slug": "system-monospace",
+					"name": "System Monospace"
 				}
 			],
 			"fontSizes": [
