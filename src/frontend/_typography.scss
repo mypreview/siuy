@@ -5,11 +5,11 @@ a {
 p {
 	margin: {
 		top: 0;
-		bottom: var(--wp--style--block-gap);
+		bottom: $block-gap;
 	}
 
 	a {
-		@include underline-hover;
+		@include hover-slide;
 	}
 }
 

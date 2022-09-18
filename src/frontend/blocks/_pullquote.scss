@@ -1,0 +1,30 @@
+.wp-block-pullquote {
+	blockquote {
+		margin: 0;
+		@include box(vertical);
+		gap: $block-gap;
+		position: relative;
+
+		> * {
+			margin-bottom: 0;
+		}
+
+		&:before {
+			content: "”";
+			position: absolute;
+	    	font-size: 320px;
+	    	line-height: 0;
+	    	color: preset(color, secondary);
+	        right: calc(50% - 60px);
+    		top: calc(50% + 60px);
+    		z-index: -1;
+		}
+	}
+
+	cite {
+	    font-size: 60%;
+	    display: block;
+	}
+
+	
+}

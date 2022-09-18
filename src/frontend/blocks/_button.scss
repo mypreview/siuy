@@ -1,8 +1,19 @@
 .wp-block-button {
 
 	&__link {
-		@include box(middle, center);
-		min-height: 75px;
+		@include box(inline, middle, center);
+		@include hover-slide(rgba(30, 32, 37, .1), 100%);
 		cursor: pointer;
+		border-radius: 0;
+		border-width: 0;
+		min-height: 50px;
+	}
+}
+
+.is-style-outline {
+	.wp-block-button {
+		&__link {
+			border-width: 1px;
+		}
 	}
 }

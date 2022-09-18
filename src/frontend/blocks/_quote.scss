@@ -1,0 +1,48 @@
+.wp-block-quote {
+	@include box(vertical);
+	gap: $block-gap;
+	position: relative;
+	padding-right: 50px;
+
+	> * {
+		margin-bottom: 0;
+	}
+
+	cite {
+	    font-size: 60%;
+	    display: block;
+	}
+
+	&:before {
+		content: "”";
+		position: absolute;
+    	font-size: 120px;
+    	line-height: 0;
+    	color: preset(color, secondary);
+	    right: 0;
+    	bottom: 30px;
+    	pointer-events: none;
+	}
+
+	&.has-text-align-right {
+		border-right: 0;
+	}
+
+	&.is-style-plain {
+		background-color: preset(color, tile);
+    	border-width: 0;
+		padding: {
+			left: 40px;
+			right: 100px;
+		}
+
+		&:before {
+			@include box(center, middle);
+			@include size(72px, 100%);
+			background-color: preset(color, secondary);
+			color: preset(color, secondary-alt);
+    		bottom: 0;
+    		padding-top: 30px;
+		}
+	}
+}

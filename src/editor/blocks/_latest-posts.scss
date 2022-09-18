@@ -1,0 +1,13 @@
+.editor-styles-wrapper {
+	.wp-block-latest-posts {
+		> li {
+			> a {
+				font-family: preset(font-family, secondary);
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				color: preset(color, text-dark);
+				font-weight: 700;
+			}
+		}
+	}
+}

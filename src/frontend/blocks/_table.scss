@@ -1,0 +1,33 @@
+.wp-block-table {
+	tfoot,
+	thead,
+	th,
+	td {
+		border-color: inherit;
+	}
+
+	a {
+		@include hover-slide;
+	}
+
+	.has-text-color {
+		a {
+			color: inherit;
+		}
+	}
+
+	&.is-style-stripes {
+		th,
+		td {
+			border-color: inherit;
+		}
+
+		tbody {
+			tr {
+				&:nth-child(odd) {
+					background-color: preset(color, tile);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.wp-block-search {
+	&__button {
+		@include hover-slide(rgba(30, 32, 37, .1), 100%);
+		cursor: pointer;
+		background-color: preset(color, secondary);
+		color: preset(color, text);
+		padding: 12px 30px;
+		font-size: preset(font-size, smaller);
+		font-family: preset(font-family, secondary);
+		font-weight: 700;
+		border-width: 0;
+
+		&.has-icon {
+			padding: .125em .5em;
+		}
+	}
+
+	&__input {
+		font-size: preset(font-size, small);
+		font-family: preset(font-family, secondary);
+	    height: 36px;
+	}
+}

@@ -1,0 +1,24 @@
+.wp-block-latest-posts {
+	@include box(vertical);
+	gap: 60px;
+	margin: 0;
+
+	@each $element in title, author, date {
+		&__post-#{$element} {
+			font-family: preset(font-family, secondary);
+			letter-spacing: 2px;
+			text-transform: uppercase;
+
+			@if $element == title {
+				color: preset(color, text-dark);
+				font-weight: 700;
+			} @else if $element == author {
+				color: preset(color, text-light);
+				font-size: preset(font-size, smaller);
+			} @else {
+				font-size: preset(font-size, smallest);
+				color: preset(color, text-lighter);
+			}
+		}
+	}
+}

@@ -1,4 +1,4 @@
-@each $field in (checkboxes, radio) {
+@each $field in checkboxes, radio {
 	.wp-block-mypreview-flash-form-field-#{$field}__input {
 
 		> div {

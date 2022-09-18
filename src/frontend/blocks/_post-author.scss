@@ -1,0 +1,15 @@
+.wp-block-post-author {
+	&__content {
+		@include box(wrap);
+		gap: 5px;
+	}
+
+	&__byline {
+		font-size: inherit;
+		width: auto;
+	}
+
+	&__name {
+		margin: 0;
+	}
+}
