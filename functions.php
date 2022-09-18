@@ -152,7 +152,7 @@ function google_fonts(): void {
 	$fonts = apply_filters(
 		'siuy_google_font_args',
 		array(
-			'lato'  => 'Lato:400,500,700,900',
+			'lato'  => 'Lato:400,700,900',
 			'cardo' => 'Cardo:400,700',
 		)
 	);
