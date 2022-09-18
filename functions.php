@@ -21,7 +21,6 @@ namespace Siuy;
 
 use function Siuy\Includes\Utils\get_asset_handle as get_asset_handle;
 use function Siuy\Includes\Utils\enqueue_resources as enqueue_resources;
-use function Siuy\Includes\Utils\google_fonts_css as google_fonts_css;
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 
@@ -141,47 +140,6 @@ function enqueue_editor(): void {
 	do_action( 'siuy_enqueue_editor', 'editor' );
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_editor' );
-
-/**
- * Enqueue Google fonts stylesheet.
- *
- * @since     2.0.0
- * @return    void
- */
-function google_fonts(): void {
-	$fonts = apply_filters(
-		'siuy_google_font_args',
-		array(
-			'lato'  => 'Lato:400,700,900',
-			'cardo' => 'Cardo:400,700',
-		)
-	);
-    // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
-	wp_enqueue_style( get_asset_handle( 'google', 'fonts' ), google_fonts_css( $fonts ), array(), null );
-}
-add_action( 'siuy_enqueue_frontend', __NAMESPACE__ . '\google_fonts' );
-add_action( 'siuy_enqueue_editor', __NAMESPACE__ . '\google_fonts' );
-
-/**
- * Add preconnect for Google Fonts.
- *
- * @since     2.0.0
- * @param     array  $urls             URLs to print for resource hints.
- * @param     string $relation_type    The relation type the URLs are printed.
- * @return    array  $urls
- */
-function preconnect_gstatic( array $urls, string $relation_type ): array {
-	// Check whether the main CSS stylesheet has been added to the queue.
-	if ( wp_style_is( get_asset_handle( 'google', 'fonts' ), 'queue' ) && 'preconnect' === $relation_type ) {
-		$urls[] = array(
-			'crossorigin',
-			'href' => 'https://fonts.gstatic.com',
-		);
-	}
-
-	return $urls;
-}
-add_action( 'wp_resource_hints', __NAMESPACE__ . '\preconnect_gstatic', 10, 2 );
 
 /**
  * Adds custom classes to the array of body classes.
