@@ -26,9 +26,9 @@ function styles(): void {
 		'siuy_block_styles',
 		array(
 			array(
-				'block' => 'core/search',
-				'name'  => 'toggle-effect',
-				'label' => _x( 'Toggle effect', 'block style', 'siuy' ),
+				'block' => 'core/categories',
+				'name'  => 'two-columns',
+				'label' => _x( 'Two columns', 'block style', 'siuy' ),
 			),
 			array(
 				'block' => 'core/navigation',
