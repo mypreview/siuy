@@ -25,7 +25,8 @@ function categories(): void {
 	$categories = apply_filters(
 		'siuy_pattern_categories',
 		array(
-			'header' => array( 'label' => _x( 'Header', 'pattern category', 'siuy' ) ),
+			'header' => array( 'label' => _x( 'Headers', 'pattern category', 'siuy' ) ),
+			'footer' => array( 'label' => _x( 'Footers', 'pattern category', 'siuy' ) ),
 		)
 	);
 
