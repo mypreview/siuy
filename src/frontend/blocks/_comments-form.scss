@@ -4,14 +4,17 @@
 
 	> * {
 		width: 100%;
-	    flex-grow: 1;
+		flex-grow: 1;
 	}
 
-	.wp-block-button__link {
-		background-color: preset(color, secondary);
-		color: preset(color, text);
-		width: auto;
-		border-width: 0;
+	.wp-block-button {
+
+		&__link {
+			background-color: preset(color, secondary);
+			color: preset(color, text);
+			width: auto;
+			border-width: 0;
+		}
 	}
 
 	@include from-tablet {

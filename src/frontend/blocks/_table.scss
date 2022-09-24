@@ -1,4 +1,5 @@
 .wp-block-table {
+
 	tfoot,
 	thead,
 	th,
@@ -11,19 +12,23 @@
 	}
 
 	.has-text-color {
+
 		a {
 			color: inherit;
 		}
 	}
 
 	&.is-style-stripes {
+
 		th,
 		td {
 			border-color: inherit;
 		}
 
 		tbody {
+
 			tr {
+
 				&:nth-child(odd) {
 					background-color: preset(color, tile);
 				}

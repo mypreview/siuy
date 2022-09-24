@@ -1,4 +1,6 @@
 .wp-block-post-author {
+	align-items: center;
+
 	&__content {
 		@include box(wrap);
 		gap: 5px;

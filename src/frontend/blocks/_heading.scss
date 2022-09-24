@@ -1,0 +1,8 @@
+.is-style-vertical-on-mobile {
+	@include until-tablet {
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		word-break: normal;
+	}
+
+}

@@ -1,4 +1,5 @@
 .wp-block-comment-content {
+
 	> *:last-child {
 		margin-bottom: 0;
 	}
@@ -6,6 +7,7 @@
 
 @each $element in edit-link, date, reply-link {
 	.wp-block-comment-#{$element} {
+
 		a {
 			@include hover-slide;
 		}
@@ -13,37 +15,42 @@
 }
 
 .wp-block-comment-template {
+
 	ol {
 		padding-top: calc(#{$block-gap} * 2);
+	}
 
-		> .comment {
-			padding-right: 10px;
-			position: relative;
+	.comment {
+		padding-right: 10px;
+		position: relative;
 
-			&:after,
-			&:before {
-				@include square(10px);
-				border-radius: 10px;
-				background-color: preset(color, separator);
-				position: absolute;
-				right: -6px;
+		&::after,
+		&::before {
+			@include square(10px);
+			border-radius: 10px;
+			background-color: preset(color, separator);
+			position: absolute;
+			right: -6px;
+		}
+
+		&:not(:last-child) {
+			padding-bottom: calc(#{$block-gap} * 2);
+		}
+
+		&:not(:last-of-type) {
+			border-right: 3px solid preset(color, separator);
+
+			&::before {
+				content: "";
+				top: 0;
 			}
+		}
 
-			&:not(:last-of-type) {
-				border-right: 3px solid preset(color, separator);
-				padding-bottom: calc(#{$block-gap} * 2);
+		&:nth-last-of-type(2) {
 
-				&:before {
-					content: '';
-					top: 0;
-				}
-			}
-
-			&:nth-last-of-type(2) {
-				&:after {
-					content: '';
-					bottom: 0;
-				}
+			&::after {
+				content: "";
+				bottom: 0;
 			}
 		}
 	}
