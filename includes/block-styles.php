@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 /**
  * Register block styles
  *
- * @since     1.0.0
+ * @since     2.0.0
  * @return    void
  */
 function styles(): void {
@@ -34,6 +34,21 @@ function styles(): void {
 				'block' => 'core/navigation',
 				'name'  => 'main-navigation',
 				'label' => _x( 'Main navigation', 'block style', 'siuy' ),
+			),
+			array(
+				'block' => 'core/columns',
+				'name'  => 'stacked-on-tablet',
+				'label' => _x( 'Stacked on tabet', 'block style', 'siuy' ),
+			),
+			array(
+				'block' => 'core/heading',
+				'name'  => 'vertical-on-mobile',
+				'label' => _x( 'Vertical on mobile', 'block style', 'siuy' ),
+			),
+			array(
+				'block' => 'core/latest-posts',
+				'name'  => 'border-inline',
+				'label' => _x( 'Border inline', 'block style', 'siuy' ),
 			),
 		)
 	);
