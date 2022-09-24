@@ -48,6 +48,7 @@
         <exclude name="PSR2.Methods.MethodDeclaration.Underscore" />
         <exclude name="Core.Commenting.CommentTags.AccessTag" />
         <exclude name="Core.Commenting.CommentTags.AuthorTag" />
+        <exclude name="Squiz.Commenting.FileComment.MissingPackageTag" />
     </rule>
     <rule ref="WPThemeReview">
         <exclude name="WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_pattern_category" />
