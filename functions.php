@@ -36,6 +36,7 @@ define(
 );
 
 require get_parent_theme_file_path( '/includes/block-styles.php' );
+require get_parent_theme_file_path( '/includes/pattern-categories.php' );
 require get_parent_theme_file_path( '/includes/utils.php' );
 
 /**
