@@ -65,6 +65,8 @@ add_action( 'init', __NAMESPACE__ . '\load_textdomain', 10, 2 );
 function theme_support(): void {
 	// Adding support for core block visual styles.
 	add_theme_support( 'wp-block-styles' );
+	
+	remove_theme_support( 'core-block-patterns' );
 
 	// Enqueue editor styles.
 	add_editor_style( 'style.css' );
@@ -141,6 +143,39 @@ function enqueue_editor(): void {
 	do_action( 'siuy_enqueue_editor', 'editor' );
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_editor' );
+
+/**
+ * Changes the number of words included in a post excerpt.
+ *
+ * @since     2.0.0
+ * @param     int $length    The maximum number of words.
+ * @return    int
+ */
+function reduced_post_excerpt_length( int $length ): int {
+	if ( is_admin() ) {
+		return $length;
+	}
+
+	return 35;
+}
+add_filter( 'excerpt_length', __NAMESPACE__ . '\reduced_post_excerpt_length' );
+
+/**
+ * Changes ellipsis shown at the end of a truncated post
+ * excerpt.
+ *
+ * @since     2.0.0
+ * @param     string $more    The string shown within the more link.
+ * @return    string
+ */
+function dotted_excerpt_more( string $more ): string {
+	if ( is_admin() ) {
+		return $more;
+	}
+
+	return '&hellip;';
+}
+add_filter( 'excerpt_more', __NAMESPACE__ . '\dotted_excerpt_more' );
 
 /**
  * Adds custom classes to the array of body classes.
