@@ -9,7 +9,7 @@
 	.wp-block-comment-#{$element} {
 
 		a {
-			@include hover-slide;
+			@include hover-overlay;
 		}
 	}
 }

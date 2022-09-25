@@ -1,7 +1,7 @@
 .wp-block-comments-pagination {
 
 	a {
-		@include hover-slide;
+		@include hover-overlay;
 	}
 }
 
@@ -11,5 +11,5 @@
 }
 
 a.page-numbers {
-	@include hover-slide;
+	@include hover-overlay;
 }
