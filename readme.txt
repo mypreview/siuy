@@ -10,6 +10,10 @@ License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Changelog ==
+= 2.0.0 =
+* Feature: Refactored underlying code.
+* Feature: Full support of WordPress block editor.
+
 = 1.1.4 =
 * Update: Blog layout styles.
 
@@ -17,7 +21,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 * Update: Posts widget.
 
 = 1.1.2 =
-* Update: posts widget.
+* Update: Posts widget.
 
 = 1.1.1 =
 * Update: Language file.
@@ -36,3 +40,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 = 1.0.0 =
 * Initial release.
+
+== Upgrade Notice ==
+= 2.0.0 =
+This version of the "Siuy" theme adds full support for the WordPress block editor "Gutenberg." Please don't upgrade if you still use the "Classic" editor.
