@@ -41,12 +41,7 @@
 		]
 	},
 	"dependencies": {
-		"@mypreview/unicorn-js-upsell": "1.0.1",
-		"@mypreview/unicorn-js-utils": "1.4.0",
-		"@mypreview/unicorn-style-utils": "1.1.0",
-		"@wordpress/dom-ready": "3.17.0",
-		"@wordpress/i18n": "4.17.0",
-		"lodash": "4.17.21"
+		"@mypreview/unicorn-style-utils": "^1.2.0"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "24.1.0",
@@ -56,8 +51,5 @@
 		"prettier": "npm:wp-prettier@2.6.2",
 		"webpack-notifier": "1.15.0",
 		"webpack-rtl-plugin": "2.0.0"
-	},
-	"dependencies": {
-		"@mypreview/unicorn-style-utils": "^1.0.1"
 	}
 }
