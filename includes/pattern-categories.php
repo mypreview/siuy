@@ -25,8 +25,15 @@ function categories(): void {
 	$categories = apply_filters(
 		'siuy_pattern_categories',
 		array(
-			'header' => array( 'label' => _x( 'Headers', 'pattern category', 'siuy' ) ),
-			'footer' => array( 'label' => _x( 'Footers', 'pattern category', 'siuy' ) ),
+			'header'       => array( 'label' => _x( 'Headers', 'pattern category', 'siuy' ) ),
+			'footer'       => array( 'label' => _x( 'Footers', 'pattern category', 'siuy' ) ),
+			'404'          => array( 'label' => _x( '404', 'pattern category', 'siuy' ) ),
+			'recent-posts' => array( 'label' => _x( 'Recent Posts', 'pattern category', 'siuy' ) ),
+			'query'        => array( 'label' => _x( 'Posts', 'pattern category', 'siuy' ) ),
+			'cover'        => array( 'label' => _x( 'Cover', 'pattern category', 'siuy' ) ),
+			'comments'     => array( 'label' => _x( 'Comments', 'pattern category', 'siuy' ) ),
+			'title'        => array( 'label' => _x( 'Title', 'pattern category', 'siuy' ) ),
+			'error'        => array( 'label' => _x( 'Error', 'pattern category', 'siuy' ) ),
 		)
 	);
 
