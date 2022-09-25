@@ -47,8 +47,8 @@ function styles(): void {
 			),
 			array(
 				'block' => 'core/latest-posts',
-				'name'  => 'border-inline',
-				'label' => _x( 'Border inline', 'block style', 'siuy' ),
+				'name'  => 'separator-between',
+				'label' => _x( 'Separator between', 'block style', 'siuy' ),
 			),
 		)
 	);
