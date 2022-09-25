@@ -6,6 +6,16 @@
 			"name": "blank",
 			"title": "Blank",
 			"postTypes": [ "page", "post" ]
+		},
+		{
+			"name": "without-title",
+			"title": "Fullwidth without title",
+			"postTypes": [ "page", "post" ]
+		},
+		{
+			"name": "with-sidebar",
+			"title": "Page with Sidebar",
+			"postTypes": [ "page" ]
 		}
 	],
 	"settings": {
