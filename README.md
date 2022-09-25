@@ -21,10 +21,10 @@ Siuy is a specialized WordPress theme dedicated to blogging, and it is primarily
 
 You'll need [Node.js](https://nodejs.org/) installed on your computer in order to build this theme.
 
-* Download or fork the repository.
-* Run `npm install` to install the dependencies within a `/node_modules/` folder.
-* Run `npm run dev` command to compile and watch source files for changes while developing.
-* Run `npm run build` command to publish the source files for the production environment.
+1. Download or fork the repository.
+2. Run `npm install` to install the dependencies within a `/node_modules/` folder.
+3. Run `npm run dev` command to compile and watch source files for changes while developing.
+4. Run `npm run build` command to publish the source files for the production environment.
 
 ## Contributing
 
