@@ -6,30 +6,6 @@
 @import "~@mypreview/unicorn-style-utils/src/functions/preset";
 @import "~@mypreview/unicorn-style-utils/src/mixins";
 
-@mixin hover-slide($color: currentcolor, $size: 1px) {
-	transition: background-size 0.35s ease 0s, color 0.35s ease 0.35s;
-	background-image: linear-gradient($color, $color);
-	background-repeat: no-repeat;
-	background-position: 100% 100%;
-	background-size: 0% $size;
-
-	&:hover {
-		background-position: 0 100%;
-		background-size: 100% $size;
-	}
-}
-
-/**
- * Reset the box-sizing
- */
-* {
-
-	&::after,
-	&::before {
-		box-sizing: border-box;
-	}
-}
-
 /**
  * Variables
  */
