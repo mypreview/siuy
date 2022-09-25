@@ -8,7 +8,7 @@
  *
  * @package       siuy
  * @subpackage    siuy/includes
- * @phpcs:disable WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_style
+ * @phpcs:disable WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_pattern_category
  */
 
 namespace Siuy\Includes\Block_Patterns;
@@ -39,7 +39,7 @@ function categories(): void {
 
 	foreach ( $categories as $name => $properties ) {
 		if ( ! \WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
-			\register_block_pattern_category( $name, $properties );
+			\register_block_pattern_category( (string) $name, (array) $properties );
 		}
 	}
 }
