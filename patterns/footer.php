@@ -6,7 +6,7 @@
  * Inserter:       no
  * Keywords:       footer, links, copyright
  * Block Types:    core/template-part/footer
- * 
+ *
  * @since          2.0.0
  * @package        siuy
  * @subpackage     siuy/patterns
@@ -50,7 +50,7 @@
 <hr class="wp-block-separator has-text-color has-text-lighter-color has-alpha-channel-opacity has-text-lighter-background-color has-background is-style-wide"/>
 <!-- /wp:separator -->
 
-<!-- wp:group {"style":{"spacing":{"padding":{"right":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dside)","left":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dside)"}}},"layout":{"inherit":true}} -->
+<!-- wp:group {"style":{"spacing":{"padding":{"right":"var(--wp--custom--spacing--side)","left":"var(--wp--custom--spacing--side)"}}},"layout":{"inherit":true}} -->
 <div class="wp-block-group" style="padding-right:var(--wp--custom--spacing--side);padding-left:var(--wp--custom--spacing--side)"><!-- wp:group {"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between"}} -->
 <div class="wp-block-group"><!-- wp:verse {"style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary-alt"}}}},"textColor":"secondary-alt","fontSize":"small","fontFamily":"secondary"} -->
 <pre class="wp-block-verse has-secondary-alt-color has-text-color has-link-color has-secondary-font-family has-small-font-size"><?php esc_html_e( '© Siuy 2022. All Rights Reserved', 'siuy' ); ?></pre>
