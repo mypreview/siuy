@@ -1,0 +1,17 @@
+.sticky {
+
+	.wp-block-post-title {
+
+		a {
+			@include transition(background-size);
+			background-image: linear-gradient(preset(color, primary), preset(color, primary));
+			background-repeat: no-repeat;
+			background-position: 100% 100%;
+			background-size: 40% 50%;
+
+			&:hover {
+				background-size: 100% 50%;
+			}
+		}
+	}
+}
