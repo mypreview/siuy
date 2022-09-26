@@ -1,9 +1,9 @@
 === Siuy ===
 Contributors: mahdiyazdani, mypreview, gookaani
-Tags:
+Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, editor-style, featured-images, full-site-editing, full-width-template, news, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, translation-ready, two-columns, wide-blocks
 Donate link: https://www.buymeacoffee.com/mahdiyazdani
 Requires at least: 6.0
-Tested up to: 6.1
+Tested up to: 6.0
 Requires PHP: 7.4
 Stable tag: 2.0.0
 License: GPLv3 or later
