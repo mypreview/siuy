@@ -9,6 +9,11 @@ Stable tag: 2.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
+Siuy is a WordPress theme dedicated to blogging. Made for minimalistic book and writing lovers.
+
+== Description ==
+Siuy is a WordPress theme dedicated to blogging. Made for minimalistic book and writing lovers. Theme is designed to emphasize typography with plenty of white space and room for prominent photos. It’s an ideal choice for storytelling.
+
 == Changelog ==
 = 2.0.0 =
 * Feature: Refactored underlying code.

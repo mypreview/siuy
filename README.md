@@ -10,7 +10,7 @@
 | For Writers, Journalists, Book Lovers! |
 | --- |
 
-Siuy is a specialized WordPress theme dedicated to blogging, and it is primarily made for the minimalistic book and writing lovers.
+Siuy is a WordPress theme dedicated to blogging. Made for minimalistic book and writing lovers.
 
 ## Requirements
 
