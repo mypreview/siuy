@@ -3,9 +3,11 @@
 		"exclude": [
 			"!/build",
 			"!/languages",
-			"!vendor/*",
+			"/docs",
 			"/src",
+			"@mypreview",
 			"node_modules",
+			"vendor",
 			"CONTRIBUTING.md",
 			"CODE_OF_CONDUCT.md",
 			"babel.config.js",
