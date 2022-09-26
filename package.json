@@ -41,7 +41,7 @@
 		]
 	},
 	"dependencies": {
-		"@mypreview/unicorn-style-utils": "^1.2.0"
+		"@mypreview/unicorn-style-utils": "1.2.0"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "24.1.0",
