@@ -46,8 +46,8 @@
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
 
-<!-- wp:separator {"align":"full","backgroundColor":"text-lighter","className":"is-style-wide"} -->
-<hr class="wp-block-separator alignfull has-text-color has-text-lighter-color has-alpha-channel-opacity has-text-lighter-background-color has-background is-style-wide"/>
+<!-- wp:separator {"backgroundColor":"text-lighter","className":"is-style-wide"} -->
+<hr class="wp-block-separator has-text-color has-text-lighter-color has-alpha-channel-opacity has-text-lighter-background-color has-background is-style-wide"/>
 <!-- /wp:separator -->
 
 <!-- wp:group {"style":{"spacing":{"padding":{"right":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dside)","left":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dside)"}}},"layout":{"inherit":true}} -->

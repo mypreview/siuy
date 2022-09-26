@@ -21,7 +21,7 @@
 <!-- wp:site-title {"level":0} /--></div>
 <!-- /wp:group -->
 
-<!-- wp:navigation {"ref":8,"className":"is-style-main-navigation","layout":{"type":"flex","justifyContent":"right"},"style":{"typography":{"fontSize":"13px"}}} /--></div>
+<!-- wp:navigation {"className":"is-style-main-navigation","layout":{"type":"flex","justifyContent":"right"},"style":{"typography":{"fontSize":"13px"}}} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
