@@ -21,7 +21,6 @@ namespace Siuy;
 
 use function Siuy\Includes\Utils\get_asset_handle as get_asset_handle;
 use function Siuy\Includes\Utils\enqueue_resources as enqueue_resources;
-use function Siuy\Includes\Utils\google_fonts_css as google_fonts_css;
 
 defined( 'ABSPATH' ) || exit; // Exit if accessed directly.
 
@@ -37,6 +36,7 @@ define(
 );
 
 require get_parent_theme_file_path( '/includes/block-styles.php' );
+require get_parent_theme_file_path( '/includes/pattern-categories.php' );
 require get_parent_theme_file_path( '/includes/utils.php' );
 
 /**
@@ -65,6 +65,8 @@ add_action( 'init', __NAMESPACE__ . '\load_textdomain', 10, 2 );
 function theme_support(): void {
 	// Adding support for core block visual styles.
 	add_theme_support( 'wp-block-styles' );
+	
+	remove_theme_support( 'core-block-patterns' );
 
 	// Enqueue editor styles.
 	add_editor_style( 'style.css' );
@@ -143,44 +145,37 @@ function enqueue_editor(): void {
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_editor' );
 
 /**
- * Enqueue Google fonts stylesheet.
+ * Changes the number of words included in a post excerpt.
  *
  * @since     2.0.0
- * @return    void
+ * @param     int $length    The maximum number of words.
+ * @return    int
  */
-function google_fonts(): void {
-	$fonts = apply_filters(
-		'siuy_google_font_args',
-		array(
-			'open-sans' => 'Open+Sans:300,400,500,700,900',
-		)
-	);
-    // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
-	wp_enqueue_style( get_asset_handle( 'google', 'fonts' ), google_fonts_css( $fonts ), array(), null );
-}
-add_action( 'siuy_enqueue_frontend', __NAMESPACE__ . '\google_fonts' );
-add_action( 'siuy_enqueue_editor', __NAMESPACE__ . '\google_fonts' );
-
-/**
- * Add preconnect for Google Fonts.
- *
- * @since     2.0.0
- * @param     array  $urls             URLs to print for resource hints.
- * @param     string $relation_type    The relation type the URLs are printed.
- * @return    array  $urls
- */
-function preconnect_gstatic( array $urls, string $relation_type ): array {
-	// Check whether the main CSS stylesheet has been added to the queue.
-	if ( wp_style_is( get_asset_handle( 'google', 'fonts' ), 'queue' ) && 'preconnect' === $relation_type ) {
-		$urls[] = array(
-			'crossorigin',
-			'href' => 'https://fonts.gstatic.com',
-		);
+function reduced_post_excerpt_length( int $length ): int {
+	if ( is_admin() ) {
+		return $length;
 	}
 
-	return $urls;
+	return 35;
 }
-add_action( 'wp_resource_hints', __NAMESPACE__ . '\preconnect_gstatic', 10, 2 );
+add_filter( 'excerpt_length', __NAMESPACE__ . '\reduced_post_excerpt_length' );
+
+/**
+ * Changes ellipsis shown at the end of a truncated post
+ * excerpt.
+ *
+ * @since     2.0.0
+ * @param     string $more    The string shown within the more link.
+ * @return    string
+ */
+function dotted_excerpt_more( string $more ): string {
+	if ( is_admin() ) {
+		return $more;
+	}
+
+	return '&hellip;';
+}
+add_filter( 'excerpt_more', __NAMESPACE__ . '\dotted_excerpt_more' );
 
 /**
  * Adds custom classes to the array of body classes.

@@ -1,0 +1,28 @@
+.comment-form {
+	@include box(wrap);
+	column-gap: $block-gap;
+
+	> * {
+		width: 100%;
+		flex-grow: 1;
+	}
+
+	.wp-block-button {
+
+		&__link {
+			background-color: preset(color, secondary);
+			color: preset(color, text);
+			width: auto;
+			border-width: 0;
+		}
+	}
+
+	@include from-tablet {
+		@each $field in author, email, url {
+			.comment-form-#{$field} {
+
+				width: calc(33.333% - #{$block-gap} * 2 / 3);
+			}
+		}
+	}
+}

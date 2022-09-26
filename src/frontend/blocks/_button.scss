@@ -1,0 +1,21 @@
+.wp-block-button {
+
+	&__link {
+		@include box(inline, middle, center);
+		@include hover-overlay(rgba(30, 32, 37, 0.1), 100%);
+		cursor: pointer;
+		border-radius: 0;
+		border-width: 0;
+		min-height: 50px;
+	}
+}
+
+.is-style-outline {
+
+	.wp-block-button {
+
+		&__link {
+			border-width: 1px;
+		}
+	}
+}

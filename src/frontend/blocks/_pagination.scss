@@ -1,0 +1,15 @@
+.wp-block-comments-pagination {
+
+	a {
+		@include hover-overlay;
+	}
+}
+
+.page-numbers {
+	padding: 2px;
+	margin: 3px;
+}
+
+a.page-numbers {
+	@include hover-overlay;
+}

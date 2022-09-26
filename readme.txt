@@ -3,7 +3,7 @@ Contributors: mahdiyazdani, mypreview, gookaani
 Tags:
 Donate link: https://www.buymeacoffee.com/mahdiyazdani
 Requires at least: 6.0
-Tested up to: 6.0
+Tested up to: 6.1
 Requires PHP: 7.4
 Stable tag: 2.0.0
 License: GPLv3 or later

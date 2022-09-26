@@ -1,0 +1,31 @@
+.wp-block-categories {
+
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		list-style: none;
+
+		ul {
+			position: relative;
+			border-left: 1px solid;
+			padding-inline-start: 20px;
+
+			&::before {
+				@include size(10px, 1px);
+				content: "";
+				background-color: currentcolor;
+				position: absolute;
+				left: 0;
+				top: 50%;
+			}
+		}
+	}
+
+}
+
+.is-style-two-columns {
+	column-count: 2;
+}

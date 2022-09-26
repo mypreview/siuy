@@ -82,28 +82,3 @@ if ( ! function_exists( 'enqueue_resources' ) ) :
 		wp_style_add_data( $style_handle, 'rtl', 'replace' );
 	}
 endif;
-
-if ( ! function_exists( 'google_fonts_css' ) ) :
-	/**
-	 * Register Google fonts.
-	 *
-	 * @since     2.0.0
-	 * @param     array $fonts    Google fonts names and variations.
-	 * @return    string
-	 */
-	function google_fonts_css( array $fonts = array() ): string {
-		if ( ! is_array( $fonts ) || empty( $fonts ) ) {
-			return '';
-		}
-
-		$query_args = array(
-			'family'  => implode( '|', $fonts ),
-			'subset'  => rawurlencode( 'latin,latin-ext' ),
-			'display' => 'swap',
-		);
-
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-
-		return $fonts_url;
-	}
-endif;

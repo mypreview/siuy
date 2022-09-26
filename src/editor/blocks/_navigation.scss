@@ -1,0 +1,18 @@
+$nav-block: wp-block-navigation;
+
+.#{$nav-block} {
+
+	.has-child {
+
+		&.has-child-selected,
+		&.is-selected {
+			opacity: 1;
+
+			> .#{$nav-block}__submenu-container {
+				opacity: 1;
+				transform: translate(0);
+			}
+		}
+	}
+
+}

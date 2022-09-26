@@ -1,0 +1,119 @@
+.wp-block-latest-posts {
+
+	@each $element in title, author, date {
+		&__post-#{$element} {
+			font-family: preset(font-family, secondary);
+			letter-spacing: 2px;
+			text-transform: uppercase;
+
+			@if $element == title {
+				color: preset(color, text-dark);
+				font-weight: 700;
+			} @else if $element == author {
+				color: preset(color, text-light);
+				font-size: preset(font-size, smaller);
+			} @else {
+				font-size: preset(font-size, smallest);
+				color: preset(color, text-lighter);
+			}
+		}
+	}
+
+	&__featured-image {
+		margin-bottom: 20px;
+	}
+
+	&.is-grid {
+		display: grid;
+
+		&:not(.is-style-separator-between) {
+			gap: $block-gap;
+		}
+
+		li {
+			margin: 0;
+			width: unset;
+		}
+
+		&.is-style-separator-between {
+			text-align: center;
+			row-gap: $block-gap;
+
+			li {
+
+				> * {
+					display: block;
+					padding: {
+						left: 15%;
+						right: 15%;
+					}
+
+					&:last-child {
+						margin-bottom: 8%;
+					}
+
+					&:first-child {
+						margin-top: 8%;
+					}
+				}
+
+				@include from-tablet {
+					border-right: 1px solid preset(color, text-lighter);
+				}
+			}
+
+			@for $i from 2 through 6 {
+				&.columns-#{$i} {
+
+					li {
+						@include from-desktop {
+							&:nth-child(#{$i}n) {
+								border-right-width: 0;
+							}
+						}
+						@include tablet {
+
+							&:nth-child(even) {
+								border-right-width: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@for $i from 2 through 6 {
+			&.columns-#{$i} {
+				@include from-desktop {
+					grid-template-columns: repeat(#{$i}, 1fr);
+				}
+
+				@include tablet {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+		}
+	}
+
+	&:not(.is-grid) {
+
+		&:not(.is-style-separator-between) {
+			@include box(vertical);
+			gap: 60px;
+		}
+
+		&.is-style-separator-between {
+
+			li {
+				padding: {
+					left: 2%;
+					right: 2%;
+				}
+
+				&:nth-child(n+2) {
+					border-top: 1px solid preset(color, text-lighter);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+.wp-block-search {
+
+	&__button {
+		@include hover-overlay(rgba(30, 32, 37, 0.1), 100%);
+		cursor: pointer;
+		background-color: preset(color, secondary);
+		color: preset(color, text);
+		padding: 12px 30px;
+		font-size: preset(font-size, smaller);
+		font-family: preset(font-family, secondary);
+		font-weight: 700;
+		border-width: 0;
+
+		&.has-icon {
+			padding: 0.125em 0.5em;
+		}
+	}
+
+	&__input {
+		font-size: preset(font-size, small);
+		font-family: preset(font-family, secondary);
+	}
+
+	&__label {
+		font-size: preset(font-size, small);
+		font-family: preset(font-family, secondary);
+	}
+}

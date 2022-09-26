@@ -1,0 +1,10 @@
+.is-style-stacked-on-tablet {
+	@include tablet {
+		flex-wrap: wrap !important;
+
+		> .wp-block-column {
+			flex-basis: 100% !important;
+		}
+	}
+
+}
