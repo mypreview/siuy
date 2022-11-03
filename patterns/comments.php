@@ -7,7 +7,7 @@
  * Keywords:       comments loop, comment form
  * Block Types:    core/comments
  * 
- * @since          2.0.0
+ * @since          2.1.0
  * @package        siuy
  * @subpackage     core/post-comments-form, core/comments-query-loop
  */

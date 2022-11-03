@@ -7,7 +7,7 @@
  * Keywords:       header, navigation
  * Block Types:    core/template-part/header
  * 
- * @since          2.0.0
+ * @since          2.1.0
  * @package        siuy
  * @subpackage     siuy/patterns
  */

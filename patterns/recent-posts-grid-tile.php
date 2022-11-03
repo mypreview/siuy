@@ -7,7 +7,7 @@
  * Keywords:       recent posts, latest posts
  * Block Types:    core/latest-posts
  * 
- * @since          2.0.0
+ * @since          2.1.0
  * @package        siuy
  * @subpackage     siuy/patterns
  */
