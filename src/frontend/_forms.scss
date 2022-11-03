@@ -1,6 +1,6 @@
 label {
 	display: block;
-	font-size: preset(font-size, small);
+	font-size: preset(font-size, medium);
 	font-family: preset(font-family, secondary);
 	color: inherit;
 
@@ -33,7 +33,7 @@ input,
 textarea {
 	display: block;
 	width: 100%;
-	font-size: preset(font-size, small);
+	font-size: preset(font-size, medium);
 	font-family: preset(font-family, secondary);
 	line-height: 1.8;
 	color: inherit;
@@ -41,9 +41,9 @@ textarea {
 	border: 1px solid preset(color, border);
 	background-color: transparent;
 	appearance: none;
-	padding: 10px 20px;
+	padding: preset(spacing, 10) preset(spacing, 20);
 	border-radius: 0;
-	height: 50px;
+	height: preset(spacing, 50);
 
 	&:focus {
 		color: preset(color, dark);
@@ -65,7 +65,7 @@ textarea {
 
 	+ label {
 		display: inline;
-		margin-left: 10px;
+		margin-left: preset(spacing, 10);
 	}
 }
 

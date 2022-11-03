@@ -17,11 +17,11 @@
 .wp-block-comment-template {
 
 	ol {
-		padding-top: calc(#{$block-gap} * 2);
+		padding-top: calc(#{preset(spacing, 30)} * 2);
 	}
 
 	.comment {
-		padding-right: 10px;
+		padding-right: preset(spacing, 10);
 		position: relative;
 
 		&::after,
@@ -34,7 +34,7 @@
 		}
 
 		&:not(:last-child) {
-			padding-bottom: calc(#{$block-gap} * 2);
+			padding-bottom: calc(#{preset(spacing, 30)} * 2);
 		}
 
 		&:not(:last-of-type) {

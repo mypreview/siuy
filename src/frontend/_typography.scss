@@ -1,11 +1,7 @@
-a {
-	text-decoration: none;
-}
-
 p {
 	margin: {
 		top: 0;
-		bottom: $block-gap;
+		bottom: preset(spacing, 30);
 	}
 
 	a {

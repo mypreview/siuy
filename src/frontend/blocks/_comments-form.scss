@@ -1,6 +1,6 @@
 .comment-form {
 	@include box(wrap);
-	column-gap: $block-gap;
+	column-gap: preset(spacing, 30);
 
 	> * {
 		width: 100%;
@@ -10,10 +10,7 @@
 	.wp-block-button {
 
 		&__link {
-			background-color: preset(color, secondary);
-			color: preset(color, text);
 			width: auto;
-			border-width: 0;
 		}
 	}
 
@@ -21,7 +18,7 @@
 		@each $field in author, email, url {
 			.comment-form-#{$field} {
 
-				width: calc(33.333% - #{$block-gap} * 2 / 3);
+				width: calc(33.333% - #{preset(spacing, 30)} * 2 / 3);
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 .wp-block-quote {
 	@include box(vertical);
-	gap: $block-gap;
+	gap: preset(spacing, 30);
 	position: relative;
 
 	> * {
@@ -8,7 +8,6 @@
 	}
 
 	cite {
-		font-size: 60%;
 		display: block;
 	}
 
@@ -19,7 +18,7 @@
 		line-height: 0;
 		color: preset(color, secondary);
 		right: 0;
-		bottom: 30px;
+		bottom: preset(spacing, 30);
 		pointer-events: none;
 	}
 
@@ -33,15 +32,15 @@
 
 		@include from-desktop {
 			padding: {
-				left: 40px;
-				right: 80px;
+				left: calc(#{preset(spacing, 80)} / 2);
+				right: preset(spacing, 80);
 			}
 		}
 
 		@include until-tablet {
 			padding: {
-				left: 20px;
-				right: 60px;
+				left: preset(spacing, 20);
+				right: preset(spacing, 60);
 			}
 		}
 
@@ -51,7 +50,7 @@
 			background-color: preset(color, secondary);
 			color: preset(color, secondary-alt);
 			bottom: 0;
-			padding: 30px 10px 0;
+			padding: preset(spacing, 30) preset(spacing, 10) 0;
 		}
 	}
 }
