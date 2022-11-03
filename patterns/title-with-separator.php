@@ -13,7 +13,7 @@
  */
 
 ?>
-<!-- wp:group {"style":{"spacing":{"blockGap":"20px"}}} -->
+<!-- wp:group {"templateLock":"contentOnly","style":{"spacing":{"blockGap":"var(--wp--preset--spacing--20)"}}} -->
 <div class="wp-block-group"><!-- wp:verse {"style":{"typography":{"textTransform":"uppercase"}},"textColor":"text-dark","fontFamily":"secondary"} -->
 <pre class="wp-block-verse has-text-dark-color has-text-color has-secondary-font-family" style="text-transform:uppercase"><?php esc_html_e( 'Category title', 'siuy' ); ?></pre>
 <!-- /wp:verse -->
