@@ -3,17 +3,16 @@
  * Title:          404 Error
  * Slug:           siuy/404
  * Inserter:       no
- * Keywords:       404, not found
  * 
- * @since          2.0.0
+ * @since          2.1.0
  * @package        siuy
  * @subpackage     siuy/patterns
  */
 
 ?>
-<!-- wp:group {"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":false,"contentSize":"790px"}} -->
-<div class="wp-block-group" style="margin-top:0px;margin-bottom:0px"><!-- wp:spacer {"height":"50px"} -->
-<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- wp:group {"templateLock":"contentOnly","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"inherit":false,"contentSize":"790px"}} -->
+<div class="wp-block-group" style="margin-top:0;margin-bottom:0"><!-- wp:spacer {"height":"var(--wp--preset--spacing--50)"} -->
+<div style="height:var(--wp--preset--spacing--50)" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
 <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"9rem"}},"textColor":"primary"} -->
@@ -30,7 +29,7 @@
 
 <!-- wp:search {"label":"Search","showLabel":false,"buttonText":"Search"} /-->
 
-<!-- wp:spacer {"height":"50px"} -->
-<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- wp:spacer {"height":"var(--wp--preset--spacing--50)"} -->
+<div style="height:var(--wp--preset--spacing--50)" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer --></div>
 <!-- /wp:group -->

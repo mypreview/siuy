@@ -12,7 +12,7 @@
  * @see        https://codex.wordpress.org/Theme_Development
  * @see        https://codex.wordpress.org/Plugin_API
  * @author     MyPreview (Github: @mahdiyazdani, @gooklani, @mypreview)
- * @since      2.0.0
+ * @since      2.1.0
  *
  * @package    siuy
  */
@@ -59,14 +59,12 @@ add_action( 'init', __NAMESPACE__ . '\load_textdomain', 10, 2 );
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
- * @since     2.0.0
+ * @since     2.1.0
  * @return    void
  */
 function theme_support(): void {
 	// Adding support for core block visual styles.
 	add_theme_support( 'wp-block-styles' );
-	
-	remove_theme_support( 'core-block-patterns' );
 
 	// Enqueue editor styles.
 	add_editor_style( 'style.css' );

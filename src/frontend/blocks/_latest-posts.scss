@@ -11,23 +11,23 @@
 				font-weight: 700;
 			} @else if $element == author {
 				color: preset(color, text-light);
-				font-size: preset(font-size, smaller);
+				font-size: preset(font-size, small);
 			} @else {
-				font-size: preset(font-size, smallest);
+				font-size: 10px;
 				color: preset(color, text-lighter);
 			}
 		}
 	}
 
 	&__featured-image {
-		margin-bottom: 20px;
+		margin-bottom: preset(spacing, 20);
 	}
 
 	&.is-grid {
 		display: grid;
 
 		&:not(.is-style-separator-between) {
-			gap: $block-gap;
+			gap: preset(spacing, 30);
 		}
 
 		li {
@@ -37,7 +37,7 @@
 
 		&.is-style-separator-between {
 			text-align: center;
-			row-gap: $block-gap;
+			row-gap: preset(spacing, 30);
 
 			li {
 
@@ -99,7 +99,7 @@
 
 		&:not(.is-style-separator-between) {
 			@include box(vertical);
-			gap: 60px;
+			gap: preset(spacing, 60);
 		}
 
 		&.is-style-separator-between {

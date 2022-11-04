@@ -3,9 +3,9 @@ Contributors: mahdiyazdani, mypreview, gookaani
 Tags: block-patterns, block-styles, blog, custom-colors, custom-logo, editor-style, featured-images, full-site-editing, full-width-template, news, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, translation-ready, two-columns, wide-blocks
 Donate link: https://www.buymeacoffee.com/mahdiyazdani
 Requires at least: 6.0
-Tested up to: 6.0
+Tested up to: 6.1
 Requires PHP: 7.4
-Stable tag: 2.0.0
+Stable tag: 2.1.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,7 +14,16 @@ Siuy is a WordPress theme dedicated to blogging. Made for minimalistic book and 
 == Description ==
 Siuy is a WordPress theme dedicated to blogging. Made for minimalistic book and writing lovers. Theme is designed to emphasize typography with plenty of white space and room for prominent photos. It’s an ideal choice for storytelling.
 
+== Frequently Asked Questions ==
+= How do I contribute to this theme? =
+We welcome contributions in any form, and you can help report, test, and detail bugs.
+
+Here’s the [GitHub development repository &#8594;](https://github.com/mypreview/siuy "GitHub development repository")
+
 == Changelog ==
+= 2.1.0 =
+* Compatibility with WordPress 6.1
+
 = 2.0.0 =
 * Feature: Refactored underlying code.
 * Feature: Full support of WordPress block editor.

@@ -7,7 +7,7 @@
  * Keywords:       query, posts
  * Block Types:    core/query
  * 
- * @since          2.0.0
+ * @since          2.1.0
  * @package        siuy
  * @subpackage     siuy/patterns
  */
@@ -17,20 +17,20 @@
 <div class="wp-block-query"><!-- wp:post-template -->
 <!-- wp:post-featured-image {"isLink":true,"align":"wide"} /-->
 
-<!-- wp:post-title {"isLink":true,"style":{"spacing":{"margin":{"bottom":"10px"}}}} /-->
+<!-- wp:post-title {"isLink":true,"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--10)"}}}} /-->
 
 <!-- wp:post-excerpt {"moreText":"Read more"} /-->
 
-<!-- wp:spacer {"height":"10px"} -->
-<div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- wp:spacer {"height":"var(--wp--preset--spacing--10)"} -->
+<div style="height:var(--wp--preset--spacing--10)" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
 <!-- wp:separator {"opacity":"css","className":"is-style-wide"} -->
 <hr class="wp-block-separator has-css-opacity is-style-wide"/>
 <!-- /wp:separator -->
 
-<!-- wp:spacer {"height":"20px"} -->
-<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- wp:spacer {"height":"var(--wp--preset--spacing--20)"} -->
+<div style="height:var(--wp--preset--spacing--20)" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 <!-- /wp:post-template -->
 

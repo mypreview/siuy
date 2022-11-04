@@ -43,7 +43,7 @@ $submenu-triangle: 16px;
 				padding: 18px;
 			}
 			.#{$nav-block}__submenu-icon {
-				margin: 0 10px;
+				margin: 0 preset(spacing, 10);
 			}
 			> .#{$nav-block}-item {
 
@@ -151,7 +151,7 @@ $submenu-triangle: 16px;
 		padding: 24px;
 
 		.#{$nav-block}-item__content {
-			font-size: preset(font-size, medium);
+			font-size: preset(font-size, large);
 		}
 
 		.#{$nav-block}__responsive-container-content {
@@ -159,12 +159,12 @@ $submenu-triangle: 16px;
 			.has-child {
 				.#{$nav-block}__submenu-container,
 				.submenu-container {
-					padding: calc(#{$block-gap} / 2) 0 0;
+					padding: calc(#{preset(spacing, 30)} / 2) 0 0;
 					transform: scale(0.9);
 					opacity: 0.9;
 
 					li:nth-child(n+2) {
-						padding-top: calc(#{$block-gap} / 2);
+						padding-top: calc(#{preset(spacing, 30)} / 2);
 					}
 				}
 			}

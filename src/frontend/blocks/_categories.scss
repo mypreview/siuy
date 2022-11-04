@@ -11,7 +11,7 @@
 		ul {
 			position: relative;
 			border-left: 1px solid;
-			padding-inline-start: 20px;
+			padding-inline-start: preset(spacing, 20);
 
 			&::before {
 				@include size(10px, 1px);

@@ -3,7 +3,7 @@
 	blockquote {
 		@include box(vertical);
 		margin: 0;
-		gap: $block-gap;
+		gap: preset(spacing, 30);
 		position: relative;
 		z-index: 1;
 
@@ -29,7 +29,6 @@
 	}
 
 	cite {
-		font-size: 60%;
 		display: block;
 	}
 

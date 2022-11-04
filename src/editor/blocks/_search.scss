@@ -1,0 +1,11 @@
+$search: wp-block-search;
+
+.wp-block {
+
+	:where(.#{$search}__button-inside .#{$search}__inside-wrapper) {
+
+		.#{$search}__input {
+			border-width: 0;
+		}
+	}
+}
