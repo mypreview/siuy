@@ -14,9 +14,15 @@ Siuy is a WordPress theme dedicated to blogging. Made for minimalistic book and 
 == Description ==
 Siuy is a WordPress theme dedicated to blogging. Made for minimalistic book and writing lovers. Theme is designed to emphasize typography with plenty of white space and room for prominent photos. It’s an ideal choice for storytelling.
 
+== Frequently Asked Questions ==
+= How do I contribute to this theme? =
+We welcome contributions in any form, and you can help report, test, and detail bugs.
+
+Here’s the [GitHub development repository &#8594;](https://github.com/mypreview/siuy "GitHub development repository")
+
 == Changelog ==
 = 2.1.0 =
-* Compatibility with WordPress 6.1.
+* Compatibility with WordPress 6.1
 
 = 2.0.0 =
 * Feature: Refactored underlying code.
