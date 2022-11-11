@@ -1,12 +1,6 @@
 # Siuy
 
-![Siuy WordPress Theme Downloads](https://img.shields.io/wordpress/theme/dm/siuy)
-![Siuy WordPress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/siuy)
-![Siuy WordPress Theme Last Updated](https://img.shields.io/wordpress/theme/last-updated/siuy)
-![Siuy WordPress Theme Rating](https://img.shields.io/wordpress/theme/stars/siuy)
-![Siuy WordPress Theme Required PHP Version](https://img.shields.io/wordpress/theme/required-php/siuy)
-![Siuy WordPress Theme: Tested WP Version](https://img.shields.io/wordpress/theme/wp-version/siuy)
-![Siuy WordPress Theme Version](https://img.shields.io/wordpress/theme/v/siuy)
+[![Siuy WordPress Theme Downloads](https://img.shields.io/wordpress/theme/dt/siuy.svg)](https://wordpress.org/themes/siuy) [![Siuy WordPress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/siuy.svg)](https://wordpress.org/themes/siuy) [![Siuy WordPress Theme Ratings](https://img.shields.io/wordpress/theme/r/siuy.svg)](https://wordpress.org/themes/siuy) [![Siuy WordPress Theme Version](https://img.shields.io/wordpress/theme/v/siuy.svg)](https://wordpress.org/themes/siuy) [![Siuy WordPress Theme License](https://img.shields.io/github/license/mypreview/siuy)](https://wordpress.org/themes/siuy) [![Donate to support this theme](https://img.shields.io/badge/☕-Buy%20me%20a%20coffee-%23fedd04)](https://www.buymeacoffee.com/mahdiyazdani)
 
 | For Writers, Journalists, Book Lovers! |
 | --- |
